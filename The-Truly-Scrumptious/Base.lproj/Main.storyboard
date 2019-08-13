@@ -3290,7 +3290,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR4-Yf-zhi">
-                                        <rect key="frame" x="108.5" y="18.5" width="103.5" height="23"/>
+                                        <rect key="frame" x="113" y="18.5" width="94" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3570,7 +3570,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-dw-fie">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select list">
                                                             <color key="titleColor" red="0.40392156862745099" green="0.38039215686274508" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3624,7 +3624,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WY-b7-hKw">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select table">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3678,7 +3678,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-zN-mwt">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select menu">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -8599,7 +8599,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Guests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0G-8r-Qyh">
-                                        <rect key="frame" x="139" y="18.5" width="97.5" height="23"/>
+                                        <rect key="frame" x="142" y="18.5" width="91" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -9226,7 +9226,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNL-pK-0Jv">
-                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
+                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -20223,7 +20223,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orn-hq-Me4">
-                                        <rect key="frame" x="108.5" y="18.5" width="103.5" height="23"/>
+                                        <rect key="frame" x="113" y="18.5" width="94" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -21737,7 +21737,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-NY-U55">
-                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
+                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -22925,7 +22925,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgi-w6-IuE">
-                                        <rect key="frame" x="108" y="18.5" width="104" height="23"/>
+                                        <rect key="frame" x="112" y="18.5" width="96" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -23181,7 +23181,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-47-wIK">
-                                                        <rect key="frame" x="8" y="23" width="312" height="28"/>
+                                                        <rect key="frame" x="8" y="23" width="312" height="29"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select list">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -23289,7 +23289,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbe-Hz-XV6">
-                                                        <rect key="frame" x="8" y="23" width="312" height="28"/>
+                                                        <rect key="frame" x="8" y="23" width="312" height="29"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select menu">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -24423,7 +24423,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-bP-xBQ">
-                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
+                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -24685,7 +24685,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Tables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-bH-5LP">
-                                        <rect key="frame" x="138" y="18" width="99.5" height="24"/>
+                                        <rect key="frame" x="143" y="18" width="89" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

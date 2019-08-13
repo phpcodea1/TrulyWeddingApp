@@ -10,7 +10,7 @@ import UIKit
 
 class PinCollectionViewCell: UICollectionViewCell {
     
-    
+    // prinit
     @IBOutlet weak var pinImages: UIImageView!
     @IBOutlet weak var pinLabel: UILabel!
 }

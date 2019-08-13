@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+        <array key="Quicksand_Bold.otf">
+            <string>QuicksandBold-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="FavTableViewCell" customModule="The_Truly_Scrumptious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-lF-9WL">
+                        <rect key="frame" x="8" y="8" width="319" height="93.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image5" translatesAutoresizingMaskIntoConstraints="NO" id="GZx-Vh-9bY">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YYE-hY-CXw"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZBD-Al-9rd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-E4-DZ7">
+                                <rect key="frame" x="58" y="0.0" width="46" height="16"/>
+                                <fontDescription key="fontDescription" name="QuicksandBold-Regular" family="Quicksand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Reviews.HotelWedding.Port" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihb-z8-oT1">
+                                <rect key="frame" x="143" y="24" width="176" height="14"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Washington,Wi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR5-ik-EWm">
+                                <rect key="frame" x="58" y="58" width="99.5" height="15"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-e5-43l" customClass="FloatRatingView" customModule="FloatRatingView">
+                                <rect key="frame" x="58" y="24" width="77" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="3kS-vb-7kN"/>
+                                    <constraint firstAttribute="width" constant="77" id="a5T-vp-LP4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Emapty"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="fillStar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                                        <size key="value" width="15" height="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="I2W-kp-ebD">
+                                <rect key="frame" x="299" y="73.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0qx-Ag-cKo"/>
+                                    <constraint firstAttribute="width" constant="20" id="aot-DJ-39k"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ihb-z8-oT1" firstAttribute="top" secondItem="hfI-e5-43l" secondAttribute="top" id="7nS-PE-9Op"/>
+                            <constraint firstAttribute="bottom" secondItem="I2W-kp-ebD" secondAttribute="bottom" id="Fbq-6B-pl5"/>
+                            <constraint firstItem="hfI-e5-43l" firstAttribute="leading" secondItem="GZx-Vh-9bY" secondAttribute="trailing" constant="8" id="FxG-ie-Nfr"/>
+                            <constraint firstItem="GZx-Vh-9bY" firstAttribute="top" secondItem="WHf-lF-9WL" secondAttribute="top" id="ICn-fE-DqG"/>
+                            <constraint firstItem="NbR-E4-DZ7" firstAttribute="top" secondItem="WHf-lF-9WL" secondAttribute="top" id="Lga-ti-WBQ"/>
+                            <constraint firstItem="cR5-ik-EWm" firstAttribute="leading" secondItem="WHf-lF-9WL" secondAttribute="leading" constant="58" id="Lx7-WA-a5t"/>
+                            <constraint firstItem="hfI-e5-43l" firstAttribute="top" secondItem="NbR-E4-DZ7" secondAttribute="bottom" constant="8" id="Pf4-dZ-GJ3"/>
+                            <constraint firstItem="GZx-Vh-9bY" firstAttribute="leading" secondItem="WHf-lF-9WL" secondAttribute="leading" id="QrF-Q6-iHZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ihb-z8-oT1" secondAttribute="trailing" id="TeY-mp-HBK"/>
+                            <constraint firstItem="cR5-ik-EWm" firstAttribute="top" secondItem="hfI-e5-43l" secondAttribute="bottom" constant="8" id="ce1-8l-EMb"/>
+                            <constraint firstItem="ihb-z8-oT1" firstAttribute="leading" secondItem="hfI-e5-43l" secondAttribute="trailing" constant="8" id="ce7-bE-fzu"/>
+                            <constraint firstAttribute="trailing" secondItem="I2W-kp-ebD" secondAttribute="trailing" id="qrM-MI-Nh9"/>
+                            <constraint firstItem="NbR-E4-DZ7" firstAttribute="leading" secondItem="GZx-Vh-9bY" secondAttribute="trailing" constant="8" id="vcX-01-iRF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WHf-lF-9WL" secondAttribute="bottom" constant="8" id="RGC-07-0Ef"/>
+                    <constraint firstItem="WHf-lF-9WL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dal-kw-umy"/>
+                    <constraint firstItem="WHf-lF-9WL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="di8-Yx-Vlp"/>
+                    <constraint firstAttribute="trailing" secondItem="WHf-lF-9WL" secondAttribute="trailing" constant="8" id="zbx-zK-KxN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="locationlbl" destination="cR5-ik-EWm" id="zVZ-EZ-Nvu"/>
+                <outlet property="nameLbl" destination="NbR-E4-DZ7" id="Bo6-kP-Vw4"/>
+                <outlet property="profileImg" destination="GZx-Vh-9bY" id="cja-vM-TRW"/>
+                <outlet property="ratingUIView" destination="hfI-e5-43l" id="h42-kU-NVH"/>
+                <outlet property="totalLbl" destination="ihb-z8-oT1" id="N1U-lG-R3C"/>
+            </connections>
+            <point key="canvasLocation" x="144.80000000000001" y="139.43028485757122"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Emapty" width="27" height="26"/>
+        <image name="fillStar" width="24" height="24"/>
+        <image name="image5" width="32" height="32"/>
+        <image name="like" width="23" height="23"/>
+    </resources>
+</document>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingTableViewCell" rowHeight="93" id="KGk-i7-Jjw" customClass="RatingTableViewCell" customModule="The_Truly_Scrumptious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="309" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="309" height="92.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-Wc-rKk">
+                        <rect key="frame" x="2.5" y="2.5" width="304" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-e3-Q4B">
+                                <rect key="frame" x="8" y="8" width="84.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R70-XV-R2R">
+                                <rect key="frame" x="221" y="8" width="75" height="17"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Von-Ue-7Me" customClass="FloatRatingView" customModule="FloatRatingView">
+                                <rect key="frame" x="8" y="33" width="100" height="15"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8K9-Bm-1Yi"/>
+                                    <constraint firstAttribute="height" constant="15" id="SHz-oW-2Ai"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Emapty"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="fillStar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                                        <size key="value" width="15" height="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review text here Review text here Review text hereReview text here " textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-4V-xoW">
+                                <rect key="frame" x="8" y="56" width="288" height="34"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Y8-CF-Z1j">
+                                <rect key="frame" x="0.0" y="84" width="304" height="1"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.87450980392156863" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2Yg-7i-MQK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VNo-4V-xoW" firstAttribute="top" secondItem="Von-Ue-7Me" secondAttribute="bottom" constant="8" id="0Rm-wJ-Xj3"/>
+                            <constraint firstAttribute="bottom" secondItem="2Y8-CF-Z1j" secondAttribute="bottom" id="C3r-du-JVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="R70-XV-R2R" secondAttribute="trailing" constant="8" id="DnO-iU-zOc"/>
+                            <constraint firstAttribute="height" constant="85" id="M0a-Ml-clA"/>
+                            <constraint firstItem="qyM-e3-Q4B" firstAttribute="top" secondItem="zmZ-Wc-rKk" secondAttribute="top" constant="8" id="QRo-JW-fGm"/>
+                            <constraint firstItem="Von-Ue-7Me" firstAttribute="leading" secondItem="zmZ-Wc-rKk" secondAttribute="leading" constant="8" id="Rnm-fs-W1W"/>
+                            <constraint firstItem="VNo-4V-xoW" firstAttribute="leading" secondItem="zmZ-Wc-rKk" secondAttribute="leading" constant="8" id="THl-w5-HAF"/>
+                            <constraint firstAttribute="trailing" secondItem="2Y8-CF-Z1j" secondAttribute="trailing" id="Y6J-Hh-zMm"/>
+                            <constraint firstItem="Von-Ue-7Me" firstAttribute="top" secondItem="qyM-e3-Q4B" secondAttribute="bottom" constant="8" id="g7T-RY-Umq"/>
+                            <constraint firstItem="R70-XV-R2R" firstAttribute="top" secondItem="zmZ-Wc-rKk" secondAttribute="top" constant="8" id="gzg-DE-gxb"/>
+                            <constraint firstItem="VNo-4V-xoW" firstAttribute="top" secondItem="Von-Ue-7Me" secondAttribute="bottom" constant="8" id="hMI-U3-iNb"/>
+                            <constraint firstItem="2Y8-CF-Z1j" firstAttribute="leading" secondItem="zmZ-Wc-rKk" secondAttribute="leading" id="hfA-Z0-lei"/>
+                            <constraint firstItem="qyM-e3-Q4B" firstAttribute="leading" secondItem="zmZ-Wc-rKk" secondAttribute="leading" constant="8" id="jsU-QY-RO1"/>
+                            <constraint firstAttribute="trailing" secondItem="VNo-4V-xoW" secondAttribute="trailing" constant="8" id="slq-uo-kKi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zmZ-Wc-rKk" secondAttribute="bottom" constant="2.5" id="C85-cK-PZi"/>
+                    <constraint firstAttribute="trailing" secondItem="zmZ-Wc-rKk" secondAttribute="trailing" constant="2.5" id="gyR-Fk-Ef2"/>
+                    <constraint firstItem="zmZ-Wc-rKk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="srW-OF-TZg"/>
+                    <constraint firstItem="zmZ-Wc-rKk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2.5" id="vsq-CM-oOc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="zmZ-Wc-rKk" id="OsP-VI-8FP"/>
+                <outlet property="rating" destination="Von-Ue-7Me" id="dYz-Eq-FCa"/>
+                <outlet property="reviewTxt" destination="VNo-4V-xoW" id="VSj-ib-1x6"/>
+                <outlet property="timeLbl" destination="R70-XV-R2R" id="GVy-Ud-d7n"/>
+                <outlet property="userName" destination="qyM-e3-Q4B" id="QxB-55-mDu"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="158.77061469265368"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Emapty" width="27" height="26"/>
+        <image name="fillStar" width="24" height="24"/>
+    </resources>
+</document>

@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManager
+import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +19,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+      
+        GIDSignIn.sharedInstance().clientID = "433162082332-qr8d0g04ntu6fhkl2bq773q2sbo6ejcc.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self as? GIDSignInDelegate
+        IQKeyboardManager.shared().isEnabled = true
+
+        
+       Autologin()
+
         return true
     }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let handled = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        
+        return handled
+        
+    }
+    
+    
+    func Autologin()
+    {
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if token == nil
+        {
+            let delegate = UIApplication.shared.delegate as? AppDelegate
+            let vc = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let nav = UINavigationController(rootViewController: vc)
+            delegate?.window?.rootViewController = nav
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+        }
+       
+        else
+        {
+            
+            if  let evetType =  DEFAULT.value(forKey: "email") as? String
+            {
+                let delegate = UIApplication.shared.delegate as? AppDelegate
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+                let nav = UINavigationController(rootViewController: vc)
+                nav.setNavigationBarHidden(true, animated: true)
+                delegate?.window?.rootViewController = nav
+                window?.rootViewController = nav
+                window?.makeKeyAndVisible()
+            }
+            else
+            {
+                let delegate = UIApplication.shared.delegate as? AppDelegate
+                let vc = storyBoard.instantiateViewController(withIdentifier: "SubHome_VC") as! SubHome_VC
+                let nav = UINavigationController(rootViewController: vc)
+                delegate?.window?.rootViewController = nav
+                window?.rootViewController = nav
+                window?.makeKeyAndVisible()
+                }
+            }
+           
+        
+    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Light.ttf">
+            <string>Quicksand-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="57" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="The_Truly_Scrumptious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="56.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-da-LJi">
+                        <rect key="frame" x="0.0" y="1" width="335" height="2"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="kDS-WC-KLV"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Venue" translatesAutoresizingMaskIntoConstraints="NO" id="0JN-8v-pfe">
+                        <rect key="frame" x="20" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="BdH-la-zyd"/>
+                            <constraint firstAttribute="height" constant="25" id="ICe-Q6-52Z"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud7-ZU-2Ss">
+                        <rect key="frame" x="53" y="17.5" width="274" height="22"/>
+                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-IP-d1y">
+                        <rect key="frame" x="0.0" y="53.5" width="335" height="2"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="7vm-h0-rbJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ud7-ZU-2Ss" secondAttribute="trailing" constant="8" id="0BJ-yq-R6R"/>
+                    <constraint firstAttribute="bottom" secondItem="mWQ-IP-d1y" secondAttribute="bottom" constant="1" id="5er-gl-i6s"/>
+                    <constraint firstItem="Umd-da-LJi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="D1J-sB-oR5"/>
+                    <constraint firstItem="ud7-ZU-2Ss" firstAttribute="leading" secondItem="0JN-8v-pfe" secondAttribute="trailing" constant="8" id="PhT-4D-0c7"/>
+                    <constraint firstAttribute="trailing" secondItem="Umd-da-LJi" secondAttribute="trailing" id="Vof-l1-akA"/>
+                    <constraint firstItem="Umd-da-LJi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="ZDe-jM-jQP"/>
+                    <constraint firstAttribute="trailing" secondItem="mWQ-IP-d1y" secondAttribute="trailing" id="a4b-rb-2NX"/>
+                    <constraint firstItem="mWQ-IP-d1y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iCe-hg-IeP"/>
+                    <constraint firstItem="ud7-ZU-2Ss" firstAttribute="centerY" secondItem="0JN-8v-pfe" secondAttribute="centerY" id="pma-pv-whh"/>
+                    <constraint firstItem="0JN-8v-pfe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rOS-1F-73i"/>
+                    <constraint firstItem="0JN-8v-pfe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zlP-dK-lug"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="0JN-8v-pfe" id="GWk-ee-aQK"/>
+                <outlet property="title" destination="ud7-ZU-2Ss" id="kDm-51-cGt"/>
+                <outlet property="topView" destination="Umd-da-LJi" id="EFq-7V-lOy"/>
+            </connections>
+            <point key="canvasLocation" x="144.80000000000001" y="133.5832083958021"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Venue" width="35" height="35"/>
+    </resources>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+        <array key="Quicksand-Light.ttf">
+            <string>Quicksand-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="NoticeTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoticeTableViewCell" rowHeight="144" id="KGk-i7-Jjw" customClass="NoticeTableViewCell" customModule="The_Truly_Scrumptious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="535" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="535" height="143.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKh-wd-j9o">
+                        <rect key="frame" x="0.0" y="5" width="535" height="133.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oiq-XR-eb5">
+                                <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fYT-Ti-luB"/>
+                                    <constraint firstAttribute="height" constant="50" id="sKc-zG-q7i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roesie cabine event venue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd0-z1-u9h">
+                                <rect key="frame" x="66" y="0.0" width="227" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Sbj-s9-zVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/06/2019- 3:15 Am" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEq-DG-Av8">
+                                <rect key="frame" x="66" y="37" width="153" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="AUt-A3-iTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvy-XZ-14Y">
+                                <rect key="frame" x="66" y="57" width="461" height="69"/>
+                                <string key="text">Roesie cabine event venue helo giygwef uyggvyuuvhcv bngigbig we venue... Roesie cabine event venue helo giygwef uyggvyuuvhcv bngigbig we venue... Roesie cabine event venue helo giygwef uyggvyuuvhcv bngigbig we venue... Roesie cabine event venue helo giygwef uyggvyuuvhcv bngigbig we venueDeva</string>
+                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="15"/>
+                                <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAY-J0-YYi">
+                                <rect key="frame" x="0.0" y="132.5" width="535" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GO7-eT-qaD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DAY-J0-YYi" firstAttribute="leading" secondItem="qKh-wd-j9o" secondAttribute="leading" id="017-JN-3Ns"/>
+                            <constraint firstItem="sEq-DG-Av8" firstAttribute="leading" secondItem="Oiq-XR-eb5" secondAttribute="trailing" constant="8" id="3nV-fi-3Q3"/>
+                            <constraint firstItem="sEq-DG-Av8" firstAttribute="top" secondItem="Dd0-z1-u9h" secondAttribute="bottom" constant="2" id="6Ta-VX-W4j"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvy-XZ-14Y" secondAttribute="trailing" constant="8" id="BEu-Ih-xjf"/>
+                            <constraint firstItem="Xvy-XZ-14Y" firstAttribute="leading" secondItem="sEq-DG-Av8" secondAttribute="leading" id="JiL-m8-Dqe"/>
+                            <constraint firstAttribute="bottom" secondItem="Xvy-XZ-14Y" secondAttribute="bottom" constant="7.5" id="KJv-Sh-lza"/>
+                            <constraint firstItem="Dd0-z1-u9h" firstAttribute="top" secondItem="qKh-wd-j9o" secondAttribute="top" id="VFp-EI-0FP"/>
+                            <constraint firstAttribute="trailing" secondItem="DAY-J0-YYi" secondAttribute="trailing" id="dID-mk-Zx6"/>
+                            <constraint firstItem="Oiq-XR-eb5" firstAttribute="leading" secondItem="qKh-wd-j9o" secondAttribute="leading" constant="8" id="fuS-5R-f0h"/>
+                            <constraint firstItem="Oiq-XR-eb5" firstAttribute="top" secondItem="qKh-wd-j9o" secondAttribute="top" constant="8" id="uLN-6B-rzV"/>
+                            <constraint firstItem="Xvy-XZ-14Y" firstAttribute="top" secondItem="sEq-DG-Av8" secondAttribute="bottom" constant="5" id="vd3-vM-4ce"/>
+                            <constraint firstAttribute="bottom" secondItem="DAY-J0-YYi" secondAttribute="bottom" id="wHd-v3-7hM"/>
+                            <constraint firstItem="Dd0-z1-u9h" firstAttribute="leading" secondItem="Oiq-XR-eb5" secondAttribute="trailing" constant="8" id="xBp-NF-iY4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qKh-wd-j9o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GLm-Z4-i1h"/>
+                    <constraint firstItem="qKh-wd-j9o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Hlw-FR-tBd"/>
+                    <constraint firstAttribute="trailing" secondItem="qKh-wd-j9o" secondAttribute="trailing" id="QXg-xN-adE"/>
+                    <constraint firstAttribute="bottom" secondItem="qKh-wd-j9o" secondAttribute="bottom" constant="5" id="ueT-BR-tKM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="304.80000000000001" y="188.90554722638683"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image-1" width="40" height="40"/>
+    </resources>
+</document>

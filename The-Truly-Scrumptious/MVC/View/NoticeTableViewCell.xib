@@ -69,16 +69,27 @@
                                     <constraint firstAttribute="height" constant="1" id="GO7-eT-qaD"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-HW-EKw">
+                                <rect key="frame" x="489" y="29.5" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4On-ji-rds"/>
+                                    <constraint firstAttribute="height" constant="30" id="PDm-61-CBS"/>
+                                </constraints>
+                                <state key="normal" image="remove-64"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DAY-J0-YYi" firstAttribute="leading" secondItem="qKh-wd-j9o" secondAttribute="leading" id="017-JN-3Ns"/>
+                            <constraint firstItem="nTY-HW-EKw" firstAttribute="centerY" secondItem="sEq-DG-Av8" secondAttribute="centerY" id="3TN-Xu-DFW"/>
                             <constraint firstItem="sEq-DG-Av8" firstAttribute="leading" secondItem="Oiq-XR-eb5" secondAttribute="trailing" constant="8" id="3nV-fi-3Q3"/>
                             <constraint firstItem="sEq-DG-Av8" firstAttribute="top" secondItem="Dd0-z1-u9h" secondAttribute="bottom" constant="2" id="6Ta-VX-W4j"/>
                             <constraint firstAttribute="trailing" secondItem="Xvy-XZ-14Y" secondAttribute="trailing" constant="8" id="BEu-Ih-xjf"/>
                             <constraint firstItem="Xvy-XZ-14Y" firstAttribute="leading" secondItem="sEq-DG-Av8" secondAttribute="leading" id="JiL-m8-Dqe"/>
                             <constraint firstAttribute="bottom" secondItem="Xvy-XZ-14Y" secondAttribute="bottom" constant="7.5" id="KJv-Sh-lza"/>
                             <constraint firstItem="Dd0-z1-u9h" firstAttribute="top" secondItem="qKh-wd-j9o" secondAttribute="top" id="VFp-EI-0FP"/>
+                            <constraint firstAttribute="trailing" secondItem="nTY-HW-EKw" secondAttribute="trailing" constant="16" id="ZWg-pF-V1X"/>
                             <constraint firstAttribute="trailing" secondItem="DAY-J0-YYi" secondAttribute="trailing" id="dID-mk-Zx6"/>
                             <constraint firstItem="Oiq-XR-eb5" firstAttribute="leading" secondItem="qKh-wd-j9o" secondAttribute="leading" constant="8" id="fuS-5R-f0h"/>
                             <constraint firstItem="Oiq-XR-eb5" firstAttribute="top" secondItem="qKh-wd-j9o" secondAttribute="top" constant="8" id="uLN-6B-rzV"/>
@@ -96,10 +107,19 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentTxt" destination="Xvy-XZ-14Y" id="ufr-5a-cZm"/>
+                <outlet property="datelbl" destination="sEq-DG-Av8" id="Y7I-mC-qy6"/>
+                <outlet property="leftConst" destination="fuS-5R-f0h" id="emV-bv-wAi"/>
+                <outlet property="profileImg" destination="Oiq-XR-eb5" id="XDe-JP-gO9"/>
+                <outlet property="removeBtn" destination="nTY-HW-EKw" id="yXW-gD-2Mu"/>
+                <outlet property="title" destination="Dd0-z1-u9h" id="jER-E4-mKP"/>
+            </connections>
             <point key="canvasLocation" x="304.80000000000001" y="188.90554722638683"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="image-1" width="40" height="40"/>
+        <image name="remove-64" width="64" height="64"/>
     </resources>
 </document>

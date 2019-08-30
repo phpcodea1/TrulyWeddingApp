@@ -115,8 +115,16 @@ class CheckListViewController: UIViewController
     }
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
-       
-       AllTODOLISTAPI()
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+               AllTODOLISTAPI()
+        }
+    
         self.nodataLbl.text = "No Data Found"
     }
     
@@ -482,14 +490,17 @@ extension CheckListViewController:UITableViewDelegate,UITableViewDataSource{
                 if done_status == "1"
                 {
                     cell.checkButton.setImage(UIImage(named: "right-true"), for: .normal)
+                   
                 }
                 else
                 {
                     cell.checkButton.setImage(UIImage(named: "check-mark"), for: .normal)
+                 
                 }
             }
             else
             {
+                
                 cell.checkButton.setImage(UIImage(named: "check-mark"), for: .normal)
             }
             
@@ -531,15 +542,18 @@ extension CheckListViewController:UITableViewDelegate,UITableViewDataSource{
                 if done_status == "1"
                 {
                    cell.checkButton.setImage(UIImage(named: "right-true"), for: .normal)
+                     cell.crossView.isHidden=false
                 }
                 else
                 {
                    cell.checkButton.setImage(UIImage(named: "check-mark"), for: .normal)
+                     cell.crossView.isHidden=true
                 }
             }
             else
             {
                cell.checkButton.setImage(UIImage(named: "check-mark"), for: .normal)
+                cell.crossView.isHidden=true
             }
 
             
@@ -776,12 +790,26 @@ extension CheckListViewController:UITableViewDelegate,UITableViewDataSource{
                 
                 if self.ToDoArrayList.count>0 || self.AllArrayList.count>0
                 {
-                    var percent = Float(self.ToDoArrayList.count)/Float(self.AllArrayList.count)
-                    
-                    self.nodataLbl.isHidden = true
-                    print(percent)
-                    
-                    self.progressView.setProgress(percent, animated: true)
+                    if self.ToDoArrayList.count == self.AllArrayList.count
+                    {
+                         self.progressView.setProgress(0, animated: true)
+                    }
+                    else if self.ToDoArrayList.count == 0
+                    {
+                         self.progressView.setProgress(1, animated: true)
+                    }
+                    else
+                    {
+                        
+                        var percent = Float(self.ToDoArrayList.count)/Float(self.AllArrayList.count)
+                        
+                        
+                        self.nodataLbl.isHidden = true
+                        print(percent)
+                        
+                        self.progressView.setProgress(percent, animated: true)
+                    }
+                   
                 }
                 else
                 {

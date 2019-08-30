@@ -35,7 +35,7 @@ class LoginModel :Mappable {
 
 class LoginData :Mappable{
     
-    var deviceToken : String?
+   // var deviceToken1 : String?
     var deviceType : String?
     var displayName : String?
     var iD : String?
@@ -55,7 +55,7 @@ class LoginData :Mappable{
     
     func mapping(map: Map)
     {
-        deviceToken       <- map["deviceToken"]
+        //deviceToken1       <- map["deviceToken"]
         deviceType  <- map["deviceType"]
         displayName    <- map["display_name"]
         iD     <- map["ID"]
@@ -140,7 +140,7 @@ class FacebookModel : Mappable{
 
 class FaceBookData:Mappable{
 
-    var deviceToken : String?
+  //  var deviceToken1 : String?
     var deviceType : String?
     var displayName : String?
     var eventData : [facebookEventData]?
@@ -161,7 +161,7 @@ class FaceBookData:Mappable{
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        deviceToken       <- map["deviceToken"]
+     //   deviceToken1       <- map["deviceToken"]
         deviceType  <- map["deviceType"]
         displayName    <- map["display_name"]
         iD     <- map["ID"]
@@ -240,7 +240,7 @@ class GmailModel : Mappable{
 
 class GmailData:Mappable{
     
-    var deviceToken : String?
+   // var deviceToken1 : String?
     var deviceType : String?
     var displayName : String?
     var eventData : [gmailEventData]?
@@ -261,7 +261,7 @@ class GmailData:Mappable{
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        deviceToken       <- map["deviceToken"]
+       // deviceToken1       <- map["deviceToken"]
         deviceType  <- map["deviceType"]
         displayName    <- map["display_name"]
         iD     <- map["ID"]

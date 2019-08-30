@@ -66,7 +66,16 @@ class PhotosViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.nameArray = ["External Catering Permitted","Evening Reception Capacity","Civil Licence","Fireworks Permitted"]
         tableviewHeight.constant = CGFloat((nameArray.count * 40))
         
-        self.detailApi()
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            detailApi()
+        }
+        
+       
 
         // Do any additional setup after loading the view.
     }
@@ -156,9 +165,12 @@ class PhotosViewController: UIViewController,UITableViewDelegate,UITableViewData
                 //
                 if let amount = self.DetailModel.data?.bannerImage
                 {
+                    if amount != ""
+                    {
+                        let url1 = URL(string: amount)!
+                        self.LongImg.sd_setImage(with: url1, completed: nil)
+                    }
                     
-                    let url1 = URL(string: amount)!
-                self.LongImg.sd_setImage(with: url1, completed: nil)
                 }
                 
                 if let address = self.DetailModel.data?.guest

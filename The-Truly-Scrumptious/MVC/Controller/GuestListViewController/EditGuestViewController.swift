@@ -141,7 +141,9 @@ class EditGuestViewController: UIViewController,UIGestureRecognizerDelegate,UITa
         }
         else
         {
+            
             self.GetListAPI()
+            
             self.GetMenuListAPI()
             self.GetTableListAPI()
         }
@@ -1357,7 +1359,7 @@ class EditGuestViewController: UIViewController,UIGestureRecognizerDelegate,UITa
                 "last_name":lastNameTxt.text!,
                 "group_id":gropId,
                 "age_level":userage,
-                "attendence":attend,
+                "attendence":"attend",
                 "table_id":self.table_id,
                 "menu_id":self.menu_id,
                 "list_id":self.list_id,

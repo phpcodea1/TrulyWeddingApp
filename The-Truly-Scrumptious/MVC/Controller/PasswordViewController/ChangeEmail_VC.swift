@@ -52,13 +52,16 @@ class ChangeEmail_VC: UIViewController {
             let check = isValidEmail(testStr: emailTextfiled.text!)
             if check
             {
-                if CheckInternet.Connection()
+                if !(NetworkEngine.networkEngineObj.isInternetAvailable())
                 {
-                    self.fogotAPI()
+                    NetworkEngine.networkEngineObj.showInterNetAlert()
                 }
-                else{
-                    Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
+                else
+                {
+                    
+                     self.fogotAPI()
                 }
+               
             }
             else{
                 Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Vaild Email")

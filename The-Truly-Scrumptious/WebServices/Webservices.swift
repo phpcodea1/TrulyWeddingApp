@@ -11,6 +11,9 @@ import Foundation
 let baseURL = "http://112.196.9.211:8230/trully/wp-json/custom-plugin/"
 
 
+let IMAGEBASEURL = "http://112.196.9.211:8230/trully/wp-content/uploads"
+//let baseURL = "http://112.196.9.211:8230/wp/wp-json/custom-plugin/"
+
 let registerURL = baseURL + "register"
 
 
@@ -105,6 +108,8 @@ let GUESTGROUPNAME = baseURL + "guestgroupnames"
 
 let SELECTEVENTAPI = baseURL + "updateselectevent"
 
+let DELETETEVENTAPI = baseURL + "deleteevent"
+
 let DELETEGUESTAPI = baseURL + "removeguest"
 
 let FULLGUESTAPI = baseURL + "getguestlistfull"
@@ -149,6 +154,8 @@ let WEDDINGSHOW = baseURL + "getweddingshows"
 
 let PREREGISTERWEDDINGSHOW = baseURL + "preregisterweddingshows"
 
+let DETAILSWEDDINGSHOW = baseURL + "singleweddingshow"
+
 // venue show
 
 let VENUEBYNAME = baseURL + "venuebyname"
@@ -163,6 +170,8 @@ let VENUELIKEUNLIKE = baseURL + "addvenuefavourite"
 
 let VENUEFAVRITE = baseURL + "getvenuefavourite"
 
+
+
 let VENUEREQUESTPRICING = baseURL + "venuerequestprice"
 
 let GETVENUEREQUEST = baseURL + "getvenuerequests"
@@ -176,3 +185,45 @@ let VENUEBOOKMARKANDSORT = baseURL + "markbooksort"
 let SUPLLIERWITHCAT = baseURL + "supplierwithcat"
 
 let SUPPLIERLIKEUNLIKE = baseURL + "addsupplierfavourite"
+
+let SUPPLIERDETAILS = baseURL + "singlesupplier"
+
+let SUPPLIERREQUESTPRICING = baseURL + "supplierrequestprice"
+
+let SUPLIERFAVRITE = baseURL + "getsupplierfavourite"
+
+let SUPPLIEALLRREQUEST = baseURL + "getsupplierrequests"
+
+let SUPPLIEBOOKMARKSHORT = baseURL + "markbooksort_supplier"
+
+let SUPPLIECATDETAILS = baseURL + "singlecatsupplier"
+
+// Rating
+
+let ADDVENUERATING = baseURL + "add_review_venue"
+
+let ADDSUPPLIERRATING = baseURL + "add_review_supplier"
+
+
+// Notice board API
+
+let GETNOTICEWITHCOMMNET = baseURL + "get_notice_with_comments"
+
+let ADDNOTICEBOARD = baseURL + "add_notice"
+
+let REPLYNOTICEBOARD = baseURL + "comment_notice"
+
+let DELETECOMMENTNOTICEBOARD = baseURL + "delete_comment_notice"
+
+let DEATILSCOMMENTNOTICEBOARD = baseURL + "getPostDataWithComment"
+
+let DELETENOTICEBOARD = baseURL + "deletenoticeboard"
+
+// pin board API
+
+let ADDPINBOARD = baseURL + "addpinboard"
+
+let GETALLPINBOARD = baseURL + "getallpinboard"
+
+let DELETEPINBOARD = baseURL + "delpinboard"
+

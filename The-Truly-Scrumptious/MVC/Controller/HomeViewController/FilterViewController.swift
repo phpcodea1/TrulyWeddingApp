@@ -178,9 +178,13 @@
             
             if let amount = dict.value(forKey: "banner_image") as? String
             {
+                if amount != ""
+                {
+                    let url1 = URL(string: amount)!
+                    cell.LongImg.sd_setImage(with: url1, completed: nil)
+                }
                
-                let url1 = URL(string: amount)!
-                cell.LongImg.sd_setImage(with: url1, completed: nil)
+                
             }
             
             if let amount = dict.value(forKey: "price") as? String

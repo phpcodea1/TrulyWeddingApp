@@ -89,11 +89,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUK-DN-drq">
-                                <rect key="frame" x="247" y="49.5" width="90" height="31"/>
+                                <rect key="frame" x="247" y="4.5" width="90" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.70196078429999997" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="OZy-oe-IxM"/>
-                                    <constraint firstAttribute="height" constant="31" id="cH7-CQ-fi1"/>
+                                    <constraint firstAttribute="width" constant="90" id="qOL-RI-M7D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                 <state key="normal" title="Select">
@@ -105,19 +104,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ija-8T-8Tb">
+                                <rect key="frame" x="277" y="50.5" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KXs-B9-jH2"/>
+                                    <constraint firstAttribute="height" constant="30" id="nAq-JM-u1c"/>
+                                </constraints>
+                                <state key="normal" image="remove-64">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="QUK-DN-drq" secondAttribute="bottom" constant="8" id="8Ew-cQ-Oew"/>
+                            <constraint firstItem="ija-8T-8Tb" firstAttribute="centerX" secondItem="QUK-DN-drq" secondAttribute="centerX" id="7iK-OE-PCC"/>
                             <constraint firstItem="HvM-fI-dQ2" firstAttribute="leading" secondItem="4cu-O6-zyQ" secondAttribute="trailing" constant="8" id="8g7-4L-ele"/>
-                            <constraint firstAttribute="trailing" secondItem="QUK-DN-drq" secondAttribute="trailing" constant="8" id="C8I-b0-GYz"/>
                             <constraint firstItem="mdx-aE-ail" firstAttribute="leading" secondItem="4cu-O6-zyQ" secondAttribute="trailing" constant="8" id="ESZ-wf-3sh"/>
+                            <constraint firstItem="QUK-DN-drq" firstAttribute="top" secondItem="HvM-fI-dQ2" secondAttribute="top" id="FpC-9f-ARO"/>
                             <constraint firstItem="Fgp-aX-VFS" firstAttribute="leading" secondItem="YB0-xf-6uZ" secondAttribute="leading" constant="8" id="Hk4-eM-WNu"/>
                             <constraint firstItem="Fgp-aX-VFS" firstAttribute="centerY" secondItem="YB0-xf-6uZ" secondAttribute="centerY" id="Rlb-mf-Gfd"/>
                             <constraint firstItem="mdx-aE-ail" firstAttribute="top" secondItem="HvM-fI-dQ2" secondAttribute="bottom" constant="8" id="aue-eJ-dt4"/>
                             <constraint firstItem="4cu-O6-zyQ" firstAttribute="centerY" secondItem="YB0-xf-6uZ" secondAttribute="centerY" id="lKI-my-6pR"/>
                             <constraint firstItem="HvM-fI-dQ2" firstAttribute="top" secondItem="4cu-O6-zyQ" secondAttribute="top" id="oIV-UG-KGd"/>
                             <constraint firstItem="4cu-O6-zyQ" firstAttribute="leading" secondItem="YB0-xf-6uZ" secondAttribute="leading" constant="8" id="ujx-JI-X1W"/>
+                            <constraint firstAttribute="trailing" secondItem="QUK-DN-drq" secondAttribute="trailing" constant="8" id="unD-2Q-0M2"/>
+                            <constraint firstAttribute="bottom" secondItem="ija-8T-8Tb" secondAttribute="bottom" constant="8" id="yFS-sh-MFX"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
@@ -137,6 +154,7 @@
             <connections>
                 <outlet property="celeProfileImg" destination="gAy-zo-ogm" id="vn0-jK-pGv"/>
                 <outlet property="celeUiView" destination="4cu-O6-zyQ" id="Wqf-zh-hjH"/>
+                <outlet property="deleteButton" destination="ija-8T-8Tb" id="6az-Pk-oZb"/>
                 <outlet property="eventDateLbl" destination="mdx-aE-ail" id="LuI-RB-wJx"/>
                 <outlet property="eventTypeLbl" destination="HvM-fI-dQ2" id="s37-ua-elh"/>
                 <outlet property="selectButton" destination="QUK-DN-drq" id="yLB-Dx-G1c"/>
@@ -150,5 +168,6 @@
     <resources>
         <image name="image" width="640" height="375"/>
         <image name="image-2" width="133" height="122"/>
+        <image name="remove-64" width="64" height="64"/>
     </resources>
 </document>

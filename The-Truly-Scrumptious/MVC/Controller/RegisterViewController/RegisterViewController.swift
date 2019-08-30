@@ -146,14 +146,16 @@ class RegisterViewController: UIViewController {
             let check = isValidEmail(testStr: emailTextfiled.text!)
             if check
             {
-                if CheckInternet.Connection()
+                
+                if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+                {
+                    NetworkEngine.networkEngineObj.showInterNetAlert()
+                }
+                else
                 {
                     self.SignupAPI()
                 }
-                    
-                else{
-                    Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
-                }
+               
             }
                 
             else
@@ -172,11 +174,17 @@ class RegisterViewController: UIViewController {
     
     func SignupAPI()
     {
+       var DEVICETOKEN = "bc383f4cf9b7a177102338a67b7c845eb22088db570d559129a53f898ab4710b"
+        if let DEVICETOKEN1 = DEFAULT.value(forKey: "DEVICETOKEN") as? String
+        {
+            DEVICETOKEN = DEVICETOKEN1
+        }
+        
         let params:[String:Any] = ["email":emailTextfiled.text!,
                                    "username":userNameTXT.text!,
                                    "password":passwordTXT.text!,
-                                   "deviceToken":"abc",
-                                   "deviceType":"1"]
+                                   "deviceToken":DEVICETOKEN,
+                                   "deviceType":"2"]
         
         print(params)
         

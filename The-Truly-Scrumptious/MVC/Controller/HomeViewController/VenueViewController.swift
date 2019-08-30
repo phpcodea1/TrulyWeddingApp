@@ -279,12 +279,7 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
         DEFAULT.removeObject(forKey: "typeLong")
         DEFAULT.removeObject(forKey: "typeLat")
         DEFAULT.synchronize()
-    print("Home appear data=  ")
-        
-        print(DEFAULT.value(forKey: "email") as! String)
-        print(DEFAULT.value(forKey: "eventType") as! String)
-        print(DEFAULT.value(forKey: "eventID") as! String)
-        
+   
        
         
        // self.supplierTXT.text = ""
@@ -570,22 +565,31 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
                     
                     if let bannerImg = self.viewProfileModel.data?.celebrationBannerImage
                     {
-                        let img = URL(string: bannerImg)
-                        self.changeImage.sd_setImage(with: img, placeholderImage: nil)
+                        if bannerImg != ""
+                        {
+                            let img = URL(string: bannerImg)
+                            self.changeImage.sd_setImage(with: img, placeholderImage: nil)
+                        }
+                        
                     }
+                    
+                    self.image123.layer.borderWidth = 1.0
+                    self.image123.layer.masksToBounds = false
+                    self.image123.layer.cornerRadius = self.image123.frame.size.height/2
+                    self.image123.layer.borderColor = UIColor.clear.cgColor
+                    self.image123.clipsToBounds = true
+                    
+                    
                     if let profileImg = self.viewProfileModel.data?.celebrationProfileImage
                     {
-                        let img = URL(string: profileImg)
+                        if profileImg != ""
+                        {
+                            let img = URL(string: profileImg)
+                    
+                            self.image123.sd_setImage(with: img, placeholderImage: nil)
+                        }
                         
-                        
-                        self.image123.layer.borderWidth = 1.0
-                        self.image123.layer.masksToBounds = false
-                        self.image123.layer.cornerRadius = self.image123.frame.size.height/2
-                        self.image123.layer.borderColor = UIColor.clear.cgColor
-                        self.image123.clipsToBounds = true
-                        
-    
-                        self.image123.sd_setImage(with: img, placeholderImage: nil)
+                       
                     }
                     
                     
@@ -629,16 +633,16 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
                             
                             if let total_expense = dataDict.value(forKey: "total_expense") as? String
                             {
-                                self.budgetLbl.text =  total_expense
+                                self.budgetLbl.text =   "£"+total_expense
                             }
                             if let total_budget1 = dataDict.value(forKey: "total_budget") as? String
                             {
-                                self.totalBudgetLbl.text =  " of " + total_budget1
+                                self.totalBudgetLbl.text =  " of " + "£" + total_budget1
                             }
                             
                             if let total_expense = dataDict.value(forKey: "total_expense") as? String
                             {
-                                self.budgetLbl.text =  total_expense
+                                self.budgetLbl.text =  "£"+total_expense
                             }
                             else
                             {
@@ -707,19 +711,23 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
                             {
                                 
                                 self.dateLabel.text! = self.convertDateFormater(wedding_date)
-                                self.dateDiff(dateStr: wedding_date)
+                               self.dateDiff(dateStr: wedding_date)
                             }
-                            
+                            self.image123.layer.borderWidth = 1.0
+                            self.image123.layer.masksToBounds = false
+                            self.image123.layer.cornerRadius = self.image123.frame.size.height/2
+                            // + self.profileImg2.frame.height/2
+                            self.image123.layer.borderColor = UIColor.clear.cgColor
+                            self.image123.clipsToBounds = true
                             if let parnter = dataDict.value(forKey: "parnter_image") as? String
                             {
-                                let img = URL(string: parnter)
-                                self.image123.layer.borderWidth = 1.0
-                                self.image123.layer.masksToBounds = false
-                                self.image123.layer.cornerRadius = self.image123.frame.size.height/2
-                                // + self.profileImg2.frame.height/2
-                                self.image123.layer.borderColor = UIColor.clear.cgColor
-                                self.image123.clipsToBounds = true
-                                self.image123.sd_setImage(with: img, placeholderImage: nil)
+                                if parnter != ""
+                                {
+                                    let img = URL(string: parnter)
+                                    
+                                    self.image123.sd_setImage(with: img, placeholderImage: nil)
+                                }
+                               
                                 
                             }
                             self.weedingGirlImage.layer.borderWidth = 1.0
@@ -731,8 +739,12 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
                             
                             if let parnter = dataDict.value(forKey: "parnter_image") as? String
                             {
-                                let img = URL(string: parnter)
-                                self.weedingGirlImage.sd_setImage(with: img, placeholderImage:nil)
+                                if parnter != ""
+                                {
+                                    let img = URL(string: parnter)
+                                    self.weedingGirlImage.sd_setImage(with: img, placeholderImage:nil)
+                                }
+                                
                             }
                             
                             
@@ -746,16 +758,24 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
                             
                             if let myself_image = dataDict.value(forKey: "myself_image") as? String
                             {
-                                let img = URL(string: myself_image)
+                                if myself_image != ""
+                                {
+                                    let img = URL(string: myself_image)
+                                    
+                                    self.weddingBoysImage.sd_setImage(with: img, placeholderImage: nil)
+                                }
                                 
-                                self.weddingBoysImage.sd_setImage(with: img, placeholderImage: nil)
                                 
                                 
                             }
                             if let wedding_banner_image = dataDict.value(forKey: "wedding_banner_image") as? String
                             {
-                                let img = URL(string: wedding_banner_image)
-                                self.changeImage.sd_setImage(with: img, placeholderImage: nil)
+                                if wedding_banner_image != ""
+                                {
+                                    let img = URL(string: wedding_banner_image)
+                                    self.changeImage.sd_setImage(with: img, placeholderImage: nil)
+                                }
+                                
                             }
                             var eventType = "celebaration"
                             var name = "Amar"
@@ -963,7 +983,7 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
         let f:DateFormatter = DateFormatter()
         f.timeZone = NSTimeZone.local
         //        f.dateFormat = "yyyy-M-dd'T'HH:mm:ss.SSSZZZ"
-        f.dateFormat = "MMMM-dd-yyyy"
+        f.dateFormat = "yyyy-MM-dd"
         let now = f.string(from: NSDate() as Date)
         let startDate = f.date(from: dateStr)
         let endDate = f.date(from: now)
@@ -1059,15 +1079,46 @@ class VenueViewController: UIViewController,UIGestureRecognizerDelegate,CLLocati
         print("timeAgo is===> \(timeAgo)")
         return timeAgo;
     }
+   
+    
     func convertDateFormater(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM-dd-yyyy"
-        let date = dateFormatter.date(from: date)
+        let date2 = dateFormatter.date(from: date)
+        
+        
         dateFormatter.dateFormat = "dd MMMM yyyy"
-        return  dateFormatter.string(from: date!)
+        
+        if date2 != nil
+        {
+            return  dateFormatter.string(from: date2!)
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date3 = dateFormatter.date(from: date)
+            
+            
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            
+            if date3 != nil
+            {
+                return  dateFormatter.string(from: date3!)
+            }
+            else
+            {
+                return  ""
+            }
+            
+        }
+        
         
     }
+
+    
+    
     
     func VenueByNameAPI()
     {

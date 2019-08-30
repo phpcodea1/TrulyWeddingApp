@@ -104,10 +104,15 @@ class SubProfile_VC: UIViewController,UIGestureRecognizerDelegate {
                     
                     if let profileImg = self.viewProfileModel.profileImage
                     {
-                        let img = URL(string: profileImg)
+                        if profileImg != ""
+                        {
+                            let img = URL(string: profileImg)
+                            
+                            
+                            self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                        }
                         
-                        
-                        self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                       
                     }
                     else
                     

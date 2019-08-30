@@ -19,15 +19,19 @@ class SendRequestViewController: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var nameTxt: UITextField!
     
+    @IBOutlet weak var titleLbl: UILabel!
     var vendorId = ""
     var contactType = ""
+    var titleText = ""
+    
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showDatePicker()
+       
         
-self.contactType = "1"
+        self.contactType = "1"
         // Do any additional setup after loading the view.
         self.emailBtn1.setImage(UIImage(named: "radioFill"), for: .normal)
     }
@@ -39,16 +43,19 @@ self.contactType = "1"
         }
         else
         {
-            if CheckInternet.Connection()
+
+            if !(NetworkEngine.networkEngineObj.isInternetAvailable())
             {
+                NetworkEngine.networkEngineObj.showInterNetAlert()
+            }
+            else
+            {
+                
                 self.SendRequestAPI()
             }
-                
-                
-            else{
-                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
-            }
-        }    }
+        }
+        
+    }
     
     @IBAction func RadioAct(_ sender: UIButton)
     {
@@ -109,21 +116,25 @@ self.contactType = "1"
         {
             eventID = eventType1
         }
-        
-        let params:[String:Any] =
+        var params:[String:Any] = [:]
+       
+         params =
             [
                 "email":userEmail,
                 "customer_email":emailTxt.text!,
                 "venue_id":self.vendorId,
                 "name":nameTxt.text!,
                 "mobile_no":phonetxt.text!,
-                "event_date":self.eventTxt.text!,
+                "event_date":self.convertDateFormater2(self.eventTxt.text!),
                 "guest_list":guestNumberTxt.text!,
                 "message":messgeTxt.text!,
                 "contact_type":self.contactType,
                 "event_id":eventID,
                 "event_type":eventType
+                
         ]
+        
+        
         
         
         print(params)
@@ -207,7 +218,7 @@ self.contactType = "1"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let date = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "MMMM-dd-yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return  dateFormatter.string(from: date!)
         
     }

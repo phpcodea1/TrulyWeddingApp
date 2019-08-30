@@ -31,6 +31,6 @@ pod 'FBSDKLoginKit'
 pod 'GoogleSignIn'
 pod 'SDWebImage'
 pod 'FloatRatingView', '~> 2.0.0'
-
-
+pod 'Toast-Swift', '~> 5.0.0'
+pod 'MarqueeLabel'
 end

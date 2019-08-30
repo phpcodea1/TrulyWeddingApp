@@ -10,6 +10,7 @@ import UIKit
 
 class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
+    @IBOutlet weak var nodataLbl: UILabel!
     
     // for picker
     
@@ -49,7 +50,7 @@ class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDat
     var fromEdit = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.nodataLbl.isHidden = true
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
             NetworkEngine.networkEngineObj.showInterNetAlert()
@@ -678,14 +679,17 @@ class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDat
             self.subArray = subData.mutableCopy() as! NSMutableArray
             
         }
-        
-        if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
+        if selectedRow != -1
         {
-            if let id = dict2.value(forKey: "id") as? String
+            if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
             {
-                
-                self.MoveGuestId = id
+                if let id = dict2.value(forKey: "id") as? String
+                {
+                    
+                    self.MoveGuestId = id
+                }
             }
+            
         }
         
         var dict = self.ListArray.object(at: self.selectedSection) as! NSDictionary
@@ -716,6 +720,10 @@ class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func showPicker()
     {
         
+        if self.ListArray.count>1
+        {
+        
+        
         let optionMenu = UIAlertController(title: "Are you sure want to move table!", message: "If yes ! Please select other table", preferredStyle: .alert)
         
         
@@ -738,7 +746,27 @@ class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDat
         optionMenu.addAction(deleteAction2)
         
         self.present(optionMenu, animated: true, completion: nil)
-        
+        }
+        else
+            
+        {
+            let optionMenu = UIAlertController(title: "Alert!", message: "There is no another List to move", preferredStyle: .alert)
+            
+            let deleteAction = UIAlertAction(title: "Ok", style: .default, handler:
+            {
+                (alert: UIAlertAction!) -> Void in
+                
+                self.selectedRow = -1
+                self.listTable.reloadData()
+                
+            })
+            
+            optionMenu.addAction(deleteAction)
+            
+            
+            self.present(optionMenu, animated: true, completion: nil)
+        }
+
         
     }
     func GetListAPI()
@@ -790,6 +818,15 @@ class AllListViewController: UIViewController,UITableViewDelegate,UITableViewDat
                         //
                         
                    // }
+                    if self.ListArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
                     self.listTable.reloadData()
                     
                 }

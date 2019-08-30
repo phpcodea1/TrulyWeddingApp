@@ -88,7 +88,17 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         selectedSection = -1
-        self.detailApi()
+        
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+            self.detailApi()
+        }
+        
     }
     @objc func methodOfReceivedNotification(notification: Notification)
     {
@@ -132,12 +142,17 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 else if section == 3
                 {
                     
-                                        var count = 0
-                                        if let amenitiesAray =  self.mainDict.value(forKey: "reviews") as? NSArray
+                                        var count = 1
+                                        if let reviews =  self.mainDict.value(forKey: "reviews") as? NSArray
                                         {
-                    
-                                            count =  amenitiesAray.count
+                                            if reviews.count>0
+                                            {
+                                                count =  reviews.count
+                                            }
+                                            
                                         }
+                    
+                    
                     return count
                 }
                 else if section == 4
@@ -311,7 +326,13 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
             
             if let reviewsAray =  self.mainDict.value(forKey: "reviews") as? NSArray
             {
-             
+                if reviewsAray.count>0
+                {
+                    cell.rating.isHidden = false
+                    cell.timeLbl.isHidden = false
+                    cell.userName.isHidden = false
+                    cell.reviewTxt.isHidden = false
+                    cell.noFound.isHidden = true
                     if let reviewsDict = reviewsAray.object(at: indexPath.row) as? NSDictionary
                     {
                         if let customer_name = reviewsDict.value(forKey: "customer_name") as? String
@@ -326,10 +347,13 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                             cell.reviewTxt.text = review_text
                             
                         }
-                        if let average_rating = reviewsDict.value(forKey: "average_rating") as? Int
+                        if let average_rating = reviewsDict.value(forKey: "average_rating") as? String
                         {
+                            if average_rating != ""
+                            {
+                              cell.rating.rating = Float(average_rating)!
+                            }
                             
-                            cell.rating.rating = Float(average_rating)
                             
                         }
                         if let created_at = reviewsDict.value(forKey: "created_at") as? String
@@ -340,7 +364,16 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                         }
                         
                     }
-                
+                }
+                else
+                {
+                    cell.rating.isHidden = true
+                    cell.timeLbl.isHidden = true
+                    cell.userName.isHidden = true
+                    cell.reviewTxt.isHidden = true
+                    
+                   cell.noFound.isHidden = false
+                }
             }
             
             return cell
@@ -726,9 +759,12 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
 
                                 if let amount = self.mainDict.value(forKey: "banner_image") as? String
                                 {
-
-                                    let url1 = URL(string: amount)!
-                                    cell.LongImg.sd_setImage(with: url1, completed: nil)
+                                      if amount != ""
+                                      {
+                                        let url1 = URL(string: amount)!
+                                        cell.LongImg.sd_setImage(with: url1, completed: nil)
+                                    }
+                                  
                                 }
 
                                 if let address = self.mainDict.value(forKey: "guest") as? String
@@ -748,7 +784,15 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
             }
             if let avgrating_persons = self.mainDict.value(forKey: "avgrating_persons") as? Int
             {
-                cell.totalNoOfRating.text =  "\(avgrating_persons)"
+                if avgrating_persons > 1
+                {
+                    cell.totalNoOfRating.text =  "\(avgrating_persons)" + " Reviews"
+                }
+                else
+                {
+                   cell.totalNoOfRating.text =  "\(avgrating_persons)" + " Review"
+                }
+               
             }
             if let avgrating = self.mainDict.value(forKey: "avgrating") as? Int
             {
@@ -795,7 +839,10 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 cell.arraowBtn.tag = section
                 cell.allButton.tag = section
             
-          
+            if let reviews =  self.mainDict.value(forKey: "reviews") as? NSArray
+            {
+                
+            }
             
             
                 if  selectedSection == section
@@ -929,17 +976,33 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
         print("BookedClicked")
         
         self.fromBookMark = "yes"
-        self.BookMarkAndSortApi()
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+            self.BookMarkAndSortApi()
+        }
+        
     }
     @objc func ReviewClicked(_ sender:UIButton)
     {
-        print("ReviewClicked")
+//        print("ReviewClicked")
+//
+//
+//
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "VenueAllReviewViewController") as! VenueAllReviewViewController
+//        vc.mainDict = self.mainDict
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
         
-        
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "VenueAllReviewViewController") as! VenueAllReviewViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
         vc.mainDict = self.mainDict
-        
+        vc.backHidden = "yes"
+        vc.viewHide2 = "yes"
+        vc.fromVenue = "yes"
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -958,10 +1021,22 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
     {
         print("VenueTextClicked")
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SendRequestViewController") as! SendRequestViewController
-        vc.vendorId = self.id
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SendRequestViewController") as! SendRequestViewController
+//        var dict = self.FilterArray.object(at: sender.tag) as!NSDictionary
+//
+//        if let id1 = dict.value(forKey: "login_id") as? String
+//        {
+//            vc.vendorId = id1
+//        }
+//        vc.titleText = "Message Venue"
+//        self.navigationController?.pushViewController(vc, animated: true)
         
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SendRequestViewController") as! SendRequestViewController
+        vc.vendorId = self.login_id
+        vc.titleText = "Message Venue"
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
     @objc func VenueEmailClicked(_ sender:UIButton)
     {
@@ -979,7 +1054,17 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
     {
         print("ShortListClicked")
         self.fromBookMark = "no"
-        BookMarkAndSortApi()
+        
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+            BookMarkAndSortApi()
+        }
+        
     }
    
     

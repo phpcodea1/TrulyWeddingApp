@@ -13,15 +13,25 @@ class VenueRequestViewController: UIViewController,UITableViewDelegate,UITableVi
 
     @IBOutlet weak var tableView1: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
-    var MainArray = NSMutableArray()
+    var MainArray = NSArray()
     
     
+    @IBOutlet weak var nodataLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), forCellReuseIdentifier: "RequestVenueTableViewCell")
         // Do any additional setup after loading the view.
-        
-        AllRequestAPI()
+         self.nodataLbl.isHidden = true
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+             AllRequestAPI()
+        }
+       
     }
     
     @IBAction func goBack(_ sender: UIButton)
@@ -42,7 +52,7 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
         }
         if let event_date = dict.value(forKey: "event_date") as? String
         {
-            cell.dateLbl.text = event_date
+            cell.dateLbl.text = self.convertDateFormater(event_date)
         }
         
         if let status = dict.value(forKey: "status") as? String
@@ -93,16 +103,16 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        let cell = tableView1.dequeueReusableCell(withIdentifier: "RequestVenueTableViewCell") as! RequestVenueTableViewCell
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPhotosViewController") as! NewPhotosViewController
-//        var dict = self.MainArray.object(at: indexPath.row) as!NSDictionary
-//        
-//        if let id1 = dict.value(forKey: "id") as? String
-//        {
-//            vc.id = id1
-//        }
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "VenueRequestDetailsViewController") as! VenueRequestDetailsViewController
+        var dict = self.MainArray.object(at: indexPath.row) as!NSDictionary
+        cell.backgroundColor = UIColor.white
+        tableView.deselectRow(at: indexPath, animated: true)
+       vc.mainDict = dict
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     func AllRequestAPI()
     {
@@ -113,11 +123,22 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
         {
             userEmail = email
         }
-        
+        var eventType = "wedding"
+        if let eventType1 = DEFAULT.value(forKey: "eventType") as? String
+        {
+            eventType = eventType1
+        }
+        var eventID = "1"
+        if let eventType1 = DEFAULT.value(forKey: "eventID") as? String
+        {
+            eventID = eventType1
+        }
         
         
         let params:[String:Any] = [
-            "email":userEmail]
+            "email":userEmail,
+            "event_id":eventID,
+            "event_type":eventType]
         print(params)
         WebService.shared.apiDataPostMethod(url:GETVENUEREQUEST, parameters: params) { (response, error) in
             if error == nil
@@ -133,8 +154,15 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
                         self.MainArray = dataDict.mutableCopy() as! NSMutableArray
                         
                     }
-                    
-                }
+                    if self.MainArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }                }
                 self.tableView1.reloadData()
             }
                 
@@ -150,4 +178,42 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
         }
         
     }
+    
+    func convertDateFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        let date2 = dateFormatter.date(from: date)
+        
+        
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        
+        if date2 != nil
+        {
+            return  dateFormatter.string(from: date2!)
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date3 = dateFormatter.date(from: date)
+            
+            
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            
+            if date3 != nil
+            {
+                return  dateFormatter.string(from: date3!)
+            }
+            else
+            {
+                return  ""
+            }
+            
+        }
+        
+        
+    }
+    
+
 }

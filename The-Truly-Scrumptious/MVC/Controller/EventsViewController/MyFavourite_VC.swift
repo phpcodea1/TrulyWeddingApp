@@ -11,20 +11,42 @@ import SVProgressHUD
 
 class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-     var MainArray = NSMutableArray()
+    @IBOutlet weak var nodataLbl: UILabel!
+    var MainArray = NSMutableArray()
     var nameArray = [String]()
     @IBOutlet weak var tableview1: UITableView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view1.isHidden = true
-        
+         self.view1.isHidden = false
+        self.view2.isHidden = true
         tableview1.register(UINib(nibName: "FavTableViewCell", bundle: nil), forCellReuseIdentifier: "FavTableViewCell")
+        self.nodataLbl.isHidden = true
+       
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            FavriteSuplierAPI()
+        }
         
-       FavriteAPI()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.view1.isHidden = false
+        self.view2.isHidden = true
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            FavriteSuplierAPI()
+        }
+    }
 
     @IBAction func backAction(_ sender: UIButton) {
         
@@ -37,12 +59,30 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.view2.isHidden = true
         self.view1.isHidden = false
         
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            FavriteSuplierAPI()
+        }
+        
         
     }
     
-    @IBAction func venueAction(_ sender: UIButton) {
+    @IBAction func venueAction(_ sender: UIButton)
+    {
         self.view2.isHidden = false
         self.view1.isHidden = true
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            FavriteVenueAPI()
+        }
     }
     
     
@@ -73,10 +113,26 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
         {
             cell.ratingUIView.rating = Float(avgrating)
         }
+        else
+        {
+            cell.ratingUIView.rating = Float(0)
+        }
         if let avgrating_persons = dict.value(forKey: "avgrating_persons") as? Int
         {
+            if avgrating_persons > 1
+            {
+                cell.totalLbl.text =  "\(avgrating_persons)" + " Reviews"
+            }
+            else
+            {
+                cell.totalLbl.text =  "\(avgrating_persons)" + " Review"
+            }
             
-            cell.totalLbl.text = "\(avgrating_persons)" + " Reviews"
+           
+        }
+        else
+        {
+             cell.totalLbl.text =  "\(0)" + " Review"
         }
         
         if let name = dict.value(forKey: "name") as? String
@@ -106,20 +162,51 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
 
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         {
-        
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPhotosViewController") as! NewPhotosViewController
-            var dict = self.MainArray.object(at: indexPath.row) as!NSDictionary
+            let cell = tableview1.dequeueReusableCell(withIdentifier: "FavTableViewCell") as!
+            FavTableViewCell
             
-            if let id1 = dict.value(forKey: "id") as? String
+            cell.backgroundColor = UIColor.white
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            if self.view1.isHidden
             {
-                vc.id = id1
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPhotosViewController") as! NewPhotosViewController
+                
+                var dict = self.MainArray.object(at: indexPath.row) as!NSDictionary
+                
+                if let id1 = dict.value(forKey: "id") as? String
+                {
+                    vc.id = id1
+                }
+                if let login_id = dict.value(forKey: "login_id") as? String
+                {
+                    vc.login_id = login_id
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            self.navigationController?.pushViewController(vc, animated: true)
+            else
+            {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewSuplierDetailsViewController") as! NewSuplierDetailsViewController
+                var dict = self.MainArray.object(at: indexPath.row) as!NSDictionary
+                
+                if let id1 = dict.value(forKey: "id") as? String
+                {
+                    vc.id = id1
+                }
+                if let cat_id = dict.value(forKey: "cat_id") as? String
+                {
+                    vc.cat_ID = cat_id
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+           
+            
+            
             
         }
     
     
-    func FavriteAPI()
+    func FavriteVenueAPI()
     {
         SVProgressHUD.show()
        
@@ -152,7 +239,10 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 
                 
                 SVProgressHUD.dismiss()
-                
+                if self.MainArray.count>0
+                {
+                    self.MainArray.removeAllObjects()
+                }
                 if let dict = response as? NSDictionary
                 {
                     if let dataDict = (dict.value(forKey: "data")) as? NSArray
@@ -160,7 +250,15 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
                         self.MainArray = dataDict.mutableCopy() as! NSMutableArray
                        
                     }
-                    
+                    if self.MainArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
                 }
                 self.tableview1.reloadData()
             }
@@ -177,5 +275,77 @@ class MyFavourite_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         
     }
+    
+    func FavriteSuplierAPI()
+    {
+        SVProgressHUD.show()
+        
+        var userEmail = ""
+        if let email = DEFAULT.value(forKey: "email") as? String
+        {
+            userEmail = email
+        }
+        
+        var eventType = "wedding"
+        if let eventType1 = DEFAULT.value(forKey: "eventType") as? String
+        {
+            eventType = eventType1
+        }
+        var eventID = "1"
+        if let eventType1 = DEFAULT.value(forKey: "eventID") as? String
+        {
+            eventID = eventType1
+        }
+        
+        
+        let params:[String:Any] = [
+            "email":userEmail,
+            "event_id":eventID,
+            "event_type":eventType]
+        print(params)
+        WebService.shared.apiDataPostMethod(url:SUPLIERFAVRITE, parameters: params) { (response, error) in
+            if error == nil
+            {
+                
+                
+                SVProgressHUD.dismiss()
+                if self.MainArray.count>0
+                {
+                    self.MainArray.removeAllObjects()
+                }
+                
+                if let dict = response as? NSDictionary
+                {
+                    if let dataDict = (dict.value(forKey: "data")) as? NSArray
+                    {
+                        self.MainArray = dataDict.mutableCopy() as! NSMutableArray
+                        
+                    }
+                    if self.MainArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
+                }
+                self.tableview1.reloadData()
+            }
+                
+                
+            else
+            {
+                SVProgressHUD.dismiss()
+                Helper.helper.showAlertMessage(vc:self, titleStr: "Notification", messageStr: error?.localizedDescription ?? "")
+                
+            }
+            
+            
+        }
+        
+    }
+
 
 }

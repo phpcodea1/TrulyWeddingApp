@@ -263,21 +263,33 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         
         if let wedding_banner_image = allData.value(forKey: "wedding_banner_image") as? String
         {
-            let img = URL(string: wedding_banner_image)
-            
-            self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            if wedding_banner_image !=  ""
+            {
+                let img = URL(string: wedding_banner_image)
+                
+                self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
+           
         }
         if let myself_image = allData.value(forKey: "myself_image") as? String
         {
-            let img = URL(string: myself_image)
+            if myself_image != ""
+            {
+                let img = URL(string: myself_image)
+                
+                self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
             
-            self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
         }
         if let parnter_image = allData.value(forKey: "parnter_image") as? String
         {
-            let img = URL(string: parnter_image)
-            
-            self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            if parnter_image != ""
+            {
+                let img = URL(string: parnter_image)
+                
+                self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
+           
         }
         if let wedding_date = allData.value(forKey: "wedding_date") as? String
         {
@@ -285,7 +297,7 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         }
         if let wedding_date = allData.value(forKey: "wedding_date") as? String
         {
-            self.dateLabel.text = wedding_date
+            self.dateLabel.text = self.convertDateFormater(wedding_date)
         }
         if let myself = allData.value(forKey: "myself") as? String
         {
@@ -322,21 +334,33 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         
         if let wedding_banner_image = allData.value(forKey: "wedding_banner_image") as? String
         {
-            let img = URL(string: wedding_banner_image)
-            
-            self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            if wedding_banner_image != ""
+            {
+                let img = URL(string: wedding_banner_image)
+                
+                self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
+           
         }
         if let myself_image = allData.value(forKey: "myself_image") as? String
         {
-            let img = URL(string: myself_image)
-            
-            self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            if myself_image != ""
+            {
+                let img = URL(string: myself_image)
+                
+                self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
+           
         }
         if let parnter_image = allData.value(forKey: "parnter_image") as? String
         {
-            let img = URL(string: parnter_image)
+            if parnter_image != ""
+            {
+                let img = URL(string: parnter_image)
+                
+                self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+            }
             
-            self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
         }
         if let wedding_date = allData.value(forKey: "wedding_date") as? String
         {
@@ -677,7 +701,7 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         
         formatter.dateFormat = "MMMM-dd-yyyy"
         self.seletedDate = formatter.string(from: datePicker.date)
-        weddingDateTXT.text! = self.convertDateFormater(self.seletedDate)
+        weddingDateTXT.text! = self.convertDateFormater3(self.seletedDate)
         self.view.endEditing(true)
     }
     
@@ -785,21 +809,33 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
                                             
                                             if let bannerImage =  imageData?["wedding_banner_image"] as? String
                                             {
-                                                let img = URL(string: bannerImage)
+                                                if bannerImage != ""
+                                                {
+                                                    let img = URL(string: bannerImage)
+                                                    
+                                                    self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                                }
                                                 
-                                                self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
                                             }
                                             if let myselfImage =  imageData?["myself_image"] as? String
                                             {
-                                                let img = URL(string: myselfImage)
-                                                
-                                                self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                                if myselfImage != ""
+                                                {
+                                                    let img = URL(string: myselfImage)
+                                                    
+                                                    self.image1.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                                }
+                                               
                                             }
                                             if let parnerImage =  imageData?["parnter_image"] as? String
                                             {
-                                                let img = URL(string: parnerImage)
+                                                if parnerImage != ""
+                                                {
+                                                    let img = URL(string: parnerImage)
+                                                    
+                                                    self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                                }
                                                 
-                                                self.image2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
                                             }
 //
                                             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
@@ -960,18 +996,21 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
 
     //===MARK:---- calculate difference
     
-    func dateDiff(dateStr:String) -> String {
+    func dateDiff(dateStr:String) -> String
+    {
         let f:DateFormatter = DateFormatter()
         f.timeZone = NSTimeZone.local
         //        f.dateFormat = "yyyy-M-dd'T'HH:mm:ss.SSSZZZ"
-        f.dateFormat = "MMMM-dd-yyyy"
+        f.dateFormat = "yyyy-MM-dd"
         let now = f.string(from: NSDate() as Date)
+        
         let startDate = f.date(from: dateStr)
         let endDate = f.date(from: now)
         let calendar: NSCalendar = NSCalendar.current as NSCalendar
         
         let calendarUnits:NSCalendar.Unit = [.day, .hour, .minute, .second]
         //let calendarUnits:NSCalendar.Unit = [.year,.month,.weekOfMonth,.day, .hour, .minute, .second]
+        
         let dateComponents = calendar.components(calendarUnits, from: startDate!, to: endDate!, options: [])
         // let weeks = abs(Int32(dateComponents.weekOfMonth!))
         //let month = abs(Int32(dateComponents.month!))
@@ -1045,20 +1084,56 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     func convertDateFormater(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        if date != nil
+        {
+            return  dateFormatter.string(from: date!)
+        }
+        else
+        {
+            return  ""
+        }
+        
+        
+        
+    }
+    func convertDateFormater3(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM-dd-yyyy"
         let date = dateFormatter.date(from: date)
         dateFormatter.dateFormat = "dd MMMM yyyy"
-        return  dateFormatter.string(from: date!)
+        if date != nil
+        {
+            return  dateFormatter.string(from: date!)
+        }
+        else
+        {
+            return  ""
+        }
+        
+        
         
     }
+    
     
     func convertDateFormater2(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let date = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "MMMM-dd-yyyy"
-        return  dateFormatter.string(from: date!)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if date != nil
+        {
+            return  dateFormatter.string(from: date!)
+        }
+        else
+        {
+          return  ""
+        }
+        
         
     }
     

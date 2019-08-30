@@ -53,13 +53,16 @@ class ForgotViewController: UIViewController {
             let check = isValidEmail(testStr: emailTextfiled.text!)
             if check
             {
-                if CheckInternet.Connection()
+                if !(NetworkEngine.networkEngineObj.isInternetAvailable())
                 {
+                    NetworkEngine.networkEngineObj.showInterNetAlert()
+                }
+                else
+                {
+                    
                     self.fogotAPI()
                 }
-                else{
-                    Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
-                }
+               
             }
             else{
                 Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Vaild Email")

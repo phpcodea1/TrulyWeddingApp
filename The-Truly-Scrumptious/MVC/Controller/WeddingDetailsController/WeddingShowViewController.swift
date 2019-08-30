@@ -14,11 +14,14 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var nodataLbl: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        self.nodataLbl.isHidden = true
+
+
         tableView.register(UINib(nibName: "AllWeddingShowTableViewCell", bundle: nil), forCellReuseIdentifier: "AllWeddingShowTableViewCell")
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
@@ -40,7 +43,7 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
     {
         
         let cell =  tableView.dequeueReusableCell(withIdentifier: "AllWeddingShowTableViewCell") as? AllWeddingShowTableViewCell
-         var dict = self.weddingShowArray.object(at: indexPath.section) as! NSDictionary
+         var dict = self.weddingShowArray.object(at: indexPath.row) as! NSDictionary
         if let title = dict.value(forKey: "title") as? String
         {
             cell?.weddingTitle.text = title
@@ -61,9 +64,13 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
         }
         if let image = dict.value(forKey: "image") as? String
         {
+            if image != ""
+            {
            if  let url = URL(string: image) as? URL
            {
+            
              cell?.profileImg.sd_setImage(with: url, completed: nil)
+            }
             }
         }
         
@@ -93,8 +100,13 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
     @objc func checkMarkButtonClicked ( sender: UIButton)
     {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WeddingShowDetails_VC") as! WeddingShowDetails_VC
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewWeddingShowDetailsViewController") as! NewWeddingShowDetailsViewController
+        var dict = self.weddingShowArray.object(at: sender.tag) as! NSDictionary
+        if let title = dict.value(forKey: "id") as? String
+        {
+            vc.id = title
+        }
+       
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -126,7 +138,15 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
                 if let data = (response as! NSDictionary).value(forKey: "data") as? NSArray
                 {
                     self.weddingShowArray = data.mutableCopy() as! NSMutableArray
-                    
+                    if self.weddingShowArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
                 }
                 self.tableView.reloadData()
                 
@@ -143,7 +163,7 @@ class WeddingShowViewController: UIViewController, UITableViewDataSource, UITabl
     func convertDateFormater(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.date(from: date)
         dateFormatter.dateFormat = "dd MMMM yyyy"
         return  dateFormatter.string(from: date!)

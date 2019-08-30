@@ -46,6 +46,7 @@ class AllGuestListViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet var seatView: UIView!
     
     
+    @IBOutlet weak var nodataLbl: UILabel!
     // for list
     
        var listArray = NSMutableArray()
@@ -59,7 +60,7 @@ class AllGuestListViewController: UIViewController,UITableViewDelegate,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
          self.blurView.isHidden = true
-        
+        self.nodataLbl.isHidden = true
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
             NetworkEngine.networkEngineObj.showInterNetAlert()
@@ -782,6 +783,11 @@ class AllGuestListViewController: UIViewController,UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGuestTableViewCell") as!
+        AllGuestTableViewCell
+        
+        cell.backgroundColor = UIColor.white
+        tableView.deselectRow(at: indexPath, animated: true)
                 let vc = storyboard?.instantiateViewController(withIdentifier: "EditGuestViewController") as! EditGuestViewController
         
          var dict = self.GuestListArray.object(at: indexPath.row) as! NSDictionary
@@ -1015,8 +1021,15 @@ class AllGuestListViewController: UIViewController,UITableViewDelegate,UITableVi
                                                         self.tableView.reloadData()
                                     
                                 }
-                         
-                            }
+                                if self.GuestListArray.count>0
+                                {
+                                    self.nodataLbl.isHidden = true
+                                }
+                                else
+                                    
+                                {
+                                    self.nodataLbl.isHidden = false
+                                }                            }
                             
                             
                             

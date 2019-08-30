@@ -12,7 +12,7 @@ import ObjectMapper
 class VenueDetailsModel:Mappable
 {
     var code : String?
-    var data : Data?
+    var data : Data1?
     var message : String?
     var status : String?
 
@@ -32,7 +32,7 @@ required init?(map: Map)
 
     
 }
-class Data : Mappable{
+class Data1 : Mappable{
    
     
     

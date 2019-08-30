@@ -8,39 +8,42 @@
 
 import UIKit
 import CoreData
+
 import IQKeyboardManager
 import FBSDKCoreKit
 import GoogleSignIn
+import Foundation
+
+import UIKit
+import CoreData
+import UserNotifications
+import Toast_Swift
+
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder,UNUserNotificationCenterDelegate,UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
       
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         GIDSignIn.sharedInstance().clientID = "433162082332-qr8d0g04ntu6fhkl2bq773q2sbo6ejcc.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self as? GIDSignInDelegate
         IQKeyboardManager.shared().isEnabled = true
-
         
+       registerForRemoteNotification()
+      
        Autologin()
 
         return true
     }
-    
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        let handled = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
-        
-        return handled
-        
-    }
-    
+  
+  
     
     func Autologin()
     {
@@ -83,9 +86,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            
         
     }
-    
-    
-
+  
+ 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -154,6 +156,108 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+   
+  
+        
+        //--MARK:--Get Token-----
+        func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+            var token = ""
+            for i in 0..<deviceToken.count
+            {
+                token = token + String(format: "%02.2hhx", arguments: [deviceToken[i]])
+            }
+            print("device token =  \(token)")
+           
+            UserDefaults.standard.set(token, forKey: "DEVICETOKEN")
+            UserDefaults.standard.synchronize()
+        
+        }
+    
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+    {
+        
+        print("error = \(error)")
+        UserDefaults.standard.setValue("", forKey: "FCMToken")
+        UserDefaults.standard.set("", forKey: "token")
+        UserDefaults.standard.synchronize()
+    }
+  
+    
+    
+    //MARK:-- remote notifications methods---
+    func registerForRemoteNotification() {
+        if #available(iOS 10.0, *)
+        {
+            let center  = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                if error == nil
+                {
+                    DispatchQueue.main.async {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                    
+                }
+                else
+                
+                {
+                    print("error = \(error?.localizedDescription)")
+                }
+            }
+            // For iOS 10 data message (sent via FCM
+            //            Messaging.messaging().delegate = self
+            
+        }
+        else
+        {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+        
+    }
+    
+    
+    //MARK:- Notification Methods------
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(notification.request.content.userInfo)
+        
+        let userInfo = notification.request.content.userInfo
+        
+        print("userInfo = \(userInfo)")
+   
+        completionHandler([.alert, .badge, .sound])
+    }
+    //Called to let your app know which action was selected by the user for a given notification.
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        
+         print("userInfo = \(userInfo)")
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MYNoticeBoardViewController") as! MYNoticeBoardViewController
+        let nav = UINavigationController(rootViewController: vc)
+        delegate?.window?.rootViewController = nav
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+        
+        
+        completionHandler()
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
+    {
+      print("userInfo = \(userInfo)")
+      
+        
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
 
 }
+
 

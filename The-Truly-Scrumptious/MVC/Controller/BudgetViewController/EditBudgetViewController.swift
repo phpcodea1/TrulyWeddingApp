@@ -63,15 +63,17 @@ class EditBudgetViewController: UIViewController
             
         else
         {
-            if CheckInternet.Connection()
+        
+            if !(NetworkEngine.networkEngineObj.isInternetAvailable())
             {
-                self.ADDBUDGETAPI()
+                NetworkEngine.networkEngineObj.showInterNetAlert()
             }
+            else
+            {
                 
-                
-            else{
-                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
+               self.ADDBUDGETAPI()
             }
+            
         }
         
         

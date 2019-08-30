@@ -44,6 +44,7 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var blurView: UIView!
     //for table
     
+    @IBOutlet weak var nodataLbl: UILabel!
     
    
     var tableArray = NSMutableArray()
@@ -68,6 +69,8 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
             blurView.isHidden = true
         headeRView.clipsToBounds = true
         headeRView.layer.cornerRadius = 10
+        self.nodataLbl.isHidden = true
+        
         headeRView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
@@ -342,6 +345,18 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     self.GuestListArray = data.mutableCopy() as! NSMutableArray
                     self.GuestListArray2 = data.mutableCopy() as! NSMutableArray
                     
+                    
+                    
+                    if self.GuestListArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
+
                     self.blurView.isHidden = true
                   
                     self.GuestListTable.reloadData()
@@ -746,14 +761,18 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
             
         }
        
-        if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
+        if selectedRow != -1
         {
-        if let id = dict2.value(forKey: "id") as? String
-        {
-            
-            self.MoveGuestId = id
+            if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
+            {
+                if let id = dict2.value(forKey: "id") as? String
+                {
+                    
+                    self.MoveGuestId = id
+                }
+            }
         }
-        }
+      
         
         var dict = self.GuestListArray.object(at: self.selectedSection) as! NSDictionary
         var table_name1 = dict.value(forKey: "table_name") as! String
@@ -783,6 +802,10 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func showPicker()
     {
         
+        if self.GuestListArray.count>1
+        {
+        
+        
         let optionMenu = UIAlertController(title: "Are you sure you want to move table?", message: "If yes ! Please select other table", preferredStyle: .alert)
         
         
@@ -805,7 +828,27 @@ class AllGuestViewController: UIViewController,UITableViewDelegate,UITableViewDa
         optionMenu.addAction(deleteAction2)
         
         self.present(optionMenu, animated: true, completion: nil)
-        
+        }
+        else
+            
+        {
+            let optionMenu = UIAlertController(title: "Alert!", message: "There is no another table to move", preferredStyle: .alert)
+            
+            let deleteAction = UIAlertAction(title: "Ok", style: .default, handler:
+            {
+                (alert: UIAlertAction!) -> Void in
+                
+                self.selectedRow = -1
+                self.GuestListTable.reloadData()
+                
+            })
+            
+            optionMenu.addAction(deleteAction)
+            
+            
+            self.present(optionMenu, animated: true, completion: nil)
+        }
+
         
     }
     

@@ -215,10 +215,16 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
     
     func facebookAPI()
     {
+        var DEVICETOKEN = "bc383f4cf9b7a177102338a67b7c845eb22088db570d559129a53f898ab4710b"
+        if let DEVICETOKEN1 = DEFAULT.value(forKey: "DEVICETOKEN") as? String
+        {
+            DEVICETOKEN = DEVICETOKEN1
+        }
+        
         let params:[String:Any] = [
             "email":facebookEmail,
-            "deviceToken":"abc",
-            "deviceType":"1",
+            "deviceToken":DEVICETOKEN,
+            "deviceType":"2",
             "type":"F",
             "username":facebookName,
             "profileImage":facebookProfile]
@@ -290,10 +296,16 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
     
     func gmailAPI()
     {
+        
+        var DEVICETOKEN = "bc383f4cf9b7a177102338a67b7c845eb22088db570d559129a53f898ab4710b"
+        if let DEVICETOKEN1 = DEFAULT.value(forKey: "DEVICETOKEN") as? String
+        {
+            DEVICETOKEN = DEVICETOKEN1
+        }
         let params:[String:Any] = [
             "email":gmailEmail,
-            "deviceToken":"abc",
-            "deviceType":"1",
+            "deviceToken":DEVICETOKEN,
+            "deviceType":"2",
             "type":"G",
             "username":gmailName,
              "profileImage":gmailProfile]
@@ -420,11 +432,19 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
     
     func loginAPI()
     {
+        var DEVICETOKEN = "bc383f4cf9b7a177102338a67b7c845eb22088db570d559129a53f898ab4710b"
+        if let DEVICETOKEN1 = DEFAULT.value(forKey: "DEVICETOKEN") as? String
+        {
+            DEVICETOKEN = DEVICETOKEN1
+        }
+
+        
+        
         let params:[String:Any] = [
             "email":emailTextfiled.text!,
             "password":passwordTextfiled.text!,
-            "deviceToken":"12345676789",
-            "deviceType":"1"]
+            "deviceToken":DEVICETOKEN,
+            "deviceType":"2"]
         
         
         print("para in login = ")
@@ -484,6 +504,14 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
                     defaultValues.synchronize()
                     
                    
+                }
+                else if ((response as! NSDictionary).value(forKey: "status") as! String == "fail")
+                    
+                {
+                    
+                        Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr:(response as! NSDictionary).value(forKey: "message") as! String)
+                        
+                    
                 }
                 
                 /*

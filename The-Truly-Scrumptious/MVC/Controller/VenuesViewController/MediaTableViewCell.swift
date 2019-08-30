@@ -58,8 +58,12 @@ class MediaTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionV
             cell.playBtn.isHidden = true
             if let media_file = dict.value(forKey: "media_file") as? String
             {
-                let url = URL(string: media_file)!
-                cell.image.sd_setImage(with: url, completed: nil)
+                if media_file != ""
+                {
+                    let url = URL(string: media_file)!
+                    cell.image.sd_setImage(with: url, completed: nil)
+                }
+                
             }
         }
         else
@@ -68,7 +72,11 @@ class MediaTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionV
               var media_file = dict.value(forKey: "media_file") as! String
             let url = URL(string: media_file)!
             
-            if let thumbnailImage = getThumbnailImage(forUrl: url) {
+            DispatchQueue.main.async {
+                
+            }
+            if let thumbnailImage = getThumbnailImage(forUrl: url)
+            {
                 cell.image.image = thumbnailImage
             }
             

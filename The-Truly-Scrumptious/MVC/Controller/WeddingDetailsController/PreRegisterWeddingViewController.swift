@@ -79,10 +79,11 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
 
         lbl.attributedText = underlineAttriString
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabel(tap:)))
-        self.lbl.addGestureRecognizer(tap)
-        self.lbl.isUserInteractionEnabled = true
-           showDatePicker()
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTermTapped(gesture:)))
+//        self.lbl.addGestureRecognizer(tap)
+//        self.lbl.isUserInteractionEnabled = true
+        
+        showDatePicker()
         self.venueTxt.delegate = self
         self.whereLbl.delegate = self
         self.attendingTxt.delegate = self
@@ -336,24 +337,7 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
     }
     
 
-    @objc func tapLabel(tap: UITapGestureRecognizer) {
-        guard let range = self.lbl.text?.range(of: "terms of services")?.nsRange else {
-            return
-        }
-//        guard let range2 = self.lbl.text?.range(of: "privacy policy")?.nsRange else {
-//            return
-//        }
-        if tap.didTapAttributedTextInLabel(label: self.lbl, inRange: range) {
-            // Substring tapped
-             print(range)
-        }
-//        else if tap.didTapAttributedTextInLabel(label: self.lbl, inRange: range2) {
-//            // Substring tapped
-//            
-//            print(range2)
-//        }
-    }
-    
+   
     @IBAction func goBack(_ sender: Any)
     {
         self.navigationController?.popViewController(animated:true)
@@ -397,14 +381,14 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
         }
         else
         {
-            if CheckInternet.Connection()
+    
+            if !(NetworkEngine.networkEngineObj.isInternetAvailable())
             {
-                self.PreRegisterAPI()
+                NetworkEngine.networkEngineObj.showInterNetAlert()
             }
-                
-                
-            else{
-                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
+            else
+            {
+               self.PreRegisterAPI()
             }
         }
     }
@@ -439,7 +423,7 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
                 "town_city":townCityTxt.text!,
                 "country":countryTxt.text!,
                 "postal_code":postalCodeTxt.text!,
-                "wedding_date":weddingDateTxt.text!,
+                "wedding_date":self.convertDateFormater2(weddingDateTxt.text!),
                 "booked_your_venue":venueTxt.text!,
                 "hear_about_show":whereLbl.text!,
                 "bride_or_groom":bridgeOrGroomTxt.text!,
@@ -460,7 +444,11 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
                     {
                         self.navigationController?.popViewController(animated: true)
                     }
+                    else
                     
+                    {
+                       Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr:(response as! NSDictionary).value(forKey: "message") as! String)
+                    }
                    
                 }
                     
@@ -494,7 +482,7 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let date = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "MMMM-dd-yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return  dateFormatter.string(from: date!)
         
     }
@@ -548,46 +536,27 @@ class PreRegisterWeddingViewController: UIViewController,UITextFieldDelegate,UIP
         self.present(optionMenu, animated: true, completion: nil)
         
     }
+    //  lbl.text = "I accept the terms of service and agree that Truly Scrumptious may share my information with the venue and event exhibitors."
+ 
     
-}
-extension UITapGestureRecognizer {
-    
-    func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
-        // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
-        let layoutManager = NSLayoutManager()
-        let textContainer = NSTextContainer(size: CGSize.zero)
-        let textStorage = NSTextStorage(attributedString: label.attributedText!)
-        
-        // Configure layoutManager and textStorage
-        layoutManager.addTextContainer(textContainer)
-        textStorage.addLayoutManager(layoutManager)
-        
-        // Configure textContainer
-        textContainer.lineFragmentPadding = 0.0
-        textContainer.lineBreakMode = label.lineBreakMode
-        textContainer.maximumNumberOfLines = label.numberOfLines
-        let labelSize = label.bounds.size
-        textContainer.size = labelSize
-        
-        // Find the tapped character location and compare it to the specified range
-        let locationOfTouchInLabel = self.location(in: label)
-        let textBoundingBox = layoutManager.usedRect(for: textContainer)
-        //let textContainerOffset = CGPointMake((labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x,
-        //(labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
-        let textContainerOffset = CGPoint(x: (labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x, y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y)
-        
-        //let locationOfTouchInTextContainer = CGPointMake(locationOfTouchInLabel.x - textContainerOffset.x,
-        // locationOfTouchInLabel.y - textContainerOffset.y);
-        let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
-        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
-        return NSLocationInRange(indexOfCharacter, targetRange)
+    @IBAction func termService(_ sender: UIButton)
+    {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "StaticPageViewController") as! StaticPageViewController
+        vc.openpath = "http://112.196.9.211:8230/wp/service-standards/"
+        vc.titleShow = "Term of Services"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-}
-extension Range where Bound == String.Index {
-    var nsRange:NSRange {
-        return NSRange(location: self.lowerBound.encodedOffset,
-                       length: self.upperBound.encodedOffset -
-                        self.lowerBound.encodedOffset)
+    @IBAction func shareInfo(_ sender: UIButton)
+    {
+       
+        let vc = storyboard?.instantiateViewController(withIdentifier: "StaticPageViewController") as! StaticPageViewController
+        vc.openpath = "http://112.196.9.211:8230/wp/contact-us/"
+        vc.titleShow = "Share your inforamtion"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
+    
+    
 }
+

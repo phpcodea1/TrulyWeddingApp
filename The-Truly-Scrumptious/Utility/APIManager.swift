@@ -119,10 +119,7 @@ class WebService:NSObject{
     }
     
     
-    func headersintoApi()
-    {
-        
-    }
+  
 }
 
 

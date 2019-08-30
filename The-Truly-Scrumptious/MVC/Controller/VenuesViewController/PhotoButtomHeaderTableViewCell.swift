@@ -10,7 +10,10 @@ import UIKit
 
 class PhotoButtomHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var venue3: UILabel!
+    @IBOutlet weak var venue2: UILabel!
     
+    @IBOutlet weak var venue1: UILabel!
     
     @IBOutlet weak var bookMarkView: UIView!
     @IBOutlet weak var ShortView: UIView!

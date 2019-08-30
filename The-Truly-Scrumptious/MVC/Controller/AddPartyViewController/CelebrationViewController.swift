@@ -584,19 +584,29 @@ class CelebrationViewController: UIViewController,UIGestureRecognizerDelegate {
                     
                     if let bannerImg = self.viewProfileModel.data?.celebrationBannerImage
                     {
-                        let img = URL(string: bannerImg)
-                        self.bannerImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                        if bannerImg != ""
+                        {
+                            let img = URL(string: bannerImg)
+                            self.bannerImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                        }
+                        
                     }
+                    self.profileImage.layer.borderWidth = 1.0
+                    self.profileImage.layer.masksToBounds = false
+                    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
+                    // + self.profileImg2.frame.height/2
+                    self.profileImage.layer.borderColor = UIColor.clear.cgColor
+                    self.profileImage.clipsToBounds = true
+                    
                     if let profileImg = self.viewProfileModel.data?.celebrationProfileImage
                     {
-                        let img = URL(string: profileImg)
-                        self.profileImage.layer.borderWidth = 1.0
-                        self.profileImage.layer.masksToBounds = false
-                        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
-                        // + self.profileImg2.frame.height/2
-                        self.profileImage.layer.borderColor = UIColor.clear.cgColor
-                        self.profileImage.clipsToBounds = true
-                        self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                        if profileImg != ""
+                        {
+                            let img = URL(string: profileImg)
+                            
+                            self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                        }
+                       
                     }
                 }
                 else
@@ -723,14 +733,22 @@ class CelebrationViewController: UIViewController,UIGestureRecognizerDelegate {
                                                     
                                                     if let bannerImag = imageData["celebration_banner_image"] as? String
                                                     {
-                                                        let img = URL(string: bannerImag)
-                                                        self.bannerImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                                                        if bannerImag != ""
+                                                        {
+                                                            let img = URL(string: bannerImag)
+                                                            self.bannerImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                                                        }
+                                                       
                                                     }
                                                     
                                                     if let profileImag = imageData["celebration_profile_image"] as? String
                                                     {
-                                                        let img = URL(string: profileImag)
-                                                         self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                                                        if profileImag != ""
+                                                        {
+                                                            let img = URL(string: profileImag)
+                                                            self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "Splash-screen.png"))
+                                                        }
+                                                        
                                                    
                                                       
                                                     }
@@ -851,7 +869,7 @@ class CelebrationViewController: UIViewController,UIGestureRecognizerDelegate {
         let f:DateFormatter = DateFormatter()
         f.timeZone = NSTimeZone.local
         //        f.dateFormat = "yyyy-M-dd'T'HH:mm:ss.SSSZZZ"
-        f.dateFormat = "MMMM-dd-yyyy"
+        f.dateFormat = "yyyy-MM-dd"
         let now = f.string(from: NSDate() as Date)
         let startDate = f.date(from: dateStr)
         let endDate = f.date(from: now)
@@ -970,7 +988,7 @@ class CelebrationViewController: UIViewController,UIGestureRecognizerDelegate {
         }
     }
     
-    func convertDateFormater(_ date: String) -> String
+    func convertDateFormater3(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM-dd-yyyy"
@@ -979,13 +997,58 @@ class CelebrationViewController: UIViewController,UIGestureRecognizerDelegate {
         return  dateFormatter.string(from: date!)
         
     }
+    
+    func convertDateFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM-dd-yyyy"
+        let date2 = dateFormatter.date(from: date)
+        
+        
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        
+        if date2 != nil
+        {
+            return  dateFormatter.string(from: date2!)
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date3 = dateFormatter.date(from: date)
+            
+            
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            
+            if date3 != nil
+            {
+                return  dateFormatter.string(from: date3!)
+            }
+            else
+            {
+                return  ""
+            }
+            
+        }
+        
+        
+    }
+
+    
     func convertDateFormater2(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let date = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "MMMM-dd-yyyy"
-        return  dateFormatter.string(from: date!)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if date != nil
+        {
+            return  dateFormatter.string(from: date!)
+        }
+       else
+        {
+             return  ""
+        }
         
     }
 }

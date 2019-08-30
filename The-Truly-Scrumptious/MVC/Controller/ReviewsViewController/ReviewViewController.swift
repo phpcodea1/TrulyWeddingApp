@@ -9,9 +9,27 @@
 import UIKit
 import FloatRatingView
 
-class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,FloatRatingViewDelegate {
+class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,FloatRatingViewDelegate,UITextViewDelegate {
    
    
+    @IBOutlet weak var messageText: UILabel!
+    
+    @IBOutlet weak var longImg: UIImageView!
+    
+    @IBOutlet weak var smallImg: UIImageView!
+    
+    @IBOutlet weak var nameTxt: UILabel!
+    
+    @IBOutlet weak var avgRating: FloatRatingView!
+    
+    
+    @IBOutlet weak var totalReviewLbl: UILabel!
+    
+    @IBOutlet weak var addressLbl: UILabel!
+    
+    @IBOutlet weak var reviewCharCount: UILabel!
+    
+    
     @IBOutlet weak var yesSegmt: UISegmentedControl!
     @IBOutlet weak var reviewTextfiled: UITextField!
     
@@ -27,6 +45,8 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var headerLabel: UILabel!
     var backHidden:String = ""
     
+    var fromVenue = ""
+    
     
     var Quality_of_product_or_service = ""
     var Communication = ""
@@ -34,6 +54,13 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
     var Flexibilty = ""
     var Value_for_Money = ""
     
+    
+    var VenueId = ""
+    var average_rating = 0.0
+    var mainDict = NSDictionary()
+    
+    
+
     
     var commonCell:ReviewTableViewCell!
     
@@ -47,6 +74,24 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
         titleTextfiled.layer.borderColor = myColor.cgColor
         titleTextfiled.layer.borderWidth = 1.0
         titleTextfiled.layer.cornerRadius = 5
+        
+        
+        if fromVenue == "no"
+        {
+           messageText.text = "How would you rate this supplier?"
+        }
+        else
+        {
+             messageText.text = "How would you rate this venue?"
+        }
+        
+       
+        
+        Quality_of_product_or_service = "1"
+        Communication = "1"
+        Professionalism = "1"
+        Flexibilty = "1"
+        Value_for_Money = "1"
         
         let myColor1 : UIColor = UIColor.darkGray
         textview1.layer.borderColor = myColor1.cgColor
@@ -62,6 +107,8 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
         yesSegmt.layer.cornerRadius = yesSegmt.frame.height/2
         yesSegmt.clipsToBounds=true
         
+        
+        textview1.delegate = self
         
         if viewHide2 == "yes"
         {
@@ -89,9 +136,87 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
             self.reviewsButton.isHidden = false
         }
         
+        
+        if let address = self.mainDict.value(forKey: "address") as? String
+        {
+          addressLbl.text = "Address: "   + address
+        }
+        
+//        if let type = self.mainDict.value(forKey: "type") as? String
+//        {
+//            if type.lowercased() == "v"
+//            {
+//                cell.venueTypeLbl.text = "Venue"
+//            }
+//            else
+//            {
+//                cell.venueTypeLbl.text = "Supplier"
+//            }
+//
+//        }
+        
+        
+        if let address = self.mainDict.value(forKey: "name") as? String
+        {
+            self.nameTxt.text = address
+        }
+//        if let address = self.mainDict.value(forKey: "name") as? String
+//        {
+//            t.text = address
+//        }
+        
+        if let amount = self.mainDict.value(forKey: "banner_image") as? String
+        {
+            
+            if amount != ""
+            {
+                let url1 = URL(string: amount)!
+                longImg.sd_setImage(with: url1, completed: nil)
+            }
+           
+        }
+        if let id = self.mainDict.value(forKey: "login_id") as? String
+        {
+            
+            self.VenueId = id
+        }
+        
+      
+       
+        if let avgrating_persons = self.mainDict.value(forKey: "avgrating_persons") as? Int
+        {
+            if average_rating>1
+            {
+               totalReviewLbl.text =  "\(avgrating_persons)" + "Reviews"
+            }
+            else
+            
+            {
+                totalReviewLbl.text =  "\(avgrating_persons)" + "Review"
+            }
+            
+        }
+        if let avgrating = self.mainDict.value(forKey: "avgrating") as? Int
+        {
+            avgRating.rating =  Float(avgrating)
+        }
+        
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
-    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
+    {
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        let numberOfChars = newText.count
+        
+        self.reviewCharCount.text = "Write your review " + "\(numberOfChars)" + " / 30"
+        return numberOfChars < 30    // 10 Limit Value
+    }
     
     @IBAction func backAction(_ sender: UIButton) {
         
@@ -132,24 +257,32 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
         if ratingView.tag == 0
         {
             Quality_of_product_or_service = "\(Float(rating))"
+            average_rating = average_rating + Double((Float(rating)))
         }
+            
        else if ratingView.tag == 1
         {
             Communication = "\(Float(rating))"
+            average_rating = average_rating + Double((Float(rating)))
         }
         else if ratingView.tag == 2
         {
             Professionalism = "\(Float(rating))"
+            average_rating = average_rating + Double((Float(rating)))
         }
         else if ratingView.tag == 3
         {
             Flexibilty = "\(Float(rating))"
+            average_rating = average_rating + Double((Float(rating)))
         }
         else
         {
             Value_for_Money = "\(Float(rating))"
+            average_rating = average_rating + Double((Float(rating)))
         }
         
+        
+       
     }
     
     
@@ -168,6 +301,148 @@ class ReviewViewController: UIViewController,UITableViewDelegate,UITableViewData
         print(Flexibilty)
         print(Value_for_Money)
         
+        
+        if  (titleTextfiled.text?.count == 0) || (textview1.text?.count == 0)
+        {
+            Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please enter all details.")
+        }
+        else
+        {
+
+            if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+            {
+                NetworkEngine.networkEngineObj.showInterNetAlert()
+            }
+            else
+            {
+                self.AddRetingAPI()
+            }
+        }
+        
+        
     }
     
+    
+    func AddRetingAPI()
+    {
+        
+        var userEmail = ""
+        if let email = DEFAULT.value(forKey: "email") as? String
+        {
+            userEmail = email
+        }
+        var eventType = "wedding"
+        if let eventType1 = DEFAULT.value(forKey: "eventType") as? String
+        {
+            eventType = eventType1
+        }
+        var eventID = "1"
+        if let eventType1 = DEFAULT.value(forKey: "eventID") as? String
+        {
+            eventID = eventType1
+        }
+        var recom = "1"
+        if yesSegmt.selectedSegmentIndex == 0
+        {
+            recom = "1"
+        }
+        else
+        {
+            recom = "0"
+        }
+        var username = "Ganesh"
+        if let name1 = DEFAULT.value(forKey: "name") as? String
+        {
+            username = name1
+           
+            
+        }
+        var params:[String:Any] = [:]
+    var api = ""
+        
+        if fromVenue == "yes"
+        {
+       
+            params =
+                [
+                    "email":userEmail,
+                    "event_id":eventID,
+                    "venue_id":self.VenueId,
+                    "customer_name":username,
+                    "quality_rating":Quality_of_product_or_service,
+                    "communication_rating":Communication,
+                    "professionalism_rating":Professionalism,
+                    "flexibility_rating":Flexibilty,
+                    "average_rating":"\(Int(average_rating/5))",
+                    "recommend_company":recom,
+                    "event_type":eventType,
+                    "review_text": textview1.text!,
+                    "title":titleTextfiled.text!,
+                    "value_money_rating":self.Value_for_Money
+                    
+            ]
+        api = ADDVENUERATING
+        }
+        else
+        
+        {
+            params =
+                [
+                    "email":userEmail,
+                    "event_id":eventID,
+                    "supplier_id":self.VenueId,
+                    "customer_name":username,
+                    "quality_rating":Quality_of_product_or_service,
+                    "communication_rating":Communication,
+                    "professionalism_rating":Professionalism,
+                    "flexibility_rating":Flexibilty,
+                    "average_rating":"\(Int(average_rating/5))",
+                    "recommend_company":recom,
+                    "event_type":eventType,
+                    "review_text": textview1.text!,
+                    "title":titleTextfiled.text!,
+                    "value_money_rating":self.Value_for_Money
+                    
+            ]
+            api = ADDSUPPLIERRATING
+            
+        }
+        
+        
+        
+        print(params)
+        WebService.shared.apiDataPostMethod(url:api, parameters: params) { (response, error) in
+            if error == nil
+            {
+                
+                if let resp = response as? NSDictionary
+                {
+                    if let resp = resp.value(forKey: "status") as? String
+                    {
+                        if resp  == "success"
+                        {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
+                        
+                    }
+                    else
+                    {
+                        if let msg = resp.value(forKey: "message") as? String
+                        {
+                            Helper.helper.showAlertMessage(vc: self, titleStr: "Message!", messageStr:msg)
+                        }
+                        
+                    }
+                }
+                
+            }
+            else
+            {
+                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr:"Error")
+                
+            }
+            
+        }
+    }
 }

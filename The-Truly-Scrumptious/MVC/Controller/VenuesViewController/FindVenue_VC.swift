@@ -80,6 +80,10 @@ class FindVenue_VC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         self.capcitySlider.setValue(0, animated: true)
         self.seatLbl.text = "\(Int(capcitySlider.value))"
         
+        self.locationTXT.text = ""
+        self.venueCatTxt.text = ""
+        self.seatLbl.text = "0"
+        
         DEFAULT.set("", forKey: "typeLat")
         DEFAULT.set("", forKey: "typeLong")
         DEFAULT.set("" , forKey: "selectedCountryId")
@@ -260,11 +264,11 @@ class FindVenue_VC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
        // let vc = self.storyboard?.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
          let vc = storyboard?.instantiateViewController(withIdentifier: "VenuePricing_VC") as! VenuePricing_VC
         
-        DEFAULT.set(self.typeLat, forKey: "typeLat")
+          DEFAULT.set(self.typeLat, forKey: "typeLat")
          DEFAULT.set(self.typeLong, forKey: "typeLong")
          DEFAULT.set(self.selectedCountryId , forKey: "selectedCountryId")
          DEFAULT.set(self.civilCeremony, forKey: "civilCeremony")
-        DEFAULT.set("\(self.seatLbl.text!)", forKey: "noOfSeat")
+          DEFAULT.set("\(self.seatLbl.text!)", forKey: "noOfSeat")
         
 //        vc.searchlat = self.typeLat
 //        vc.searchLong = self.typeLong

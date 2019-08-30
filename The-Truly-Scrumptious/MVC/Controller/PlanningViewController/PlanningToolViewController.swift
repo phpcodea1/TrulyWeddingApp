@@ -73,10 +73,19 @@ class PlanningToolViewController: UIViewController,UICollectionViewDataSource,UI
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        
-        
-      viewprofileAPI()
             super.viewWillAppear(true)
+        
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            viewprofileAPI()
+        }
+        
+        
+        
         if let eventType1 = DEFAULT.value(forKey: "eventType") as? String
         {
             eventType = eventType1
@@ -172,7 +181,7 @@ class PlanningToolViewController: UIViewController,UICollectionViewDataSource,UI
                 {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "BudgetVC") as! BudgetVC
                     vc.budgetAmount = self.total_budget
-                    
+                    vc.fromPlanning = "yes"
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 

@@ -14,6 +14,7 @@ class AllEventTableViewCell: UITableViewCell {
     @IBOutlet var celeProfileImg: UIImageView!
     
     @IBOutlet var selectButton: UIButton!
+    @IBOutlet var deleteButton: UIButton!
     @IBOutlet var celeUiView: UIView!
     
     @IBOutlet var wedSecImg: UIImageView!

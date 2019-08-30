@@ -18,6 +18,8 @@ import SDWebImage
 
  var budgetAmount = ""
     
+    var fromPlanning = ""
+    
     
     @IBOutlet var costLbl: UILabel!
     
@@ -106,6 +108,8 @@ import SDWebImage
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        
+        
         
         var dict = self.mainArray.object(at: indexPath.section) as! NSDictionary
 
@@ -271,19 +275,28 @@ import SDWebImage
     
     
    
-    @IBAction func goBack(_ sender: UIButton) {
+    @IBAction func goBack(_ sender: UIButton)
+    {
         
-       // self.navigationController?.popViewController(animated: true)
-        
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-        let navVC = UINavigationController.init(rootViewController: vc)
-        navVC.setNavigationBarHidden(true, animated: true)
-        if let window = UIApplication.shared.windows.first
+        if fromPlanning == "yes"
         {
-            window.rootViewController = navVC
-            window.makeKeyAndVisible()
+           self.navigationController?.popViewController(animated: true)
+        }
+       else
+        {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+            let navVC = UINavigationController.init(rootViewController: vc)
+            navVC.setNavigationBarHidden(true, animated: true)
+            if let window = UIApplication.shared.windows.first
+            {
+                window.rootViewController = navVC
+                window.makeKeyAndVisible()
+            }
+            
         }
         
+        
+      
     }
     @objc func arrowClick(_ sender:UIButton)
     {

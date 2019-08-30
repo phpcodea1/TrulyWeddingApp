@@ -1204,8 +1204,8 @@
             let params:[String:Any] =
                 [
                     "email":userEmail,
-                    "event_id":eve,
-                    "event_type":EventType ?? "",
+                    "event_id":eventID,
+                    "event_type":eventType,
                     "menu_name":menuNameTxt.text!
             ]
             
@@ -1361,7 +1361,7 @@
                     "last_name":lastNameTxt.text!,
                     "group_id":self.pickerSelectedCatId,
                     "age_level":userage,
-                    "attendence":attend,
+                    "attendence":"attend",
                     "table_id":self.table_id,
                     "menu_id":self.menu_id,
                     "list_id":self.list_id,

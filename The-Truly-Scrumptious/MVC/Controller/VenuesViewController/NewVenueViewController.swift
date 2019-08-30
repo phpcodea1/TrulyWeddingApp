@@ -11,6 +11,7 @@ import UIKit
 class NewVenueViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
    
     
+    @IBOutlet weak var nodataLbl: UILabel!
     @IBOutlet weak var serachTXT: UITextField!
    
     var greenImagesArray = [UIImage]()
@@ -50,7 +51,8 @@ class NewVenueViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cityView.layer.borderColor = myColor.cgColor
         cityView.layer.borderWidth = 1.0
         cityView.layer.cornerRadius = 5
-        
+        self.nodataLbl.isHidden = true
+
         if viewHide == "yes"
         {
             self.view1.backgroundColor = UIColor.init(red: 247/255, green: 182/255, blue: 139/255, alpha: 1)
@@ -102,9 +104,14 @@ class NewVenueViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPhotosViewController") as! NewPhotosViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VenueHomeTableViewCell") as!
+        VenueHomeTableViewCell
         
+        cell.backgroundColor = UIColor.white
+        tableView.deselectRow(at: indexPath, animated: true)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

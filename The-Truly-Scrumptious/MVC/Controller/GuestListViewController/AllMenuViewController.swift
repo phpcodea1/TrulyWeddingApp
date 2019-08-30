@@ -29,6 +29,7 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     var MenuArray = NSMutableArray()
     
+    @IBOutlet weak var nodataLbl: UILabel!
     var selectedSection2 = Int()
     var selectedSection3 = Int()
     var selectedSection = Int()
@@ -57,6 +58,7 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.selectedSection = -1
         self.selectedRow  = -1
         self.UiViewOfPicker.isHidden = true
+        self.nodataLbl.isHidden = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
         tap.delegate = self // This is not required
@@ -643,13 +645,17 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
             
         }
         
-        if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
+        if selectedRow != -1
         {
-            if let id = dict2.value(forKey: "id") as? String
+            if let dict2 = self.subArray.object(at: selectedRow) as? NSDictionary
             {
-                
-                self.MoveGuestId = id
+                if let id = dict2.value(forKey: "id") as? String
+                {
+                    
+                    self.MoveGuestId = id
+                }
             }
+            
         }
         
         var dict = self.MenuArray.object(at: self.selectedSection) as! NSDictionary
@@ -679,14 +685,23 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     func showPicker()
     {
+        if self.MenuArray.count>1
+        {
         
-        let optionMenu = UIAlertController(title: "Are you sure you want to change the menu?", message: "If yes ! Please select other table", preferredStyle: .alert)
+        
+        let optionMenu = UIAlertController(title: "Are you sure you want to change the menu?", message: "If yes ! Please select other menu", preferredStyle: .alert)
         
         
         
         let deleteAction = UIAlertAction(title: "Yes", style: .default, handler:
         {
             (alert: UIAlertAction!) -> Void in
+            
+            
+            
+            
+            
+            
             self.UiViewOfPicker.isHidden = false
             
         })
@@ -703,7 +718,26 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         self.present(optionMenu, animated: true, completion: nil)
         
+    }
+        else
         
+        {
+            let optionMenu = UIAlertController(title: "Alert!", message: "There is no another menu to move", preferredStyle: .alert)
+        
+            let deleteAction = UIAlertAction(title: "Ok", style: .default, handler:
+            {
+                (alert: UIAlertAction!) -> Void in
+                
+    self.selectedRow = -1
+                self.menuTable.reloadData()
+                
+            })
+          
+            optionMenu.addAction(deleteAction)
+       
+            
+            self.present(optionMenu, animated: true, completion: nil)
+        }
     }
     func GetMenuListAPI()
     {
@@ -739,6 +773,15 @@ class AllMenuViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 if let data = (response as! NSDictionary).value(forKey: "data") as? NSArray
                 {
                     self.MenuArray = data.mutableCopy() as! NSMutableArray
+                    if self.MenuArray.count>0
+                    {
+                        self.nodataLbl.isHidden = true
+                    }
+                    else
+                        
+                    {
+                        self.nodataLbl.isHidden = false
+                    }
                     
                     self.blurView.isHidden = true
                     //for i in 0..<self.tableArray.count

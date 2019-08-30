@@ -97,17 +97,21 @@ class SettingsViewController: UIViewController {
                 
                 if self.viewProfileModel?.status == "success"
                 {
+                    self.profileImage.layer.borderWidth = 1.0
+                    self.profileImage.layer.masksToBounds = false
+                    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
+                    self.profileImage.layer.borderColor = UIColor.clear.cgColor
+                    self.profileImage.clipsToBounds = true
                     
                     if let profileImg = self.viewProfileModel.data?.celebrationProfileImage
                     {
-                        let img = URL(string: profileImg)
-                        self.profileImage.layer.borderWidth = 1.0
-                        self.profileImage.layer.masksToBounds = false
-                        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
-                        self.profileImage.layer.borderColor = UIColor.clear.cgColor
-                        self.profileImage.clipsToBounds = true
+                        if profileImg != ""
+                        {
+                            let img = URL(string: profileImg)
+                            
+                            self.profileImage.sd_setImage(with:img, placeholderImage: UIImage(named: "image-1"))
+                        }
                         
-                    self.profileImage.sd_setImage(with:img, placeholderImage: UIImage(named: "image-1"))
                     }
                     
                     
@@ -135,16 +139,20 @@ class SettingsViewController: UIViewController {
                             }
                             
                             
+                            self.profileImage.layer.borderWidth = 1.0
+                            self.profileImage.layer.masksToBounds = false
+                            self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
+                            self.profileImage.layer.borderColor = UIColor.clear.cgColor
+                            self.profileImage.clipsToBounds = true
+                            
                             if let parnter = dataDict.value(forKey: "myself_image") as? String
                             {
+                               if parnter != ""
+                               {
                                 let img = URL(string: parnter)
-                                self.profileImage.layer.borderWidth = 1.0
-                                self.profileImage.layer.masksToBounds = false
-                                self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
-                                self.profileImage.layer.borderColor = UIColor.clear.cgColor
-                                self.profileImage.clipsToBounds = true
-                                
-                                self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                  self.profileImage.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                }
+                              
                                 
                                 
                             }

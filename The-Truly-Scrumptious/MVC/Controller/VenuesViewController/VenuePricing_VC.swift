@@ -9,6 +9,8 @@
 import UIKit
 import SVProgressHUD
 import FloatRatingView
+import SDWebImage
+import Toast_Swift
 
 class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
    
@@ -50,14 +52,14 @@ class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         tableview1.tableHeaderView = topView
         tableview1.register(UINib(nibName: "VenueHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "VenueHomeTableViewCell")
         self.notFoundLbl.isHidden = true
+//
+//        DEFAULT.removeObject(forKey: "noOfSeat")
+//        DEFAULT.removeObject(forKey: "civilCeremony")
+//        DEFAULT.removeObject(forKey: "selectedCountryId")
+//        DEFAULT.removeObject(forKey: "typeLong")
+//        DEFAULT.removeObject(forKey: "typeLat")
+//        DEFAULT.synchronize()
       
-        DEFAULT.removeObject(forKey: "noOfSeat")
-        DEFAULT.removeObject(forKey: "civilCeremony")
-        DEFAULT.removeObject(forKey: "selectedCountryId")
-        DEFAULT.removeObject(forKey: "typeLong")
-        DEFAULT.removeObject(forKey: "typeLat")
-        DEFAULT.synchronize()
-        self.serachTXT.delegate = self
         
 //        if viewHide == "yes"
 //        {
@@ -100,8 +102,15 @@ class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSourc
      self.serachTXT.delegate = self
         
         self.serachTXT.addTarget(self, action: #selector(searchText), for: .editingChanged)
-
-    
+//        if let FromDeatail = DEFAULT.value(forKey: "FromDeatail") as? String
+//        {
+//            DEFAULT.removeObject(forKey: "FromDeatail")
+//            DEFAULT.synchronize()
+//        }
+//        else
+//        {
+//            VenueFilter()
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,14 +157,10 @@ class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     }
     
     
-    @objc func searchText(textField:UITextField)
+    @objc func searchText(textField1:UITextField)
     {
-        print(textField.text!)
-         print(self.MainArray.count)
-        
-        var searchType = textField.text!
-        
-        if textField.text! == nil
+  
+        if textField1.text! == nil
         {
             if self.FilterArray.count>0
             {
@@ -164,25 +169,24 @@ class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         }
         else
         {
-            if self.FilterArray.count>0
+            if self.FilterArray.count>=1
             {
                 self.FilterArray.removeAllObjects()
             }
             for i in 0..<self.MainArray.count
             {
                 var dict = (self.MainArray.object(at: i) as! NSDictionary)
-                    var name = dict.value(forKey: "location") as! String
+                var name = dict.value(forKey: "location") as! String
                 
-                
-               let range1 = name.range(of: searchType, options: .caseInsensitive, range: nil, locale: nil)
-                print(range1)
-                if range1 != nil
+                if ((name.range(of: textField1.text!, options: .caseInsensitive, range: nil, locale: nil)) != nil)
                 {
                     self.FilterArray.add(dict)
                 }
+               
             }
         }
-print(FilterArray)
+           print(FilterArray)
+         self.hederLabel.text = "\(self.FilterArray.count)"  +  " Venues"
         self.tableview1.reloadData()
         
         
@@ -192,8 +196,16 @@ print(FilterArray)
     {
         if textField.text! == ""
         {
-            self.FilterArray = self.MainArray
+            if self.MainArray.count>0
+            {
+                self.FilterArray = self.MainArray
+            }
+            else
+            {
+                self.VenueFilter()
+            }
         }
+         self.hederLabel.text = "\(self.FilterArray.count)"  +  " Venues"
         self.tableview1.reloadData()
     }
     @IBAction func reviewsAction(_ sender: UIButton) {
@@ -227,12 +239,17 @@ print(FilterArray)
         
         var dict = self.FilterArray.object(at: indexPath.row) as!NSDictionary
         
+        
+        
    
         if let amount = dict.value(forKey: "banner_image") as? String
         {
+            if amount != ""
+            {
+                let url1 = URL(string: amount)!
+                cell.LongImg.sd_setImage(with: url1, completed: nil)
+            }
             
-            let url1 = URL(string: amount)!
-            cell.LongImg.sd_setImage(with: url1, completed: nil)
         }
         
         if let amount = dict.value(forKey: "price") as? String
@@ -248,7 +265,16 @@ print(FilterArray)
         if let avgrating_persons = dict.value(forKey: "avgrating_persons") as? Int
         {
             
-            cell.reviewLbl.text = "\(avgrating_persons)" + " Reviews"
+          
+            
+            if avgrating_persons > 1
+            {
+                cell.reviewLbl.text =  "\(avgrating_persons)" + " Reviews"
+            }
+            else
+            {
+                cell.reviewLbl.text =  "\(avgrating_persons)" + " Review"
+            }
         }
         
         if let description = dict.value(forKey: "description") as? String
@@ -323,8 +349,16 @@ print(FilterArray)
             
             self.likeStatus = is_fav
         }
-        
-        self.VenueLikeUnlikeAPI()
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+             self.VenueLikeUnlikeAPI()
+        }
+      
        
     }
     @objc func requestBtnClick(_ sender: UIButton)
@@ -337,6 +371,7 @@ print(FilterArray)
         {
             vc.vendorId = id1
         }
+        vc.titleText = "Message Venue"
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -486,6 +521,16 @@ print(FilterArray)
                
                 SVProgressHUD.dismiss()
                 
+                if self.MainArray.count>0
+                {
+                    self.MainArray.removeAllObjects()
+                    
+                }
+                if self.FilterArray.count>0
+                {
+                    self.FilterArray.removeAllObjects()
+                    
+                }
                 if let dict = response as? NSDictionary
                 {
                     if let dataDict = (dict.value(forKey: "data")) as? NSArray
@@ -562,7 +607,13 @@ print(FilterArray)
         WebService.shared.apiDataPostMethod(url:VENUELIKEUNLIKE, parameters: params) { (response, error) in
             if error == nil
             {
+                if let message = (response as! NSDictionary).value(forKey: "message") as? String
+                {
+                   self.view.makeToast(message)
+                }
             
+                
+                
                 self.VenueFilter()
             }
                 

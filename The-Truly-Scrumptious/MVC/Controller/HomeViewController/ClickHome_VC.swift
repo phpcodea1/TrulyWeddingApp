@@ -43,6 +43,7 @@ class ClickHome_VC: UIViewController {
     @IBAction func reviewsAction(_ sender: UIButton) {
         let vc =  self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
         vc.backHidden = "yes"
+        vc.fromVenue = "no"
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

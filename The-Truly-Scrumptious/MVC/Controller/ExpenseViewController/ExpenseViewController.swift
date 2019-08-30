@@ -392,8 +392,8 @@ class ExpenseViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
             "paid_status":userPaid,
             "paid_amount":expanseAmount.text!,
             "payer":payerTxt.text!,
-            "date_paid":datePaidTxt.text!,
-            "due_date":dueDateTxt.text!,
+            "date_paid":self.convertDateFormater2(datePaidTxt.text!),
+            "due_date":self.convertDateFormater2(dueDateTxt.text!),
             "expense_id":self.expense_id,
         ]
         
@@ -486,4 +486,22 @@ class ExpenseViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         
         self.present(optionMenu, animated: true, completion: nil)
     }
+    
+    func convertDateFormater2(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if date != nil
+        {
+            return  dateFormatter.string(from: date!)
+        }
+        else
+        {
+            return  ""
+        }
+        
+    }
+
 }

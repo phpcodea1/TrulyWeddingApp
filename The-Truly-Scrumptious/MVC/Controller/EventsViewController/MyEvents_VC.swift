@@ -14,12 +14,14 @@ import SDWebImage
 
 class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-
+    @IBOutlet weak var nodataLbl: UILabel!
+    
    var nameArray = [String]()
     var imageArray = [String]()
       var arrayData = NSArray()
     
-   
+    var selectedEventId = ""
+    var selectedEventType = ""
     
     var activeEventId = ""
     var activeEventType = ""
@@ -29,7 +31,7 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var myTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.nodataLbl.isHidden = true
         nameArray = ["Wedding","Birthday","Engagement","Ceremony","DJ Party"]
       
         myTableview.register(UINib(nibName: "AllEventTableViewCell", bundle: nil), forCellReuseIdentifier: "AllEventTableViewCell")
@@ -89,10 +91,12 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 if select == 1
                 {
                     cell.selectButton.backgroundColor = UIColor.init(red: 247/255, green: 182/255, blue: 139/255, alpha: 1)
+                    cell.deleteButton.isHidden = true
                 }
                 else
                 {
                     cell.selectButton.backgroundColor = UIColor.groupTableViewBackground
+                    cell.deleteButton.isHidden = false
                 }
                 
             }
@@ -174,6 +178,10 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         cell.selectButton.addTarget(self, action: #selector(SelectButtonClick), for: .touchUpInside)
         
+        cell.deleteButton.tag = indexPath.row
+        
+        cell.deleteButton.addTarget(self, action: #selector(deleteButtonClick), for: .touchUpInside)
+        
         return cell
     }
     
@@ -204,6 +212,51 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             
         }
         
+    }
+    @objc func deleteButtonClick(_ sender:UIButton)
+    {
+        let optionMenu = UIAlertController(title: "Alert!", message: "Are you sure you want to delete?", preferredStyle: .alert)
+        
+        
+        
+        let deleteAction = UIAlertAction(title: "Yes", style: .default, handler:
+        {
+            (alert: UIAlertAction!) -> Void in
+            
+            if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+            {
+                NetworkEngine.networkEngineObj.showInterNetAlert()
+            }
+            else
+            {
+                if let dict = self.mainArray.object(at: sender.tag) as? NSDictionary
+                {
+                    if let type = dict.value(forKey: "event_type") as? String
+                    {
+                        self.selectedEventType = type
+                    }
+                    if let id = dict.value(forKey: "id") as? String
+                    {
+                        self.selectedEventId = id
+                    }
+                }
+               
+               self.DeleteEventAPI()
+            }
+            
+            
+            
+        })
+        let deleteAction2 = UIAlertAction(title: "Cancel", style: .default, handler:
+        {
+            (alert: UIAlertAction!) -> Void in
+            
+            
+        })
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(deleteAction2)
+        
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -329,6 +382,15 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                                 }
                                 }
                                  self.myTableview.reloadData()
+                                if self.mainArray.count>0
+                                {
+                                    self.nodataLbl.isHidden = true
+                                }
+                                else
+                                    
+                                {
+                                    self.nodataLbl.isHidden = false
+                                }
                                 self.myTableview.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                             }
                             
@@ -446,15 +508,78 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             
         }
         
+    func DeleteEventAPI()
+    {
+        
+        
+        var userEmail = ""
+        if let email = DEFAULT.value(forKey: "email") as? String
+        {
+            userEmail = email
+        }
+        
+        let params:[String:Any] = [
+            "email":userEmail,
+            "event_id":self.selectedEventId,
+            "event_type":self.selectedEventType
+        ]
+        
+        
+        print(params)
+        WebService.shared.apiDataPostMethod(url:DELETETEVENTAPI, parameters: params) { (response, error) in
+            if error == nil
+            {
+                
+                self.ALLEVENTLISTAPI()
+       
+            }
+        
+            else
+            {
+                Helper.helper.showAlertMessage(vc:self, titleStr: "Notification", messageStr: error?.localizedDescription ?? "")
+                
+            }
+            
+            
+        }
+        
+    }
+    
     
     
     func convertDateFormater(_ date: String) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM-dd-yyyy"
-        let date = dateFormatter.date(from: date)
+        let date2 = dateFormatter.date(from: date)
+        
+        
         dateFormatter.dateFormat = "dd MMMM yyyy"
-        return  dateFormatter.string(from: date!)
+        
+        if date2 != nil
+        {
+            return  dateFormatter.string(from: date2!)
+        }
+        else
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date3 = dateFormatter.date(from: date)
+            
+            
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            
+            if date3 != nil
+            {
+              return  dateFormatter.string(from: date3!)
+            }
+            else
+            {
+                return  ""
+            }
+            
+        }
+        
         
     }
 }

@@ -11,6 +11,7 @@ import FloatRatingView
 
 class RatingTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var noFound: UILabel!
     
     @IBOutlet weak var reviewTxt: UILabel!
     @IBOutlet weak var rating: FloatRatingView!

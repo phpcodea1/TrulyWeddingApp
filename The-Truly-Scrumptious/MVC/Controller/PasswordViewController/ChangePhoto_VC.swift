@@ -163,10 +163,14 @@ class ChangePhoto_VC: UIViewController {
                         
                         if let parnter = dict.value(forKey: "profileImage") as? String
                         {
-                            let img = URL(string: parnter)
+                            if parnter != ""
+                            {
+                                let img = URL(string: parnter)
+                                
+                                
+                                self.changePhoto.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                            }
                             
-    
-                            self.changePhoto.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
                             
                             
                         }
@@ -240,8 +244,12 @@ class ChangePhoto_VC: UIViewController {
                                             
            if let  imageData = dic["data"] as? String
             {
-                let url = URL(string: imageData)
-                self.changePhoto.sd_setImage(with: url, completed: nil)
+                if imageData != ""
+                {
+                    let url = URL(string: imageData)
+                    self.changePhoto.sd_setImage(with: url, completed: nil)
+                }
+                
             }
                                               
          }

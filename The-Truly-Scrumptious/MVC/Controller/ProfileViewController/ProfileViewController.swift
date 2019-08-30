@@ -253,18 +253,22 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
                         {
                             self.nameLabel.text! = name
                         }
-    
+                        self.profileImg.layer.borderWidth = 1.0
+                        self.profileImg.layer.masksToBounds = false
+                        self.profileImg.layer.cornerRadius = self.profileImg.frame.size.height/2
+                        // + self.profileImg2.frame.height/2
+                        self.profileImg.layer.borderColor = UIColor.clear.cgColor
+                        self.profileImg.clipsToBounds = true
+                        
                         if let profileImg = self.viewProfileModel.profileImage
                         {
-                            let img = URL(string: profileImg)
-                            self.profileImg.layer.borderWidth = 1.0
-                            self.profileImg.layer.masksToBounds = false
-                            self.profileImg.layer.cornerRadius = self.profileImg.frame.size.height/2
-                            // + self.profileImg2.frame.height/2
-                            self.profileImg.layer.borderColor = UIColor.clear.cgColor
-                            self.profileImg.clipsToBounds = true
-    
-                            self.profileImg.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                            if profileImg != ""
+                            {
+                                let img = URL(string: profileImg)
+                                
+                                self.profileImg.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                            }
+                           
                         }
                         else{
                             self.profileImg.image =  UIImage(named: "image-1")
@@ -299,21 +303,22 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
                                 {
                                     self.nameLabel.text! = parnter
                                 }
+                                self.profileImg.layer.borderWidth = 1.0
+                                self.profileImg.layer.masksToBounds = false
+                                self.profileImg.layer.cornerRadius = self.profileImg.frame.size.height/2
+                                // + self.profileImg2.frame.height/2
+                                self.profileImg.layer.borderColor = UIColor.clear.cgColor
+                                self.profileImg.clipsToBounds = true
                                 
                                 if let parnter = dict.value(forKey: "profileImage") as? String
                                 {
-                                    let img = URL(string: parnter)
-                                    
-                                    
-                                    self.profileImg.layer.borderWidth = 1.0
-                                    self.profileImg.layer.masksToBounds = false
-                                    self.profileImg.layer.cornerRadius = self.profileImg.frame.size.height/2
-                                    // + self.profileImg2.frame.height/2
-                                    self.profileImg.layer.borderColor = UIColor.clear.cgColor
-                                    self.profileImg.clipsToBounds = true
-                                    
-                        
-                                    self.profileImg.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                    if parnter != ""
+                                    {
+                                        let img = URL(string: parnter)
+                                        
+                                        self.profileImg.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
+                                    }
+                                   
                                     
                                
                                 }

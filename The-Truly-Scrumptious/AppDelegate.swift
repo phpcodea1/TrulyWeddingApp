@@ -36,7 +36,7 @@ class AppDelegate: UIResponder,UNUserNotificationCenterDelegate,UIApplicationDel
         GIDSignIn.sharedInstance().delegate = self as? GIDSignInDelegate
         IQKeyboardManager.shared().isEnabled = true
         
-        // amarendra git check
+    //amarendra git check
        registerForRemoteNotification()
       
        Autologin()

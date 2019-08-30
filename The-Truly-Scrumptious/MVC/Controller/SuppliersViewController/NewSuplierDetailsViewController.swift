@@ -941,17 +941,22 @@ class NewSuplierDetailsViewController: UIViewController,UITableViewDelegate,UITa
                 cell.BookMark.backgroundColor = TABLESECTIONCOLOR
                 
             }
-            if let shortlist_status = self.mainDict.value(forKey: "shortlist_status") as? String
+            if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
             {
-                self.sortStatus = "\(shortlist_status)"
-                if shortlist_status == "0"
+                self.sortStatus = "\(is_fav)"
+               
+                
+                if is_fav == "0"
                 {
                     cell.ShortView.backgroundColor = TABLESECTIONCOLOR
+                    cell.likeImg.image = UIImage(named: "unFav")
                 }
                 else
                 {
                     cell.ShortView.backgroundColor = APPCOLOR
+                     cell.likeImg.image = UIImage(named: "like")
                 }
+               
                 
                 
             }
@@ -962,6 +967,7 @@ class NewSuplierDetailsViewController: UIViewController,UITableViewDelegate,UITa
                 cell.ShortView.backgroundColor = TABLESECTIONCOLOR
                 
             }
+            
             cell.BookMark.addTarget(self, action: #selector(BookedClicked), for: .touchUpInside)
             cell.Review.addTarget(self, action: #selector(ReviewClicked), for: .touchUpInside)
             cell.VenuePhone.addTarget(self, action: #selector(VenuePhoneClicked), for: .touchUpInside)
@@ -1128,6 +1134,17 @@ class NewSuplierDetailsViewController: UIViewController,UITableViewDelegate,UITa
     {
         print("ShortListClicked")
         self.fromBookMark = "no"
+        if let login_id = self.mainDict.value(forKey: "login_id") as? String
+        {
+            
+            self.LikeId = login_id
+        }
+        
+        if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+        {
+            
+            self.likeStatus = "\(is_fav)"
+        }
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
             NetworkEngine.networkEngineObj.showInterNetAlert()
@@ -1135,8 +1152,9 @@ class NewSuplierDetailsViewController: UIViewController,UITableViewDelegate,UITa
         else
         {
             
-            self.BookMarkAndSortApi()
+            self.SupplierLikeUnlikeAPI()
         }
+        
     }
     
     

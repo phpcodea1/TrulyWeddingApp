@@ -82,7 +82,7 @@
                                                 <rect key="frame" x="0.0" y="4" width="94" height="61"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="To-do-list-24" translatesAutoresizingMaskIntoConstraints="NO" id="UbK-ML-bFV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unFav" translatesAutoresizingMaskIntoConstraints="NO" id="UbK-ML-bFV">
                                                 <rect key="frame" x="37" y="4" width="19" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -93,7 +93,7 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shortlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-Yf-21U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-Yf-21U">
                                                 <rect key="frame" x="0.0" y="43" width="94" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
@@ -156,15 +156,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="68.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW4-h7-zRo">
-                                                <rect key="frame" x="-1" y="0.0" width="95" height="63"/>
+                                                <rect key="frame" x="-1" y="0.0" width="95" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="venue-2" translatesAutoresizingMaskIntoConstraints="NO" id="CZj-26-ITp">
-                                                <rect key="frame" x="37" y="2" width="20" height="20"/>
+                                                <rect key="frame" x="37" y="1" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-ux-H01">
-                                                <rect key="frame" x="0.0" y="42" width="95" height="18"/>
+                                                <rect key="frame" x="0.0" y="41" width="95" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -179,7 +179,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-w8-bJ8">
-                                                <rect key="frame" x="8" y="24" width="86" height="20"/>
+                                                <rect key="frame" x="8" y="23" width="86" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,11 +192,11 @@
                                         <rect key="frame" x="102" y="0.0" width="94" height="68.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFM-jG-IhS">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="5aX-GU-PX8">
-                                                <rect key="frame" x="37" y="3" width="20" height="20"/>
+                                                <rect key="frame" x="37" y="2" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-rz-9ag">
@@ -228,11 +228,11 @@
                                         <rect key="frame" x="204" y="0.0" width="94" height="68.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OY-II-RMd">
-                                                <rect key="frame" x="-1" y="0.0" width="95" height="63"/>
+                                                <rect key="frame" x="-1" y="0.0" width="95" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-9t-6Q5">
-                                                <rect key="frame" x="37" y="1" width="19" height="20"/>
+                                                <rect key="frame" x="37" y="1" width="19" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhH-Pl-elZ">
@@ -295,6 +295,7 @@
                 <outlet property="VenueText" destination="BW4-h7-zRo" id="jTn-4E-0DX"/>
                 <outlet property="VenueTextView" destination="E9t-p6-wDQ" id="CpW-QR-5NN"/>
                 <outlet property="bookMarkView" destination="tjX-hV-sDb" id="YOL-gm-6p0"/>
+                <outlet property="likeImg" destination="UbK-ML-bFV" id="Af7-HZ-3aZ"/>
                 <outlet property="venue1" destination="tFX-ux-H01" id="Baq-2P-CPI"/>
                 <outlet property="venue2" destination="php-Ph-LZ4" id="pR0-1T-7Xe"/>
                 <outlet property="venue3" destination="c34-eu-OAX" id="iJE-hc-rWQ"/>
@@ -304,10 +305,10 @@
     </objects>
     <resources>
         <image name="Right-sign" width="27" height="27"/>
-        <image name="To-do-list-24" width="24" height="24"/>
         <image name="email" width="27" height="23"/>
         <image name="phone" width="27" height="27"/>
         <image name="star.1x" width="24" height="24"/>
+        <image name="unFav" width="64" height="64"/>
         <image name="venue-2" width="24" height="24"/>
     </resources>
 </document>

@@ -20,6 +20,7 @@ class PhotoFirstSectTableViewCell: UITableViewCell {
     
         @IBOutlet weak var LongImg: UIImageView!
         @IBOutlet weak var tellPhoneLbl: UILabel!
+    @IBOutlet weak var likeBtn: UIButton!
     
     
         @IBOutlet weak var ovrVenueType: UILabel!

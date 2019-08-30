@@ -74,12 +74,12 @@
                   moduleName = "The-Truly-Scrumptious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/17June/The-Truly-Scrumptious%202%202%202%202%202/The-Truly-Scrumptious/MVC/Controller/EventsViewController/MyFavourite_VC.swift"
-                  timestampString = "588773484.604363"
+                  timestampString = "588837006.486563"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
                   endingLineNumber = "189"
-                  offsetFromSymbolStart = "3016">
+                  offsetFromSymbolStart = "3807">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -89,12 +89,12 @@
                   moduleName = "The-Truly-Scrumptious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/17June/The-Truly-Scrumptious%202%202%202%202%202/The-Truly-Scrumptious/MVC/Controller/EventsViewController/MyFavourite_VC.swift"
-                  timestampString = "588773484.606032"
+                  timestampString = "588837006.489037"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
                   endingLineNumber = "189"
-                  offsetFromSymbolStart = "5092">
+                  offsetFromSymbolStart = "6568">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -122,12 +122,12 @@
                   moduleName = "The-Truly-Scrumptious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/17June/The-Truly-Scrumptious%202%202%202%202%202/The-Truly-Scrumptious/MVC/Controller/EventsViewController/MyFavourite_VC.swift"
-                  timestampString = "588773484.610431"
+                  timestampString = "588837006.495196"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
                   endingLineNumber = "189"
-                  offsetFromSymbolStart = "3016">
+                  offsetFromSymbolStart = "3807">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -137,12 +137,12 @@
                   moduleName = "The-Truly-Scrumptious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Documents/17June/The-Truly-Scrumptious%202%202%202%202%202/The-Truly-Scrumptious/MVC/Controller/EventsViewController/MyFavourite_VC.swift"
-                  timestampString = "588773484.612098"
+                  timestampString = "588837006.497353"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
                   endingLineNumber = "189"
-                  offsetFromSymbolStart = "5092">
+                  offsetFromSymbolStart = "6568">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.0693851"
+            timestampString = "588840142.979212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "982"
-            endingLineNumber = "982"
+            startingLineNumber = "988"
+            endingLineNumber = "988"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069437"
+            timestampString = "588840142.97938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "980"
-            endingLineNumber = "980"
+            startingLineNumber = "986"
+            endingLineNumber = "986"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069524"
+            timestampString = "588840142.9794919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1003"
-            endingLineNumber = "1003"
+            startingLineNumber = "1009"
+            endingLineNumber = "1009"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069572"
+            timestampString = "588840142.979561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "989"
-            endingLineNumber = "989"
+            startingLineNumber = "995"
+            endingLineNumber = "995"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.0696191"
+            timestampString = "588840142.979624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "998"
-            endingLineNumber = "998"
+            startingLineNumber = "1004"
+            endingLineNumber = "1004"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069665"
+            timestampString = "588840142.979673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "993"
-            endingLineNumber = "993"
+            startingLineNumber = "999"
+            endingLineNumber = "999"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.06971"
+            timestampString = "588840142.9797291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1316"
-            endingLineNumber = "1316"
+            startingLineNumber = "1334"
+            endingLineNumber = "1334"
             landmarkName = "SupplierLikeUnlikeAPI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069755"
+            timestampString = "588840142.979794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1312"
-            endingLineNumber = "1312"
+            startingLineNumber = "1330"
+            endingLineNumber = "1330"
             landmarkName = "SupplierLikeUnlikeAPI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
-            timestampString = "588773484.069803"
+            timestampString = "588840142.979859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "994"
-            endingLineNumber = "994"
+            startingLineNumber = "1000"
+            endingLineNumber = "1000"
             landmarkName = "likeBtnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
-            timestampString = "588769979.714092"
+            timestampString = "588840142.979921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1198"
-            endingLineNumber = "1198"
+            startingLineNumber = "1263"
+            endingLineNumber = "1263"
             landmarkName = "BookMarkAndSortApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
-            timestampString = "588769979.714148"
+            timestampString = "588840142.980388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1196"
-            endingLineNumber = "1196"
+            startingLineNumber = "1261"
+            endingLineNumber = "1261"
             landmarkName = "BookMarkAndSortApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
-            timestampString = "588769979.714204"
+            timestampString = "588840142.980683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1194"
-            endingLineNumber = "1194"
+            startingLineNumber = "1259"
+            endingLineNumber = "1259"
             landmarkName = "BookMarkAndSortApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,13 +746,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.070359"
+            timestampString = "588840142.981125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
             endingLineNumber = "166"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "searchText(textField1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -762,13 +762,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.070765"
+            timestampString = "588840142.981535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
             endingLineNumber = "168"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "searchText(textField1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -778,13 +778,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.0710419"
+            timestampString = "588840142.981842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "203"
             endingLineNumber = "203"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -794,13 +794,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.0713151"
+            timestampString = "588840142.982119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
             endingLineNumber = "174"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "searchText(textField1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -810,13 +810,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.0715851"
+            timestampString = "588840142.9823869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "178"
             endingLineNumber = "178"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "searchText(textField1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -826,13 +826,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.071852"
+            timestampString = "588840142.9826519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
             endingLineNumber = "172"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "searchText(textField1:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -842,13 +842,125 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/VenuePricing_VC.swift"
-            timestampString = "588773484.072117"
+            timestampString = "588840142.982915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
             endingLineNumber = "198"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
+            timestampString = "588840142.98318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "928"
+            endingLineNumber = "928"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
+            timestampString = "588840142.9834681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "912"
+            endingLineNumber = "912"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
+            timestampString = "588840142.983752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "910"
+            endingLineNumber = "910"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/VenuesViewController/NewPhotosViewController.swift"
+            timestampString = "588840142.984014"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "918"
+            endingLineNumber = "918"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
+            timestampString = "588840142.9842761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "944"
+            endingLineNumber = "944"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
+            timestampString = "588840142.984331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "950"
+            endingLineNumber = "950"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The-Truly-Scrumptious/MVC/Controller/SuppliersViewController/NewSuplierDetailsViewController.swift"
+            timestampString = "588840142.984382"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "955"
+            endingLineNumber = "955"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

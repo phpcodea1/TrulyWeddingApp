@@ -21,6 +21,10 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
     var selectedSection = Int()
     var selectedRow = Int()
   
+    var likeStatus = ""
+    var LikeId = ""
+    
+    
     var emailToSend = ""
     var callToSend = ""
     var BookStatus = ""
@@ -799,7 +803,21 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 cell.ratingUIView.rating =  Float(avgrating)
             }
             
- 
+            if let is_fav = self.mainDict.value(forKey: "is_fav") as? Int
+            {
+                if is_fav == 0
+                {
+                    cell.likeBtn.setImage(UIImage(named: "unFav"), for: .normal)
+                }
+                else
+                {
+                    cell.likeBtn.setImage(UIImage(named: "like"), for: .normal)
+                }
+                
+            }
+        
+            cell.likeBtn.addTarget(self, action: #selector(likeBtnClick), for: .touchUpInside)
+            
 //                                if let address = self.mainDict.value(forKey: "qualification") as? String
 //                                {
 //                                    cell.ovrQalifLbl.text = address
@@ -887,16 +905,18 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 cell.BookMark.backgroundColor = TABLESECTIONCOLOR
                 
             }
-            if let shortlist_status = self.mainDict.value(forKey: "shortlist_status") as? String
+            if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
             {
-                self.sortStatus = "\(shortlist_status)"
-                if shortlist_status == "0"
+                self.sortStatus = "\(is_fav)"
+                if is_fav == "0"
                 {
                     cell.ShortView.backgroundColor = TABLESECTIONCOLOR
+                    cell.likeImg.image = UIImage(named: "unFav")
                 }
                 else
                 {
                     cell.ShortView.backgroundColor = APPCOLOR
+                    cell.likeImg.image = UIImage(named: "like")
                 }
                 
                 
@@ -1055,6 +1075,17 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
         print("ShortListClicked")
         self.fromBookMark = "no"
         
+        if let login_id = self.mainDict.value(forKey: "login_id") as? String
+        {
+            
+            self.LikeId = login_id
+        }
+        
+        if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+        {
+            
+            self.likeStatus = "\(is_fav)"
+        }
         if !(NetworkEngine.networkEngineObj.isInternetAvailable())
         {
             NetworkEngine.networkEngineObj.showInterNetAlert()
@@ -1062,11 +1093,45 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
         else
         {
             
-            BookMarkAndSortApi()
+            self.VenueLikeUnlikeAPI()
         }
         
     }
-   
+    @objc func likeBtnClick(_ sender: UIButton)
+    {
+        
+        
+        
+      
+        
+        if let login_id = self.mainDict.value(forKey: "login_id") as? String
+        {
+            
+            self.LikeId = login_id
+        }
+        if let login_id = self.mainDict.value(forKey: "login_id") as? String
+        {
+            
+            self.LikeId = login_id
+        }
+        
+        if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+        {
+            
+            self.likeStatus = is_fav
+        }
+        if !(NetworkEngine.networkEngineObj.isInternetAvailable())
+        {
+            NetworkEngine.networkEngineObj.showInterNetAlert()
+        }
+        else
+        {
+            
+            self.VenueLikeUnlikeAPI()
+        }
+        
+        
+    }
     
     
     func detailApi()
@@ -1196,6 +1261,66 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 print("Response in bookMark api \(response)")
             self.detailApi()
                 
+            }
+                
+                
+            else
+            {
+                Helper.helper.showAlertMessage(vc:self, titleStr: "Notification", messageStr: error?.localizedDescription ?? "")
+                
+            }
+            
+            
+        }
+        
+    }
+    func VenueLikeUnlikeAPI()
+    {
+        
+        
+        var likeStatus2 = "1"
+        var userEmail = ""
+        if let email = DEFAULT.value(forKey: "email") as? String
+        {
+            userEmail = email
+        }
+        if self.likeStatus == "0"
+        {
+            likeStatus2 = "1"
+        }
+        else
+        {
+            likeStatus2 = "0"
+        }
+        var eventType = "wedding"
+        if let eventType1 = DEFAULT.value(forKey: "eventType") as? String
+        {
+            eventType = eventType1
+        }
+        var eventID = "1"
+        if let eventType1 = DEFAULT.value(forKey: "eventID") as? String
+        {
+            eventID = eventType1
+        }
+        let params:[String:Any] = [
+            "email":userEmail,
+            "venue_id":self.LikeId,
+            "status":likeStatus2,
+            "event_id":eventID,
+            "event_type":eventType]
+        
+        
+        print(params)
+        WebService.shared.apiDataPostMethod(url:VENUELIKEUNLIKE, parameters: params) { (response, error) in
+            if error == nil
+            {
+                if let message = (response as! NSDictionary).value(forKey: "message") as? String
+                {
+                    self.view.makeToast(message)
+                }
+                
+                
+            self.detailApi()
             }
                 
                 

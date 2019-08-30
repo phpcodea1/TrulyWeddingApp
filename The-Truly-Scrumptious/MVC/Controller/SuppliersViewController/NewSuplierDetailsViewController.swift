@@ -816,9 +816,17 @@ class NewSuplierDetailsViewController: UIViewController,UITableViewDelegate,UITa
                     let url1 = URL(string: amount)!
                     cell.LongImg.sd_setImage(with: url1, completed: nil)
                 }
-                
+                else
+                {
+                    cell.LongImg.image = UIImage(named: "image")
+                }
+
             }
-            
+            else
+            {
+                cell.LongImg.image = UIImage(named: "image")
+            }
+
 //            if let address = self.mainDict.value(forKey: "guest") as? String
 //            {
 //                cell.seatLbl.text = address

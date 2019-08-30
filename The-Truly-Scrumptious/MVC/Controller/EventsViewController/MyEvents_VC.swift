@@ -149,7 +149,16 @@ class MyEvents_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                     
                     cell.weddingUIView.isHidden = true
                       cell.celeUiView.isHidden = false
-                    cell.eventDateLbl.text = convertDateFormater(dict.value(forKey: "celebration_date") as! String)
+                    
+                    if let celebration_date = dict.value(forKey: "celebration_date") as? String
+                    {
+                        if celebration_date != ""
+                        {
+                          cell.eventDateLbl.text = convertDateFormater(celebration_date)
+                        }
+                       
+                    }
+                    
                     
                     if let celebration_profile_image = dict.value(forKey: "celebration_profile_image") as? String
                     {

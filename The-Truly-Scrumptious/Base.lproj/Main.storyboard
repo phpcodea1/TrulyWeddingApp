@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Quicksand Bold.otf">
-            <string>QuicksandBold-Regular</string>
-        </array>
         <array key="Quicksand-Bold.ttf">
             <string>Quicksand-Bold</string>
         </array>
@@ -21,6 +18,9 @@
         </array>
         <array key="Quicksand-Regular.ttf">
             <string>Quicksand-Regular</string>
+        </array>
+        <array key="Quicksand_Bold.otf">
+            <string>QuicksandBold-Regular</string>
         </array>
         <array key="Quicksand_Light_Oblique.otf">
             <string>QuicksandLightOblique-Regular</string>
@@ -40,10 +40,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash-screen.png " translatesAutoresizingMaskIntoConstraints="NO" id="0gL-dm-RPO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="384" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-3c-YzQ">
-                                <rect key="frame" x="20" y="582" width="335" height="60"/>
+                                <rect key="frame" x="20" y="582" width="344" height="60"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.71372549019607845" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Register">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZEj-L8-6AC">
-                                <rect key="frame" x="5" y="120" width="365" height="260"/>
+                                <rect key="frame" x="5" y="120" width="374" height="260"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="CfR-0H-0cX"/>
                                     <constraint firstAttribute="height" constant="260" id="dec-q0-bbl"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-MF-veR">
-                                <rect key="frame" x="20" y="507" width="335" height="60"/>
+                                <rect key="frame" x="20" y="507" width="344" height="60"/>
                                 <color key="backgroundColor" red="0.98431372549019602" green="0.85882352941176465" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="5cY-Fb-i1x"/>
@@ -198,7 +198,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-Lw-mkc">
-                                <rect key="frame" x="135" y="185" width="50" height="23.5"/>
+                                <rect key="frame" x="132.5" y="185" width="55" height="23"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -490,7 +490,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0O-QM-faQ">
-                                <rect key="frame" x="129" y="175" width="63" height="36.5"/>
+                                <rect key="frame" x="125.5" y="175" width="70" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -772,7 +772,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Celebration?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmm-kM-VYO">
-                                                <rect key="frame" x="71.5" y="13" width="232" height="24.5"/>
+                                                <rect key="frame" x="58" y="13" width="259.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1027,7 +1027,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wd-Z7-AWC">
-                                        <rect key="frame" x="160.5" y="18.5" width="54" height="23.5"/>
+                                        <rect key="frame" x="158.5" y="18.5" width="58" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" red="0.96862745100000003" green="0.71372549019999998" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1369,13 +1369,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-W0-5re">
-                                                        <rect key="frame" x="160.5" y="9.5" width="54" height="23"/>
+                                                        <rect key="frame" x="158.5" y="9.5" width="58" height="23"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                                         <color key="textColor" red="0.96862745098039216" green="0.71372549019607845" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBZ-Uu-KbA">
-                                                        <rect key="frame" x="249.5" y="10.5" width="84.5" height="21"/>
+                                                        <rect key="frame" x="251.5" y="10.5" width="82.5" height="21"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="L8I-tp-pcT"/>
@@ -2050,7 +2050,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1L-NB-d61">
-                                        <rect key="frame" x="135" y="18.5" width="105.5" height="23"/>
+                                        <rect key="frame" x="127" y="18.5" width="121.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2310,7 +2310,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Notice Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9w-5w-adA">
-                                        <rect key="frame" x="107.5" y="18.5" width="160.5" height="23"/>
+                                        <rect key="frame" x="100" y="18.5" width="175.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2438,7 +2438,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Notice Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD5-bc-fgT">
-                                        <rect key="frame" x="112" y="18.5" width="151" height="23"/>
+                                        <rect key="frame" x="105" y="18.5" width="165" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2548,7 +2548,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-JK-9l3">
-                                        <rect key="frame" x="159.5" y="18.5" width="56.5" height="23"/>
+                                        <rect key="frame" x="156" y="18.5" width="63" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2595,7 +2595,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jhonson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-53-TY5">
-                                            <rect key="frame" x="155" y="90" width="65.5" height="20"/>
+                                            <rect key="frame" x="152" y="90" width="71" height="20"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -2668,7 +2668,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwE-Ov-lFz">
-                                        <rect key="frame" x="112" y="18.5" width="96" height="23.5"/>
+                                        <rect key="frame" x="108" y="18.5" width="104" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2846,7 +2846,7 @@
                                                 <rect key="frame" x="0.0" y="79" width="320" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxG-Wj-Pwd">
-                                                        <rect key="frame" x="8" y="24" width="30.5" height="21"/>
+                                                        <rect key="frame" x="8" y="24" width="31" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="7mI-dd-Tuw"/>
                                                         </constraints>
@@ -2855,7 +2855,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0ex-Pz-z2L">
-                                                        <rect key="frame" x="8" y="54" width="172.5" height="29"/>
+                                                        <rect key="frame" x="8" y="54" width="173" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <segments>
                                                             <segment title="Adult"/>
@@ -3029,13 +3029,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deQ-aC-Lvf">
-                                                <rect key="frame" x="8" y="190" width="101.5" height="17.5"/>
+                                                <rect key="frame" x="8" y="190" width="108.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hos-7e-ng1">
-                                                <rect key="frame" x="8" y="296" width="175" height="17"/>
+                                                <rect key="frame" x="8" y="296" width="189.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="Nak-BO-xem"/>
                                                 </constraints>
@@ -3562,7 +3562,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR4-Yf-zhi">
-                                        <rect key="frame" x="113" y="18.5" width="94" height="23.5"/>
+                                        <rect key="frame" x="108.5" y="18.5" width="103.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3842,7 +3842,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-dw-fie">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select list">
                                                             <color key="titleColor" red="0.40392156862745099" green="0.38039215686274508" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3896,7 +3896,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WY-b7-hKw">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select table">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3950,7 +3950,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-zN-mwt">
-                                                        <rect key="frame" x="8" y="19.5" width="312" height="29"/>
+                                                        <rect key="frame" x="8" y="19.5" width="312" height="28"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select menu">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5323,7 +5323,7 @@
                                         <state key="normal" image="_0003_Layer-17"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a79-Ka-deH">
-                                        <rect key="frame" x="155" y="18.5" width="65.5" height="23"/>
+                                        <rect key="frame" x="152" y="18.5" width="71" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -5524,7 +5524,7 @@
                                                         <state key="normal" image="_0003_Layer-17"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-XT-OlX">
-                                                        <rect key="frame" x="100" y="18.5" width="120" height="23.5"/>
+                                                        <rect key="frame" x="93.5" y="18.5" width="133" height="23"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -5595,7 +5595,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-Cf-PqS">
-                                                <rect key="frame" x="8" y="131" width="70" height="21"/>
+                                                <rect key="frame" x="8" y="131" width="80.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="e1d-bZ-w1W"/>
                                                 </constraints>
@@ -5621,7 +5621,7 @@
                                                 <state key="normal" backgroundImage="downArraow"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1x-NB-vRz">
-                                                <rect key="frame" x="8" y="213" width="65.5" height="21"/>
+                                                <rect key="frame" x="8" y="213" width="70.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="wnP-gz-qMD"/>
                                                 </constraints>
@@ -5640,7 +5640,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="637-uG-Aeh">
-                                                <rect key="frame" x="8" y="295" width="60" height="21"/>
+                                                <rect key="frame" x="8" y="295" width="65.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="fr3-MK-EfQ"/>
                                                 </constraints>
@@ -5659,7 +5659,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sU-Vc-71G">
-                                                <rect key="frame" x="8" y="377" width="45.5" height="21"/>
+                                                <rect key="frame" x="8" y="377" width="49.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="ol6-o6-LrH"/>
                                                 </constraints>
@@ -6595,7 +6595,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxa-RN-gJa">
-                                        <rect key="frame" x="120.5" y="18.5" width="79" height="23"/>
+                                        <rect key="frame" x="114" y="18.5" width="92" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -7351,7 +7351,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-yI-1Tg">
-                                        <rect key="frame" x="105" y="18.5" width="110" height="23.5"/>
+                                        <rect key="frame" x="99.5" y="18.5" width="121" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -7988,7 +7988,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your celebration ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-H5-zoU">
-                                        <rect key="frame" x="51.5" y="19" width="217.5" height="22.5"/>
+                                        <rect key="frame" x="38" y="19" width="244" height="22"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -8092,7 +8092,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLt-cQ-eoU">
-                                        <rect key="frame" x="155" y="10" width="65.5" height="40"/>
+                                        <rect key="frame" x="152" y="10" width="71" height="40"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -8252,7 +8252,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checklist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgE-OZ-pRn">
-                                        <rect key="frame" x="118.5" y="18.5" width="83" height="23"/>
+                                        <rect key="frame" x="114.5" y="18.5" width="91" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -8885,7 +8885,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Guests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0G-8r-Qyh">
-                                        <rect key="frame" x="142" y="18.5" width="91" height="23.5"/>
+                                        <rect key="frame" x="139" y="18.5" width="97.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -9518,7 +9518,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNL-pK-0Jv">
-                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
+                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -9708,7 +9708,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiy-0R-zPR">
-                                        <rect key="frame" x="120" y="18.5" width="135.5" height="23"/>
+                                        <rect key="frame" x="111" y="18.5" width="153.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -9886,7 +9886,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-uA-c6K">
-                                        <rect key="frame" x="150" y="20" width="75" height="20"/>
+                                        <rect key="frame" x="147.5" y="22" width="80" height="16"/>
                                         <fontDescription key="fontDescription" name="QuicksandBold-Regular" family="Quicksand" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -9972,7 +9972,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-2U-rme">
-                                        <rect key="frame" x="149" y="20" width="77.5" height="20"/>
+                                        <rect key="frame" x="145" y="22" width="85" height="16"/>
                                         <fontDescription key="fontDescription" name="QuicksandBold-Regular" family="Quicksand" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -9999,13 +9999,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celebration 2 out of 100 Attending" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Z-vn-egH">
-                                <rect key="frame" x="10" y="136" width="355" height="19"/>
+                                <rect key="frame" x="10" y="136" width="355" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-hv-aq4">
-                                <rect key="frame" x="0.0" y="162.5" width="375" height="504.5"/>
+                                <rect key="frame" x="0.0" y="162" width="375" height="505"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="seS-15-cyS" id="QOx-Qc-O3b"/>
@@ -10013,7 +10013,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-K3-wmB">
-                                <rect key="frame" x="0.0" y="160" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="159.5" width="375" height="2"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Oui-ED-D7N"/>
@@ -10420,7 +10420,7 @@ Amarendra</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celebration Suppliers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-9B-Yyf">
-                                        <rect key="frame" x="105.5" y="20" width="164" height="20"/>
+                                        <rect key="frame" x="95.5" y="20" width="184.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -10447,7 +10447,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-02-aDE">
-                                        <rect key="frame" x="274.5" y="19.5" width="58.5" height="21"/>
+                                        <rect key="frame" x="285" y="19.5" width="48" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="vhR-Qv-67K"/>
                                         </constraints>
@@ -10809,7 +10809,7 @@ Amarendra</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Suppliers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Ew-YEi">
-                                        <rect key="frame" x="102" y="18.5" width="171" height="23"/>
+                                        <rect key="frame" x="94.5" y="18.5" width="186" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -10924,13 +10924,13 @@ Amarendra</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred contact method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-rc-CaK">
-                                <rect key="frame" x="16" y="435" width="343" height="22.5"/>
+                                <rect key="frame" x="16" y="435" width="343" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaw-TW-IaA">
-                                <rect key="frame" x="104" y="473" width="13" height="13"/>
+                                <rect key="frame" x="104" y="472" width="13" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="DDj-6c-Wno"/>
                                     <constraint firstAttribute="width" constant="13" id="PQg-jD-8JV"/>
@@ -10958,7 +10958,7 @@ Amarendra</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-s6-3A7">
-                                <rect key="frame" x="16" y="473" width="13" height="13"/>
+                                <rect key="frame" x="16" y="472" width="13" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="13" id="8w1-O8-EV0"/>
                                     <constraint firstAttribute="height" constant="13" id="eLe-PU-f62"/>
@@ -10977,7 +10977,7 @@ Amarendra</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-A4-1NI">
-                                <rect key="frame" x="127" y="473" width="232" height="13"/>
+                                <rect key="frame" x="127" y="472" width="232" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="GNK-qa-aK6"/>
                                 </constraints>
@@ -10991,7 +10991,7 @@ Amarendra</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-Vz-UYJ">
-                                <rect key="frame" x="39" y="473" width="60" height="13"/>
+                                <rect key="frame" x="39" y="472" width="60" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="jnF-Yz-GcY"/>
                                 </constraints>
@@ -11000,7 +11000,7 @@ Amarendra</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twc-kR-j1y">
-                                <rect key="frame" x="16" y="521" width="343" height="43"/>
+                                <rect key="frame" x="16" y="520" width="343" height="43"/>
                                 <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="UjO-au-hmq"/>
@@ -11169,7 +11169,7 @@ Amarendra</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amara Cake Boutique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwE-57-yFe">
-                                        <rect key="frame" x="57" y="18" width="206.5" height="24"/>
+                                        <rect key="frame" x="46.5" y="18" width="227.5" height="24"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -11522,13 +11522,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU5-6w-zSe">
-                                                        <rect key="frame" x="17.5" y="35" width="61" height="20"/>
+                                                        <rect key="frame" x="15" y="35" width="66" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="booked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dv-Op-7fd">
-                                                        <rect key="frame" x="17.5" y="55.5" width="61" height="21.5"/>
+                                                        <rect key="frame" x="15" y="55.5" width="66" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -11585,13 +11585,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-XB-YfF">
-                                                        <rect key="frame" x="18" y="35" width="60.5" height="20"/>
+                                                        <rect key="frame" x="14" y="35" width="68" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shortlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-lU-0Qy">
-                                                        <rect key="frame" x="18" y="55.5" width="60.5" height="20"/>
+                                                        <rect key="frame" x="14" y="55.5" width="68" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -11638,20 +11638,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="90"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.1x" translatesAutoresizingMaskIntoConstraints="NO" id="iK5-IX-OCu">
-                                                        <rect key="frame" x="38" y="14" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="16.5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="ffC-sq-g4Z"/>
                                                             <constraint firstAttribute="height" constant="20" id="ihX-P8-e6l"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znh-AS-5X0">
-                                                        <rect key="frame" x="16" y="35" width="64" height="20"/>
+                                                        <rect key="frame" x="12" y="37.5" width="72" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-QV-SiM">
-                                                        <rect key="frame" x="16" y="55.5" width="64" height="21.5"/>
+                                                        <rect key="frame" x="12" y="53.5" width="72" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -11702,20 +11702,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="90"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venue-2" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-MN-RLH">
-                                                        <rect key="frame" x="38" y="12.5" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="GOI-dS-jng"/>
                                                             <constraint firstAttribute="width" constant="20" id="PL0-9u-F9J"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-J9-1fN">
-                                                        <rect key="frame" x="25" y="35" width="46" height="20"/>
+                                                        <rect key="frame" x="22.5" y="37.5" width="51.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-2w-UHW">
-                                                        <rect key="frame" x="25" y="55.5" width="46" height="21.5"/>
+                                                        <rect key="frame" x="22.5" y="53.5" width="51.5" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -11764,20 +11764,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="90"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-F5-wHn">
-                                                        <rect key="frame" x="38" y="14" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="16.5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="W21-rR-wT5"/>
                                                             <constraint firstAttribute="width" constant="20" id="ded-Tc-fOr"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-t1-PhS">
-                                                        <rect key="frame" x="23.5" y="35" width="49" height="20"/>
+                                                        <rect key="frame" x="22.5" y="37.5" width="51.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUE-UC-UEY">
-                                                        <rect key="frame" x="23.5" y="55.5" width="49" height="21.5"/>
+                                                        <rect key="frame" x="22.5" y="53.5" width="51.5" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -11832,13 +11832,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2H-w0-KKZ">
-                                                        <rect key="frame" x="25" y="35" width="46" height="20"/>
+                                                        <rect key="frame" x="22.5" y="35" width="51.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ta-Ut-8Ws">
-                                                        <rect key="frame" x="25" y="55.5" width="46" height="21.5"/>
+                                                        <rect key="frame" x="22.5" y="55.5" width="51.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -12044,7 +12044,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-9D-iWZ">
-                                        <rect key="frame" x="155" y="18.5" width="65" height="23"/>
+                                        <rect key="frame" x="150.5" y="18.5" width="74" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -12061,7 +12061,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-01-VZJ">
-                                        <rect key="frame" x="245" y="19.5" width="85" height="21"/>
+                                        <rect key="frame" x="249.5" y="19.5" width="80.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="YCp-9E-UKb"/>
                                         </constraints>
@@ -12228,7 +12228,7 @@ Amarendra</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-1i-YlL">
-                                        <rect key="frame" x="126" y="18.5" width="123" height="23"/>
+                                        <rect key="frame" x="120.5" y="18.5" width="134" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -12552,7 +12552,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCD-Lj-UZG">
-                                        <rect key="frame" x="124.5" y="18.5" width="126" height="23"/>
+                                        <rect key="frame" x="117.5" y="18.5" width="140" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -12700,7 +12700,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beB-kU-Jch">
-                                        <rect key="frame" x="151" y="16" width="73.5" height="23"/>
+                                        <rect key="frame" x="146.5" y="16" width="82.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -12728,6 +12728,9 @@ Amarendra</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiS-26-Y76">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="Notificationction:" destination="oG2-YB-RPn" eventType="touchUpInside" id="qbu-TR-ObR"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notification" translatesAutoresizingMaskIntoConstraints="NO" id="GiW-Jx-PbO">
                                         <rect key="frame" x="18" y="17.5" width="25" height="25"/>
@@ -12737,7 +12740,7 @@ Amarendra</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa7-LF-9A0">
-                                        <rect key="frame" x="63" y="17.5" width="101" height="25"/>
+                                        <rect key="frame" x="63" y="17.5" width="114" height="25"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -12781,7 +12784,7 @@ Amarendra</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1M-RK-EuF">
-                                        <rect key="frame" x="63" y="17.5" width="116" height="25"/>
+                                        <rect key="frame" x="63" y="17.5" width="127" height="25"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -12829,7 +12832,7 @@ Amarendra</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz2-jq-jn1">
-                                        <rect key="frame" x="63" y="17.5" width="147.5" height="25"/>
+                                        <rect key="frame" x="63" y="17.5" width="161.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -12890,7 +12893,7 @@ Amarendra</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btQ-oY-46Z">
-                                        <rect key="frame" x="63" y="17.5" width="123.5" height="25"/>
+                                        <rect key="frame" x="63" y="17.5" width="136" height="25"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -12996,7 +12999,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Pin Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on4-aH-1r1">
-                                        <rect key="frame" x="95" y="16" width="130.5" height="23.5"/>
+                                        <rect key="frame" x="90" y="16" width="140" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -13327,13 +13330,13 @@ Amarendra</string>
                                                 <rect key="frame" x="0.0" y="292" width="320" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-88-gt3">
-                                                        <rect key="frame" x="8" y="8" width="79.5" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="85" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vk-Oc-zOL">
-                                                        <rect key="frame" x="8" y="37" width="304" height="51"/>
+                                                        <rect key="frame" x="8" y="36.5" width="304" height="51.5"/>
                                                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -13355,13 +13358,13 @@ Amarendra</string>
                                                 <rect key="frame" x="0.0" y="382" width="320" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-Pf-ogb">
-                                                        <rect key="frame" x="8" y="8" width="92" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="102.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MPV-Do-81A">
-                                                        <rect key="frame" x="8" y="36.5" width="304" height="163.5"/>
+                                                        <rect key="frame" x="8" y="36" width="304" height="164"/>
                                                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -13658,7 +13661,7 @@ Amarendra</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Holiday Inn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCu-e6-Xfw">
-                                        <rect key="frame" x="90.5" y="18.5" width="139.5" height="23"/>
+                                        <rect key="frame" x="82.5" y="18.5" width="155" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -14199,13 +14202,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-jF-nNY">
-                                                        <rect key="frame" x="17.5" y="25" width="61" height="20"/>
+                                                        <rect key="frame" x="15" y="25" width="66" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="booked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSf-Yc-rbL">
-                                                        <rect key="frame" x="17.5" y="45.5" width="61" height="11.5"/>
+                                                        <rect key="frame" x="15" y="45.5" width="66" height="11.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14262,13 +14265,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttM-qr-cnO">
-                                                        <rect key="frame" x="18" y="25" width="60.5" height="20"/>
+                                                        <rect key="frame" x="14" y="25" width="68" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shortlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc2-WG-vtX">
-                                                        <rect key="frame" x="18" y="45" width="60.5" height="20"/>
+                                                        <rect key="frame" x="14" y="45" width="68" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14315,20 +14318,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="70"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.1x" translatesAutoresizingMaskIntoConstraints="NO" id="06T-tg-I8C">
-                                                        <rect key="frame" x="38" y="4" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="6.5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="lvQ-1n-hyR"/>
                                                             <constraint firstAttribute="height" constant="20" id="wbD-Kg-dDu"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AD-4a-yvi">
-                                                        <rect key="frame" x="16" y="25" width="64" height="20"/>
+                                                        <rect key="frame" x="12" y="27.5" width="72" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-WD-udK">
-                                                        <rect key="frame" x="16" y="45.5" width="64" height="11.5"/>
+                                                        <rect key="frame" x="12" y="43.5" width="72" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14379,20 +14382,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="70"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venue-2" translatesAutoresizingMaskIntoConstraints="NO" id="WWX-kR-0gF">
-                                                        <rect key="frame" x="38" y="2.5" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="WNW-wG-iHB"/>
                                                             <constraint firstAttribute="width" constant="20" id="w2f-Da-WFy"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWR-gz-J2k">
-                                                        <rect key="frame" x="25" y="25" width="46" height="20"/>
+                                                        <rect key="frame" x="22.5" y="27.5" width="51.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnm-CK-Rha">
-                                                        <rect key="frame" x="25" y="45.5" width="46" height="11.5"/>
+                                                        <rect key="frame" x="22.5" y="43.5" width="51.5" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14441,20 +14444,20 @@ Amarendra</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="70"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-kg-GLz">
-                                                        <rect key="frame" x="38" y="4" width="20" height="20"/>
+                                                        <rect key="frame" x="38" y="6.5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="DIo-U1-Igm"/>
                                                             <constraint firstAttribute="height" constant="20" id="Jtf-xl-u7I"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-Zz-YF8">
-                                                        <rect key="frame" x="23.5" y="25" width="49" height="20"/>
+                                                        <rect key="frame" x="22.5" y="27.5" width="51.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="QuicksandLightOblique-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaJ-YI-rov">
-                                                        <rect key="frame" x="23.5" y="45.5" width="49" height="11.5"/>
+                                                        <rect key="frame" x="22.5" y="43.5" width="51.5" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14509,13 +14512,13 @@ Amarendra</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qne-EU-Ywv">
-                                                        <rect key="frame" x="25" y="25" width="46" height="20"/>
+                                                        <rect key="frame" x="22.5" y="25" width="51.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="venue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-Tz-2BJ">
-                                                        <rect key="frame" x="25" y="45.5" width="46" height="11.5"/>
+                                                        <rect key="frame" x="22.5" y="45.5" width="51.5" height="11.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14663,13 +14666,13 @@ Amarendra</string>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party room capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDz-WQ-eCn">
-                                                                    <rect key="frame" x="15" y="38" width="153" height="20"/>
+                                                                    <rect key="frame" x="15" y="38" width="173.5" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chb-Lo-OUz">
-                                                                    <rect key="frame" x="283.5" y="38" width="26.5" height="20"/>
+                                                                    <rect key="frame" x="281" y="38" width="29" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -14937,7 +14940,7 @@ Amarendra</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Holiday Inn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75Q-VA-Cwz">
-                                        <rect key="frame" x="118" y="18.5" width="139.5" height="23"/>
+                                        <rect key="frame" x="110" y="18.5" width="155" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -15018,7 +15021,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-rz-kZW">
-                                        <rect key="frame" x="155" y="18.5" width="65" height="23"/>
+                                        <rect key="frame" x="150.5" y="18.5" width="74" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -15193,7 +15196,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgk-WW-ee2">
-                                        <rect key="frame" x="122.5" y="18.5" width="75" height="23"/>
+                                        <rect key="frame" x="119.5" y="18.5" width="81.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -15209,7 +15212,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-lc-cEM">
-                                        <rect key="frame" x="232.5" y="19.5" width="68.5" height="21"/>
+                                        <rect key="frame" x="236" y="19.5" width="65" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="CQh-zu-JZw"/>
                                         </constraints>
@@ -15279,7 +15282,7 @@ Amarendra</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19648 SB 207,Leavenworth g egr iegrw hi egr egr hiu egrwhghr hiu egr hiuegr hegr ger  g " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slF-N2-EGZ">
-                                                <rect key="frame" x="143" y="261" width="169" height="56"/>
+                                                <rect key="frame" x="143" y="261" width="169" height="54.5"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -15623,7 +15626,7 @@ Amarendra</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Notice Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL0-Gc-6FH">
-                                        <rect key="frame" x="107.5" y="18.5" width="160.5" height="23"/>
+                                        <rect key="frame" x="100" y="18.5" width="175.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -16058,7 +16061,7 @@ Amarendra</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0I-8X-qth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8622" y="3174"/>
+            <point key="canvasLocation" x="-8578" y="2856"/>
         </scene>
         <!--Static Page View Controller-->
         <scene sceneID="kjP-hQ-avl">
@@ -16083,7 +16086,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Show Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-0d-h3p">
-                                        <rect key="frame" x="87" y="18.5" width="201.5" height="23"/>
+                                        <rect key="frame" x="74.5" y="18.5" width="226.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -16161,7 +16164,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Show Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffx-rY-TeZ">
-                                        <rect key="frame" x="87" y="18.5" width="201.5" height="23"/>
+                                        <rect key="frame" x="74.5" y="18.5" width="226.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -16377,7 +16380,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding Show Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cub-JE-QV7">
-                                        <rect key="frame" x="59.5" y="18.5" width="201.5" height="23"/>
+                                        <rect key="frame" x="47" y="18.5" width="226.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -16731,7 +16734,7 @@ Amarendra</string>
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Enquiries " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPW-bU-Lo2">
-                                        <rect key="frame" x="127" y="18.5" width="121.5" height="23"/>
+                                        <rect key="frame" x="121.5" y="18.5" width="132.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -17327,7 +17330,7 @@ Amarendra</string>
                                                         <state key="normal" image="_0003_Layer-17"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="053-XI-9O5">
-                                                        <rect key="frame" x="103" y="19" width="114.5" height="22.5"/>
+                                                        <rect key="frame" x="97" y="19.5" width="126.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="19"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -17404,7 +17407,7 @@ Amarendra</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ol-xI-ptc">
-                                                <rect key="frame" x="8" y="151" width="70" height="21"/>
+                                                <rect key="frame" x="8" y="151" width="80.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="9rF-xL-ym3"/>
                                                 </constraints>
@@ -17433,7 +17436,7 @@ Amarendra</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIE-h2-PDy">
-                                                <rect key="frame" x="8" y="233" width="65.5" height="21"/>
+                                                <rect key="frame" x="8" y="233" width="70.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="qp6-cG-umv"/>
                                                 </constraints>
@@ -17452,7 +17455,7 @@ Amarendra</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9j-b0-HHx">
-                                                <rect key="frame" x="8" y="315" width="60" height="21"/>
+                                                <rect key="frame" x="8" y="315" width="65.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="ZXc-I0-H8q"/>
                                                 </constraints>
@@ -17471,7 +17474,7 @@ Amarendra</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m2-Hv-0cD">
-                                                <rect key="frame" x="8" y="397" width="45.5" height="21"/>
+                                                <rect key="frame" x="8" y="397" width="49.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="LJl-nd-qZd"/>
                                                 </constraints>
@@ -17941,7 +17944,7 @@ Amarendra</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suppliers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1r-M7-vqh">
-                                        <rect key="frame" x="118" y="18.5" width="84.5" height="23"/>
+                                        <rect key="frame" x="113.5" y="18.5" width="93.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -18342,7 +18345,7 @@ placeholderLabel.textColor</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruk-hf-7Su">
-                                        <rect key="frame" x="111.5" y="18.5" width="152.5" height="23"/>
+                                        <rect key="frame" x="103.5" y="18.5" width="168.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -18519,7 +18522,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUw-2a-S0J">
-                                        <rect key="frame" x="114.5" y="18.5" width="146" height="23"/>
+                                        <rect key="frame" x="109.5" y="18.5" width="156.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -18699,7 +18702,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOE-tl-uq6">
-                                        <rect key="frame" x="141" y="18.5" width="93.5" height="23"/>
+                                        <rect key="frame" x="137.5" y="18.5" width="100.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -18778,7 +18781,7 @@ placeholderLabel.textColor</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-Nx-x34">
-                                        <rect key="frame" x="105.5" y="18.5" width="164" height="23"/>
+                                        <rect key="frame" x="98" y="18.5" width="179.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -18955,7 +18958,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-If-3PG">
-                                        <rect key="frame" x="105.5" y="18.5" width="164" height="23"/>
+                                        <rect key="frame" x="98" y="18.5" width="179.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -19117,7 +19120,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-yf-JgP">
-                                        <rect key="frame" x="112" y="18.5" width="96" height="23.5"/>
+                                        <rect key="frame" x="108" y="18.5" width="104" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -19295,7 +19298,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="79" width="320" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX8-PE-qTg">
-                                                        <rect key="frame" x="8" y="24" width="30.5" height="21"/>
+                                                        <rect key="frame" x="8" y="24" width="31" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="371-qM-HHi"/>
                                                         </constraints>
@@ -19304,7 +19307,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="73A-CC-Xlc">
-                                                        <rect key="frame" x="8" y="54" width="172.5" height="29"/>
+                                                        <rect key="frame" x="8" y="54" width="173" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <segments>
                                                             <segment title="Adult"/>
@@ -19478,13 +19481,13 @@ placeholderLabel.textColor</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBZ-kj-ZN4">
-                                                <rect key="frame" x="8" y="190" width="101.5" height="17.5"/>
+                                                <rect key="frame" x="8" y="190" width="108.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aG-Yi-Eb1">
-                                                <rect key="frame" x="8" y="296" width="175" height="17"/>
+                                                <rect key="frame" x="8" y="296" width="189.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="12f-aL-QOD"/>
                                                 </constraints>
@@ -20008,7 +20011,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc6-Pc-bLh">
-                                        <rect key="frame" x="112" y="18.5" width="96" height="23.5"/>
+                                        <rect key="frame" x="108" y="18.5" width="104" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -20189,7 +20192,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="79" width="320" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dm3-9G-FnH">
-                                                        <rect key="frame" x="8" y="24" width="30.5" height="21"/>
+                                                        <rect key="frame" x="8" y="24" width="31" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="zTI-2m-Iyq"/>
                                                         </constraints>
@@ -20198,7 +20201,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="onz-j8-MaK">
-                                                        <rect key="frame" x="8" y="54" width="172.5" height="29"/>
+                                                        <rect key="frame" x="8" y="54" width="173" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <segments>
                                                             <segment title="Adult"/>
@@ -20664,7 +20667,7 @@ placeholderLabel.textColor</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFu-e8-xx8">
-                                                <rect key="frame" x="8" y="177" width="175" height="17"/>
+                                                <rect key="frame" x="8" y="177" width="189.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="Zpm-8c-tRY"/>
                                                 </constraints>
@@ -20854,7 +20857,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orn-hq-Me4">
-                                        <rect key="frame" x="113" y="18.5" width="94" height="23.5"/>
+                                        <rect key="frame" x="108.5" y="18.5" width="103.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -22368,7 +22371,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-NY-U55">
-                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
+                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -22670,12 +22673,13 @@ placeholderLabel.textColor</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="My weeding was on: Apr 16, 2016" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-vB-XfP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="My weeding was on: Apr 16, 2016" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-vB-XfP">
                                 <rect key="frame" x="8" y="225" width="359" height="413"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-kt-hJl">
                                 <rect key="frame" x="0.0" y="188" width="375" height="1"/>
@@ -22755,7 +22759,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scL-qt-HCU">
-                                        <rect key="frame" x="123" y="18.5" width="129" height="23"/>
+                                        <rect key="frame" x="117" y="18.5" width="141" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -23428,7 +23432,7 @@ placeholderLabel.textColor</string>
                                 <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add type of celebration ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa0-Ks-7Nq">
-                                        <rect key="frame" x="53" y="19" width="214.5" height="22"/>
+                                        <rect key="frame" x="40" y="19" width="240" height="22"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -23556,7 +23560,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgi-w6-IuE">
-                                        <rect key="frame" x="112" y="18.5" width="96" height="23.5"/>
+                                        <rect key="frame" x="108" y="18.5" width="104" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -23812,7 +23816,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-47-wIK">
-                                                        <rect key="frame" x="8" y="23" width="312" height="29"/>
+                                                        <rect key="frame" x="8" y="23" width="312" height="28"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select list">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -23920,7 +23924,7 @@ placeholderLabel.textColor</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbe-Hz-XV6">
-                                                        <rect key="frame" x="8" y="23" width="312" height="29"/>
+                                                        <rect key="frame" x="8" y="23" width="312" height="28"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="14"/>
                                                         <state key="normal" title="Select menu">
                                                             <color key="titleColor" red="0.4039215686" green="0.3803921569" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -25054,7 +25058,7 @@ placeholderLabel.textColor</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-bP-xBQ">
-                                                        <rect key="frame" x="8" y="12.5" width="74" height="20"/>
+                                                        <rect key="frame" x="8" y="13" width="82.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -25316,7 +25320,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Tables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-bH-5LP">
-                                        <rect key="frame" x="143" y="18" width="89" height="24.5"/>
+                                        <rect key="frame" x="138" y="18" width="99.5" height="24"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -25762,7 +25766,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Lists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-cj-QOf">
-                                        <rect key="frame" x="147.5" y="16.5" width="80" height="27"/>
+                                        <rect key="frame" x="145.5" y="17" width="84.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -26078,7 +26082,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Menus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjg-Sj-5p2">
-                                        <rect key="frame" x="141.5" y="18" width="92.5" height="24.5"/>
+                                        <rect key="frame" x="139" y="18" width="97" height="24"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -26396,7 +26400,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STw-zl-Oa5">
-                                        <rect key="frame" x="155" y="18.5" width="65" height="23"/>
+                                        <rect key="frame" x="150.5" y="18.5" width="74" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -26558,7 +26562,7 @@ placeholderLabel.textColor</string>
         <!--Venue All Review View Controller-->
         <scene sceneID="mTZ-8i-bnb">
             <objects>
-                <viewController storyboardIdentifier="VenueAllReviewViewController" id="RKk-Ab-jsy" customClass="VenueAllReviewViewController" customModule="The_Truly_Scrumptious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VenueAllReviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RKk-Ab-jsy" customClass="VenueAllReviewViewController" customModule="The_Truly_Scrumptious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GlR-UJ-LJ3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26596,7 +26600,7 @@ placeholderLabel.textColor</string>
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-2h-t05">
-                                        <rect key="frame" x="120" y="18.5" width="135.5" height="23"/>
+                                        <rect key="frame" x="112" y="18.5" width="151.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -26685,7 +26689,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suppliers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxD-XD-D7g">
-                                        <rect key="frame" x="145.5" y="18.5" width="84.5" height="23"/>
+                                        <rect key="frame" x="141" y="18.5" width="93.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -26698,7 +26702,7 @@ placeholderLabel.textColor</string>
                                         </constraints>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUy-go-Xr3">
-                                        <rect key="frame" x="255" y="19.5" width="75" height="21"/>
+                                        <rect key="frame" x="259.5" y="19.5" width="70.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="CAe-VI-zge"/>
                                         </constraints>
@@ -27439,7 +27443,7 @@ placeholderLabel.textColor</string>
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Enquiries " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSy-li-TZT">
-                                        <rect key="frame" x="127" y="18.5" width="121.5" height="23"/>
+                                        <rect key="frame" x="121.5" y="18.5" width="132.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -28464,7 +28468,7 @@ placeholderLabel.textColor</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Notice Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dK-iS-3L5">
-                                        <rect key="frame" x="107.5" y="18.5" width="160.5" height="23"/>
+                                        <rect key="frame" x="100" y="18.5" width="175.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -28667,6 +28671,113 @@ placeholderLabel.textColor</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cY-aQ-MCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2242.4000000000001" y="-468.21589205397305"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="Xaj-a1-7QC">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1fh-oH-4OL" customClass="NotificationViewController" customModule="The_Truly_Scrumptious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XQO-Fa-yiz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash-screen.png " translatesAutoresizingMaskIntoConstraints="NO" id="ych-Xz-UOp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoO-s0-GSM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8td-FY-drZ">
+                                        <rect key="frame" x="12" y="16" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="7Su-cE-ZUV"/>
+                                            <constraint firstAttribute="height" constant="28" id="9l6-MW-936"/>
+                                        </constraints>
+                                        <state key="normal" image="backk"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="1fh-oH-4OL" eventType="touchUpInside" id="vJj-AA-wyG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVJ-Do-fgN">
+                                        <rect key="frame" x="334" y="17.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="5HD-wK-8hE"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="8Lj-xe-6ce"/>
+                                            <constraint firstAttribute="width" constant="25" id="VVx-Ec-Hk6"/>
+                                            <constraint firstAttribute="height" constant="22" id="ZCX-FB-DCw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="vl2-6N-5bi"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ZCX-FB-DCw"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OG-KS-Mzt">
+                                        <rect key="frame" x="129" y="18.5" width="117" height="23"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.6705882353" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8OG-KS-Mzt" firstAttribute="centerX" secondItem="PoO-s0-GSM" secondAttribute="centerX" id="AZ5-Tr-HM2"/>
+                                    <constraint firstAttribute="trailing" secondItem="hVJ-Do-fgN" secondAttribute="trailing" constant="16" id="Abg-kE-Hbw"/>
+                                    <constraint firstItem="8td-FY-drZ" firstAttribute="leading" secondItem="PoO-s0-GSM" secondAttribute="leading" constant="12" id="E2l-sa-PIa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Eda-Ok-cj5"/>
+                                    <constraint firstItem="8OG-KS-Mzt" firstAttribute="centerY" secondItem="PoO-s0-GSM" secondAttribute="centerY" id="RbH-Mg-Tu2"/>
+                                    <constraint firstItem="8td-FY-drZ" firstAttribute="centerY" secondItem="PoO-s0-GSM" secondAttribute="centerY" id="RbX-tO-apS"/>
+                                    <constraint firstAttribute="height" constant="60" id="odK-qQ-8a3"/>
+                                    <constraint firstItem="hVJ-Do-fgN" firstAttribute="centerY" secondItem="PoO-s0-GSM" secondAttribute="centerY" id="qhH-Sq-WYa"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="obQ-H9-f86"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gJz-yZ-Vet">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1fh-oH-4OL" id="Byu-sG-wrW"/>
+                                    <outlet property="delegate" destination="1fh-oH-4OL" id="H21-p2-eup"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGR-5Y-DTv">
+                                <rect key="frame" x="130" y="323.5" width="115" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gJz-yZ-Vet" firstAttribute="leading" secondItem="RxM-op-Opk" secondAttribute="leading" id="1Co-NY-TbI"/>
+                            <constraint firstItem="CGR-5Y-DTv" firstAttribute="centerX" secondItem="XQO-Fa-yiz" secondAttribute="centerX" id="3EW-ST-WTG"/>
+                            <constraint firstItem="RxM-op-Opk" firstAttribute="trailing" secondItem="gJz-yZ-Vet" secondAttribute="trailing" id="3Jo-z1-qcr"/>
+                            <constraint firstItem="gJz-yZ-Vet" firstAttribute="top" secondItem="PoO-s0-GSM" secondAttribute="bottom" id="JD6-qo-ukb"/>
+                            <constraint firstItem="ych-Xz-UOp" firstAttribute="bottom" secondItem="RxM-op-Opk" secondAttribute="bottom" id="QhG-0M-yAy"/>
+                            <constraint firstItem="ych-Xz-UOp" firstAttribute="leading" secondItem="RxM-op-Opk" secondAttribute="leading" id="TX0-yc-zIx"/>
+                            <constraint firstItem="CGR-5Y-DTv" firstAttribute="centerY" secondItem="XQO-Fa-yiz" secondAttribute="centerY" id="dDu-J7-hRh"/>
+                            <constraint firstItem="ych-Xz-UOp" firstAttribute="trailing" secondItem="RxM-op-Opk" secondAttribute="trailing" id="gUp-iQ-y4d"/>
+                            <constraint firstItem="PoO-s0-GSM" firstAttribute="leading" secondItem="RxM-op-Opk" secondAttribute="leading" id="k0G-Q6-STF"/>
+                            <constraint firstItem="RxM-op-Opk" firstAttribute="trailing" secondItem="PoO-s0-GSM" secondAttribute="trailing" id="mnv-TO-7EE"/>
+                            <constraint firstItem="PoO-s0-GSM" firstAttribute="top" secondItem="RxM-op-Opk" secondAttribute="top" id="pFm-sb-OJF"/>
+                            <constraint firstItem="RxM-op-Opk" firstAttribute="bottom" secondItem="gJz-yZ-Vet" secondAttribute="bottom" id="xCL-Al-CE8"/>
+                            <constraint firstItem="ych-Xz-UOp" firstAttribute="top" secondItem="RxM-op-Opk" secondAttribute="top" id="zDO-M4-4sh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RxM-op-Opk"/>
+                    </view>
+                    <connections>
+                        <outlet property="nodataLbl" destination="CGR-5Y-DTv" id="F8Z-vr-K10"/>
+                        <outlet property="tableView1" destination="gJz-yZ-Vet" id="m6M-Rf-6rJ"/>
+                        <outlet property="titleLbl" destination="8OG-KS-Mzt" id="pLh-32-nVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgH-zO-r6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8732" y="3514"/>
         </scene>
     </scenes>
     <resources>

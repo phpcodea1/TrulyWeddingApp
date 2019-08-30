@@ -141,7 +141,7 @@ class PinBoardViewController: UIViewController,UICollectionViewDelegate,UICollec
         {
             if imageData != ""
             {
-                var baseUrl = IMAGEBASEURL + imageData
+                var baseUrl = liveImageBaseURL + imageData
                 let url = URL(string: baseUrl)
                 cell.img.sd_setImage(with: url, completed: nil)
                
@@ -168,7 +168,7 @@ class PinBoardViewController: UIViewController,UICollectionViewDelegate,UICollec
                     {
                        DispatchQueue.global(qos: .userInitiated).async
                             {
-                            var baseUrl = IMAGEBASEURL + imageData
+                            var baseUrl = liveImageBaseURL + imageData
                             let url = URL(string: baseUrl)!
 
 
@@ -209,7 +209,7 @@ class PinBoardViewController: UIViewController,UICollectionViewDelegate,UICollec
         {
             if imageData != ""
             {
-                var baseUrl = IMAGEBASEURL + imageData
+                var baseUrl = liveImageBaseURL + imageData
                 let url = URL(string: baseUrl)!
                 
                 

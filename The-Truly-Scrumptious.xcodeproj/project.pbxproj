@@ -61,6 +61,9 @@
 		1882CF30229436F700B4F447 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1882CF2E229436F700B4F447 /* PriceTableViewCell.xib */; };
 		1887A3C122B121C5003B528D /* PinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887A3C022B121C5003B528D /* PinCollectionViewCell.swift */; };
 		188FC6212301355C00A5C875 /* CameraPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC6202301355C00A5C875 /* CameraPopupViewController.swift */; };
+		1898505123190FE200D98724 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898505023190FE200D98724 /* NotificationViewController.swift */; };
+		189850542319257300D98724 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189850522319257300D98724 /* NotificationTableViewCell.swift */; };
+		189850552319257300D98724 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189850532319257300D98724 /* NotificationTableViewCell.xib */; };
 		18A0051B22E99D4300CC39CA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0051A22E99D4300CC39CA /* FilterViewController.swift */; };
 		18AB9352228AC2A8001425D9 /* SuppliersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB9351228AC2A8001425D9 /* SuppliersViewController.swift */; };
 		18AB9354228AC2B9001425D9 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB9353228AC2B9001425D9 /* BudgetViewController.swift */; };
@@ -263,6 +266,9 @@
 		1882CF2E229436F700B4F447 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		1887A3C022B121C5003B528D /* PinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCollectionViewCell.swift; sourceTree = "<group>"; };
 		188FC6202301355C00A5C875 /* CameraPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPopupViewController.swift; sourceTree = "<group>"; };
+		1898505023190FE200D98724 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		189850522319257300D98724 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		189850532319257300D98724 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		18A0051A22E99D4300CC39CA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		18AB9351228AC2A8001425D9 /* SuppliersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersViewController.swift; sourceTree = "<group>"; };
 		18AB9353228AC2B9001425D9 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
@@ -513,6 +519,9 @@
 			isa = PBXGroup;
 			children = (
 				C3690AEF2295844500EF587E /* SettingsViewController.swift */,
+				1898505023190FE200D98724 /* NotificationViewController.swift */,
+				189850522319257300D98724 /* NotificationTableViewCell.swift */,
+				189850532319257300D98724 /* NotificationTableViewCell.xib */,
 			);
 			path = SettingsViewController;
 			sourceTree = "<group>";
@@ -1022,6 +1031,7 @@
 				1882CF30229436F700B4F447 /* PriceTableViewCell.xib in Resources */,
 				18E2CED122F44ABA00D3979F /* MediaCollectionViewCell.xib in Resources */,
 				18F5327122BBB85400464808 /* AllGuestTableViewCell.xib in Resources */,
+				189850552319257300D98724 /* NotificationTableViewCell.xib in Resources */,
 				18402CA622F980F100DE41DB /* guest-icon.png in Resources */,
 				18CEAE0A22BDFAFD0004CB49 /* NewAllGuestCellTableViewCell.xib in Resources */,
 				C3338C9E228C3DF900F6D742 /* Quicksand_Light_Oblique.otf in Resources */,
@@ -1183,6 +1193,7 @@
 				18BDEFD5228E7BE5003D78BE /* NewBudgetCellTableViewCell.swift in Sources */,
 				18084B8B229832DC0028B3CE /* SuppliersPrice_VC.swift in Sources */,
 				C3A478A922927FA600108B04 /* ProfileTableViewCell.swift in Sources */,
+				189850542319257300D98724 /* NotificationTableViewCell.swift in Sources */,
 				563DF78922AE2E3D009A0D66 /* DetailsPinBoardViewController.swift in Sources */,
 				188FC6212301355C00A5C875 /* CameraPopupViewController.swift in Sources */,
 				18D7CD5D2307D93E0026E407 /* VenueRequestDetailsViewController.swift in Sources */,
@@ -1247,6 +1258,7 @@
 				C3489993228D8224003D42F2 /* DesignFile.swift in Sources */,
 				182CF235228EDB2000A3507C /* CheckListViewController.swift in Sources */,
 				182CF233228EDB2000A3507C /* Check_Done_TableViewCell.swift in Sources */,
+				1898505123190FE200D98724 /* NotificationViewController.swift in Sources */,
 				C3215ED72296CC16005A444B /* FindVenue_VC.swift in Sources */,
 				18455EC8229E6C9900061D3E /* Helper.swift in Sources */,
 				C3690AF52295847C00EF587E /* FavouriteTableViewCell.swift in Sources */,

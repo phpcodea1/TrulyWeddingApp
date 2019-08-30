@@ -37,8 +37,8 @@
                                     <constraint firstAttribute="height" constant="50" id="sKc-zG-q7i"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roesie cabine event venue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd0-z1-u9h">
-                                <rect key="frame" x="66" y="0.0" width="227" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roesie cabine event venue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd0-z1-u9h" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="66" y="0.0" width="461" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Sbj-s9-zVw"/>
                                 </constraints>
@@ -88,6 +88,7 @@
                             <constraint firstAttribute="trailing" secondItem="Xvy-XZ-14Y" secondAttribute="trailing" constant="8" id="BEu-Ih-xjf"/>
                             <constraint firstItem="Xvy-XZ-14Y" firstAttribute="leading" secondItem="sEq-DG-Av8" secondAttribute="leading" id="JiL-m8-Dqe"/>
                             <constraint firstAttribute="bottom" secondItem="Xvy-XZ-14Y" secondAttribute="bottom" constant="7.5" id="KJv-Sh-lza"/>
+                            <constraint firstAttribute="trailing" secondItem="Dd0-z1-u9h" secondAttribute="trailing" constant="8" id="SbM-Fm-gs7"/>
                             <constraint firstItem="Dd0-z1-u9h" firstAttribute="top" secondItem="qKh-wd-j9o" secondAttribute="top" id="VFp-EI-0FP"/>
                             <constraint firstAttribute="trailing" secondItem="nTY-HW-EKw" secondAttribute="trailing" constant="16" id="ZWg-pF-V1X"/>
                             <constraint firstAttribute="trailing" secondItem="DAY-J0-YYi" secondAttribute="trailing" id="dID-mk-Zx6"/>

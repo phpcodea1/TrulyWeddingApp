@@ -8,11 +8,16 @@
 
 import Foundation
 
-let baseURL = "http://112.196.9.211:8230/trully/wp-json/custom-plugin/"
+// Test base Url
+//let baseURL = "http://112.196.9.211:8230/trully/wp-json/custom-plugin/"
 
 
 let IMAGEBASEURL = "http://112.196.9.211:8230/trully/wp-content/uploads"
-//let baseURL = "http://112.196.9.211:8230/wp/wp-json/custom-plugin/"
+
+// Live base url
+let baseURL = "http://112.196.9.211:8230/wp/wp-json/custom-plugin/"
+
+let liveImageBaseURL = "http://112.196.9.211:8230/wp/wp-content/uploads"
 
 let registerURL = baseURL + "register"
 

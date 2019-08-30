@@ -73,10 +73,18 @@ tableView1.register(UINib(nibName: "RequestVenueTableViewCell", bundle: nil), fo
             {
                 if banner_image != ""
                 {
-                    let url1 = URL(string: banner_image)!
+                    var finalUrl = liveImageBaseURL + banner_image
+                    let url1 = URL(string: finalUrl)!
                     cell.imag.sd_setImage(with: url1, completed: nil)
                 }
-                
+                else
+                {
+                    cell.imag.image = UIImage(named: "image")
+                }
+            }
+            else
+            {
+                cell.imag.image = UIImage(named: "image")
             }
             if let location = venue_detail.value(forKey: "location") as? String
             {

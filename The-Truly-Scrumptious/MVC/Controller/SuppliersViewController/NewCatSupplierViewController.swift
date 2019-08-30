@@ -145,9 +145,17 @@ class NewCatSupplierViewController: UIViewController,UITableViewDelegate,UITable
                     let url1 = URL(string: amount)!
                     cell.LongImg.sd_setImage(with: url1, completed: nil)
                 }
-                
+                else
+                {
+                    cell.LongImg.image = UIImage(named: "image")
+                }
+
             }
-            
+            else
+            {
+                cell.LongImg.image = UIImage(named: "image")
+        }
+
             if let amount = dict.value(forKey: "price") as? String
             {
                 cell.amountLbl.text = amount

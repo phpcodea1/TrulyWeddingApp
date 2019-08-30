@@ -246,12 +246,22 @@ class VenuePricing_VC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         {
             if amount != ""
             {
-                let url1 = URL(string: amount)!
+                let finalUrl = liveImageBaseURL + amount
+                
+                let url1 = URL(string: finalUrl)!
+                
                 cell.LongImg.sd_setImage(with: url1, completed: nil)
+            }
+            else
+            {
+                cell.LongImg.image = UIImage(named: "image")
             }
             
         }
-        
+        else
+        {
+            cell.LongImg.image = UIImage(named: "image")
+        }
         if let amount = dict.value(forKey: "price") as? String
         {
             cell.amountLbl.text = amount

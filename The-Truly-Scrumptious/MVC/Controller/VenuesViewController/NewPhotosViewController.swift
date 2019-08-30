@@ -765,12 +765,19 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                                 {
                                       if amount != ""
                                       {
-                                        let url1 = URL(string: amount)!
+                                         let finalUrl = liveImageBaseURL + amount
+                                        let url1 = URL(string: finalUrl)!
                                         cell.LongImg.sd_setImage(with: url1, completed: nil)
                                     }
-                                  
+                                      else
+                                      {
+                                        cell.LongImg.image = UIImage(named: "image")
+                                    }
                                 }
-
+                                else
+                                {
+                                    cell.LongImg.image = UIImage(named: "image")
+                  }
                                 if let address = self.mainDict.value(forKey: "guest") as? String
                                 {
                                     cell.seatLbl.text = address
@@ -803,9 +810,9 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 cell.ratingUIView.rating =  Float(avgrating)
             }
             
-            if let is_fav = self.mainDict.value(forKey: "is_fav") as? Int
+            if let is_fav = self.mainDict.value(forKey: "like") as? String
             {
-                if is_fav == 0
+                if is_fav == "0"
                 {
                     cell.likeBtn.setImage(UIImage(named: "unFav"), for: .normal)
                 }
@@ -905,7 +912,7 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
                 cell.BookMark.backgroundColor = TABLESECTIONCOLOR
                 
             }
-            if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+            if let is_fav = self.mainDict.value(forKey: "like") as? String
             {
                 self.sortStatus = "\(is_fav)"
                 if is_fav == "0"
@@ -1081,7 +1088,7 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
             self.LikeId = login_id
         }
         
-        if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+        if let is_fav = self.mainDict.value(forKey: "like") as? String
         {
             
             self.likeStatus = "\(is_fav)"
@@ -1115,7 +1122,7 @@ class NewPhotosViewController: UIViewController,UITableViewDelegate,UITableViewD
             self.LikeId = login_id
         }
         
-        if let is_fav = self.mainDict.value(forKey: "is_fav") as? String
+        if let is_fav = self.mainDict.value(forKey: "like") as? String
         {
             
             self.likeStatus = is_fav

@@ -69,8 +69,17 @@ class SuplierRequestViewController: UIViewController,UITableViewDelegate,UITable
                     let url1 = URL(string: banner_image)!
                     cell.imag.sd_setImage(with: url1, completed: nil)
                 }
-                
+                else
+                {
+                    cell.imag.image = UIImage(named: "image")
+                }
+
             }
+            else
+            {
+                cell.imag.image = UIImage(named: "image")
+            }
+
             if let location = venue_detail.value(forKey: "location") as? String
             {
                 

@@ -1,14 +1,14 @@
 //
-//  VenueAllReviewViewController.swift
+//  NotificationViewController.swift
 //  The-Truly-Scrumptious
 //
-//  Created by APPLE on 07/08/19.
+//  Created by APPLE on 30/08/19.
 //  Copyright © 2019 APPLE. All rights reserved.
 //
 
 import UIKit
 
-class VenueAllReviewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class NotificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var nodataLbl: UILabel!
     @IBOutlet weak var tableView1: UITableView!
@@ -18,26 +18,26 @@ class VenueAllReviewViewController: UIViewController,UITableViewDelegate,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView1.register(UINib(nibName: "RatingTableViewCell", bundle: nil), forCellReuseIdentifier: "RatingTableViewCell")
+        tableView1.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationTableViewCell")
         // Do any additional setup after loading the view.
         self.nodataLbl.isHidden = true
         if let reviewsAray =  self.mainDict.value(forKey: "reviews") as? NSArray
         {
             if reviewsAray.count>0
             {
-               self.nodataLbl.isHidden = true
+                self.nodataLbl.isHidden = true
             }
             else
             {
                 self.nodataLbl.isHidden = false
             }
             
-          
+            
         }
         else
         {
             self.nodataLbl.isHidden = false
-         
+            
         }
         //AllRequestAPI()
     }
@@ -50,13 +50,13 @@ class VenueAllReviewViewController: UIViewController,UITableViewDelegate,UITable
     {
         if let reviewsAray =  self.mainDict.value(forKey: "reviews") as? NSArray
         {
-          
-             return  reviewsAray.count
+            
+            return  reviewsAray.count
         }
-       else
+        else
         {
             
-             return  0
+            return  0
         }
     }
     

@@ -269,8 +269,9 @@ class WeddingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
                 
                 self.bannerImage2.sd_setImage(with: img, placeholderImage: UIImage(named: "image-1"))
             }
-           
+            
         }
+        
         if let myself_image = allData.value(forKey: "myself_image") as? String
         {
             if myself_image != ""

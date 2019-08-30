@@ -60,8 +60,11 @@ class MediaTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionV
             {
                 if media_file != ""
                 {
+                    DispatchQueue.global(qos: .userInitiated).async
+                        {
                     let url = URL(string: media_file)!
                     cell.image.sd_setImage(with: url, completed: nil)
+                    }
                 }
                 
             }
@@ -72,12 +75,12 @@ class MediaTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionV
               var media_file = dict.value(forKey: "media_file") as! String
             let url = URL(string: media_file)!
             
-            DispatchQueue.main.async {
-                
-            }
-            if let thumbnailImage = getThumbnailImage(forUrl: url)
-            {
+            DispatchQueue.global(qos: .userInitiated).async
+                {
+                 if let thumbnailImage = self.getThumbnailImage(forUrl: url)
+                {
                 cell.image.image = thumbnailImage
+                 }
             }
             
         }

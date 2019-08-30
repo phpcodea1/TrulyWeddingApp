@@ -54,6 +54,11 @@ class SettingsViewController: UIViewController {
         
     }
     
+    @IBAction func Notificationction(_ sender: UIButton) {
+0
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotificationViewController")  as! NotificationViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func changePhoto(_ sender: UIButton) {
         

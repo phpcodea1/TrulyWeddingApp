@@ -17,8 +17,8 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet var tableView: UITableView!
-    var titleArray = ["Planning Tools","Profile","Settings","Help","Share the App","Logout"]
-    var imageArray = ["planner-32","user","setting","Help","Share-the-app","Log-out"]
+    var titleArray = ["Planning Tools","Profile","Settings","Logout"] // ,"Help","Share the App"
+    var imageArray = ["planner-32","user","setting","Log-out"] // ,"Help","Share-the-app"
     
     var viewProfileModel:ViewProfileModel!
     var profileData:ViewData?
@@ -91,6 +91,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        ["Planning Tools","Profile","Settings","Logout"]
         if indexPath.row == 0
         {
             let vc = storyboard?.instantiateViewController(withIdentifier: "PlanningToolViewController") as! PlanningToolViewController
@@ -109,7 +110,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
             let vc = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        if indexPath.row == 5
+        if indexPath.row == 3
         {
             
             

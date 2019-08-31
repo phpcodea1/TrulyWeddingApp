@@ -91,6 +91,7 @@
 		18BDEFDD228E7C3B003D78BE /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEFDA228E7C3A003D78BE /* BudgetTableViewCell.swift */; };
 		18BDEFDE228E7C3B003D78BE /* budgetRowCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEFDB228E7C3B003D78BE /* budgetRowCellTableViewCell.swift */; };
 		18BDEFDF228E7C3B003D78BE /* budgetRowCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEFDC228E7C3B003D78BE /* budgetRowCellTableViewCell.xib */; };
+		18CCCA1F231A7E1A00E062BA /* TableIcons in Resources */ = {isa = PBXBuildFile; fileRef = 18CCCA1E231A7E1900E062BA /* TableIcons */; };
 		18CDEDB7230BBB500042762F /* NewAddPinBoaardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDEDB6230BBB500042762F /* NewAddPinBoaardViewController.swift */; };
 		18CDEDBA230BBCA70042762F /* AddPinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDEDB8230BBCA70042762F /* AddPinCollectionViewCell.swift */; };
 		18CDEDBB230BBCA70042762F /* AddPinCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CDEDB9230BBCA70042762F /* AddPinCollectionViewCell.xib */; };
@@ -296,6 +297,7 @@
 		18BDEFDA228E7C3A003D78BE /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
 		18BDEFDB228E7C3B003D78BE /* budgetRowCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = budgetRowCellTableViewCell.swift; sourceTree = "<group>"; };
 		18BDEFDC228E7C3B003D78BE /* budgetRowCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = budgetRowCellTableViewCell.xib; sourceTree = "<group>"; };
+		18CCCA1E231A7E1900E062BA /* TableIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TableIcons; sourceTree = "<group>"; };
 		18CDEDB6230BBB500042762F /* NewAddPinBoaardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddPinBoaardViewController.swift; sourceTree = "<group>"; };
 		18CDEDB8230BBCA70042762F /* AddPinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinCollectionViewCell.swift; sourceTree = "<group>"; };
 		18CDEDB9230BBCA70042762F /* AddPinCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPinCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -878,6 +880,7 @@
 		18DE378C2289836700751E34 /* The-Truly-Scrumptious */ = {
 			isa = PBXGroup;
 			children = (
+				18CCCA1E231A7E1900E062BA /* TableIcons */,
 				18EC1698230D1F25005F2349 /* The-Truly-Scrumptious.entitlements */,
 				1887A3C022B121C5003B528D /* PinCollectionViewCell.swift */,
 				C399A0B722B3815A00731373 /* Network Engine.swift */,
@@ -1027,6 +1030,7 @@
 				C3338C9B228C3DE400F6D742 /* sharefonts.net.txt in Resources */,
 				18BDEFD7228E7BED003D78BE /* NewBudgetCellTableViewCell.xib in Resources */,
 				56F6407B2292C9B2008F6333 /* WeddingSupplierCollectionCell.xib in Resources */,
+				18CCCA1F231A7E1A00E062BA /* TableIcons in Resources */,
 				C3338CA3228C3E0C00F6D742 /* Quicksand_Bold_Oblique.otf in Resources */,
 				1882CF30229436F700B4F447 /* PriceTableViewCell.xib in Resources */,
 				18E2CED122F44ABA00D3979F /* MediaCollectionViewCell.xib in Resources */,

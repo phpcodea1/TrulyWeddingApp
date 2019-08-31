@@ -24,7 +24,7 @@ class PlanningToolViewController: UIViewController,UICollectionViewDataSource,UI
     
 //    var array = ["Wedding Show","Check List","Venues","Add Guest","Event Guests","Suppliers","Wedding Show","Pin Board","My Favourites","My Events","Notice Board","Reviews","Table Plan","Menu Plan","List Plan"]
     
-    var array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pin Board","Notice Board","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
+    var array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pinboard","Noticeboard","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
     
  var imageArray = ["Budget-1","Check-list","Wedding-Show","Venue","Suppliers","star.1x","Pin-board","Notice-board","My-Favourites","Table-plan-1","Menu_plan","List_plan","guestList","guest_Events","My-events","message-notification"]
     
@@ -57,13 +57,13 @@ class PlanningToolViewController: UIViewController,UICollectionViewDataSource,UI
         if eventType.lowercased() == "wedding"
         {
            
-            array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pin Board","Notice Board","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
+            array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pinboard","Noticeboard","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
             
             imageArray = ["Budget-1","Check-list","Wedding-Show","Venue","Suppliers","star.1x","Pin-board","Notice-board","My-Favourites","Table-plan-1","Menu_plan","List_plan","guestList","guest_Events","My-events","message-notification"]
         }
         else
         {
-            array = ["Budget","Tasks","Venues","Suppliers","Reviews","Pin Board","Notice Board","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
+            array = ["Budget","Tasks","Venues","Suppliers","Reviews","Pinboard","Noticeboard","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
             
             imageArray = ["Budget-1","Check-list","Venue","Suppliers","star.1x","Pin-board","Notice-board","My-Favourites","Table-plan-1","Menu_plan","List_plan","guestList","guest_Events","My-events","message-notification"]
             
@@ -94,14 +94,14 @@ class PlanningToolViewController: UIViewController,UICollectionViewDataSource,UI
         if eventType.lowercased() == "wedding"
         {
            
-            array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pin Board","Notice Board","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
+            array = ["Budget","Tasks","Wedding Shows","Venues","Suppliers","Reviews","Pinboard","Noticeboard","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
             
             imageArray = ["Budget-1","Check-list","Wedding-Show","Venue","Suppliers","star.1x","Pin-board","Notice-board","My-Favourites","Table-plan-1","Menu_plan","List_plan","guestList","guest_Events","My-events","message-notification"]
             
         }
         else
         {
-            array = ["Budget","Tasks","Venues","Suppliers","Reviews","Pin Board","Notice Board","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
+            array = ["Budget","Tasks","Venues","Suppliers","Reviews","Pinboard","Noticeboard","My Favourites","Table Plan","Menu Plan","My Lists","Add Guest","All Guests","My Events","My Enquiries"]
             
             imageArray = ["Budget-1","Check-list","Venue","Suppliers","star.1x","Pin-board","Notice-board","My-Favourites","Table-plan-1","Menu_plan","List_plan","guestList","guest_Events","My-events","message-notification"]
             

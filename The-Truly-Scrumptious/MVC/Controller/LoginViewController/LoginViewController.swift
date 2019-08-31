@@ -399,7 +399,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
         }
         else if emailTextfiled.text?.count == 0
         {
-            Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Email")
+            Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Username/Email")
         }
             
         else if passwordTextfiled.text?.count == 0
@@ -408,23 +408,29 @@ class LoginViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegat
         }
         else
         {
-            
-            let check = isValidEmail(testStr: emailTextfiled.text!)
-            if check
+            if CheckInternet.Connection()
             {
-                if CheckInternet.Connection()
-                {
-                    self.loginAPI()
-                }
-                else{
-                    Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
-                }
+                self.loginAPI()
             }
             else{
-                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Vaild Email")
+                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
             }
-            
-            
+//            let check = isValidEmail(testStr: emailTextfiled.text!)
+//            if check
+//            {
+//                if CheckInternet.Connection()
+//                {
+//                    self.loginAPI()
+//                }
+//                else{
+//                    Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Please Check The Internet Connection")
+//                }
+//            }
+//            else{
+//                Helper.helper.showAlertMessage(vc: self, titleStr: "Notification", messageStr: "Enter Your Vaild Username/Email")
+//            }
+//
+//
             
         }
         

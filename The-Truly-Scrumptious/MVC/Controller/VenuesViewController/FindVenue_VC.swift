@@ -82,7 +82,7 @@ class FindVenue_VC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         
         self.locationTXT.text = ""
         self.venueCatTxt.text = ""
-        self.seatLbl.text = "0"
+        self.seatLbl.text = "1"
         
         DEFAULT.set("", forKey: "typeLat")
         DEFAULT.set("", forKey: "typeLong")
@@ -257,7 +257,7 @@ class FindVenue_VC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
     @IBAction func sliderValue(_ sender: UISlider)
     {
-        self.seatLbl.text = "\(Int(capcitySlider.value))"
+        self.seatLbl.text = "\(Int(capcitySlider.value) *  (10))"
     }
     @IBAction func searchAction(_ sender: UIButton)
     {
